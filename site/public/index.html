@@ -5,144 +5,230 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dukascopy M1 Data</title>
 <style>
-  :root { --bg:#0f1115; --card:#181b22; --line:#2a2f3a; --txt:#e6e8ee; --mut:#8b93a5; --acc:#3b82f6; }
-  * { box-sizing:border-box }
-  body { margin:0; background:var(--bg); color:var(--txt); font:15px/1.5 system-ui,sans-serif }
-  main { max-width:900px; margin:0 auto; padding:24px 16px 60px }
-  h1 { margin:0 0 4px; font-size:24px }
-  h2 { font-size:13px; text-transform:uppercase; letter-spacing:.06em; color:var(--mut); margin:0 0 10px }
-  .sub { color:var(--mut); margin:0 0 20px }
-  section { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px; margin-bottom:14px }
-  .row { display:flex; flex-wrap:wrap; gap:8px; align-items:center }
-  button { font:inherit; color:var(--txt); background:#222733; border:1px solid var(--line); border-radius:8px; padding:6px 12px; cursor:pointer }
-  button:hover { border-color:var(--acc) }
-  button.on { background:var(--acc); border-color:var(--acc); color:#fff }
-  button.primary { background:var(--acc); border-color:var(--acc); color:#fff; padding:10px 18px; font-weight:600 }
-  button:disabled { opacity:.5; cursor:wait }
-  .mini { margin-top:10px }
-  .mini button { font-size:12px; padding:3px 9px; color:var(--mut) }
-  table { width:100%; border-collapse:collapse; font-size:14px }
-  th, td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--line) }
-  th { color:var(--mut); font-weight:500 }
-  a { color:var(--acc); text-decoration:none }
-  .wrap { max-height:380px; overflow:auto }
-  .note { color:var(--mut); font-size:13px; margin-top:10px }
+:root{--desk:#3a6ea5;--win:#d4d0c8;--txt:#111;--hi:#fff;--lo:#7a7a7a;--field:#fff;--t1:#0a246a;--t2:#a6caf0;--acc:#0a246a;--sel:#cfd8ee;--mut:#555}
+@media (prefers-color-scheme:dark){:root{--desk:#12161c;--win:#2b2f36;--txt:#e8e8e8;--hi:#4d535e;--lo:#0b0d10;--field:#1b1e23;--t1:#1d3b7a;--t2:#4a6fb5;--acc:#8ab4ff;--sel:#33415f;--mut:#9aa0aa}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--desk);color:var(--txt);font:13px/1.5 Tahoma,Verdana,system-ui,sans-serif}
+.win{max-width:960px;margin:20px auto;background:var(--win);border:2px solid;border-color:var(--hi) var(--lo) var(--lo) var(--hi);box-shadow:3px 3px 0 rgba(0,0,0,.35)}
+.title{background:linear-gradient(90deg,var(--t1),var(--t2));color:#fff;padding:5px 10px;font-weight:700;display:flex;justify-content:space-between}
+.body{padding:12px}
+.meta{margin:0 0 10px;color:var(--mut);font-family:ui-monospace,Consolas,monospace;font-size:12px}
+.raised{border:2px solid;border-color:var(--hi) var(--lo) var(--lo) var(--hi)}
+.sunken{border:2px solid;border-color:var(--lo) var(--hi) var(--hi) var(--lo)}
+fieldset{margin:0 0 12px;padding:8px 10px 10px;border:2px groove var(--lo)}
+legend{padding:0 6px;font-weight:700}
+.row{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.btn{font:inherit;color:var(--txt);background:var(--win);padding:4px 12px;cursor:pointer;border:2px solid;border-color:var(--hi) var(--lo) var(--lo) var(--hi)}
+.btn:hover{outline:1px dotted var(--acc);outline-offset:-4px}
+.btn:active{border-color:var(--lo) var(--hi) var(--hi) var(--lo)}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.btn.big{padding:8px 18px;font-weight:700}
+.btn.sm{padding:1px 8px;font-size:12px}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0}
+.chip span{display:block;padding:2px 9px;cursor:pointer;background:var(--win);border:2px solid;border-color:var(--hi) var(--lo) var(--lo) var(--hi);font-family:ui-monospace,Consolas,monospace;font-size:12px}
+.chip input:checked+span{background:var(--sel);font-weight:700;border-color:var(--lo) var(--hi) var(--hi) var(--lo)}
+.chip input:focus-visible+span{outline:2px solid var(--acc)}
+.chip.hide{display:none}
+input[type=search],select{font:inherit;color:var(--txt);background:var(--field);padding:3px 6px;border:2px solid;border-color:var(--lo) var(--hi) var(--hi) var(--lo)}
+input[type=search]{width:100%;max-width:280px}
+label.opt{display:inline-flex;gap:5px;align-items:center;cursor:pointer;margin-right:12px}
+.bar{position:sticky;bottom:0;background:var(--win);border-top:2px solid var(--hi);padding:10px 12px}
+.prog{height:14px;background:var(--field);margin-top:8px;border:2px solid;border-color:var(--lo) var(--hi) var(--hi) var(--lo)}
+.prog i{display:block;height:100%;width:0;background:repeating-linear-gradient(90deg,var(--acc) 0 8px,transparent 8px 10px)}
+#status{margin-top:6px;font-family:ui-monospace,Consolas,monospace;font-size:12px;color:var(--mut)}
+details{margin:0 0 12px}
+summary{cursor:pointer;font-weight:700;margin-bottom:6px}
+.tbl{max-height:320px;overflow:auto;background:var(--field);border:2px solid;border-color:var(--lo) var(--hi) var(--hi) var(--lo)}
+table{width:100%;border-collapse:collapse;font-family:ui-monospace,Consolas,monospace;font-size:12px}
+th,td{text-align:left;padding:2px 8px;border-bottom:1px solid var(--lo)}
+th{position:sticky;top:0;background:var(--win)}
+a{color:var(--acc)}
+.mini{color:var(--mut);font-size:12px}
+@media (max-width:600px){.win{margin:0;border-width:0}.body{padding:8px}}
 </style>
 </head>
 <body>
-<main>
-  <h1>Dukascopy 1-Minute Data</h1>
-  <p class="sub" id="meta">Loading…</p>
+<div class="win">
+  <div class="title"><span>Dukascopy M1 Data Terminal</span><span>UTC</span></div>
+  <div class="body">
+    <p class="meta" id="meta">Loading...</p>
 
-  <section>
-    <h2>Markets</h2>
-    <div class="row" id="markets"></div>
-    <div class="mini row"><button id="mAll">All</button><button id="mNone">None</button></div>
-  </section>
+    <fieldset>
+      <legend>Quick</legend>
+      <div class="row">
+        <button class="btn big" id="latestAll">Download latest (all markets)</button>
+        <span class="mini">Prottek market-er sheshe available year, bid + ask, ZIP-e MARKET/ folder structure-e.</span>
+      </div>
+    </fieldset>
 
-  <section>
-    <h2>Years</h2>
-    <div class="row" id="years"></div>
-    <div class="mini row"><button id="yLatest">Latest year</button><button id="yAll">All years</button></div>
-  </section>
+    <fieldset>
+      <legend>1. Markets</legend>
+      <div class="row" style="margin-bottom:8px">
+        <input type="search" id="q" placeholder="Search market (eurusd, gold, btc...)">
+        <button class="btn sm" id="mAll">Select all</button>
+        <button class="btn sm" id="mNone">Clear</button>
+      </div>
+      <div id="groups"></div>
+    </fieldset>
 
-  <section>
-    <h2>Price side</h2>
-    <div class="row" id="sides"></div>
-  </section>
+    <fieldset>
+      <legend>2. Period</legend>
+      <div class="row">
+        <label>From <select id="from"></select></label>
+        <label>To <select id="to"></select></label>
+        <button class="btn sm" id="yLatest">Latest year</button>
+        <button class="btn sm" id="y5">Last 5 years</button>
+        <button class="btn sm" id="yAll">Full history</button>
+      </div>
+      <div class="mini" style="margin-top:6px">Jei market-e oi period-e data nai, shey market-er file ashbe na.</div>
+    </fieldset>
 
-  <section>
+    <fieldset>
+      <legend>3. Options</legend>
+      <div class="row" id="sides"></div>
+      <div style="margin-top:8px"><label class="opt"><input type="checkbox" id="vol" checked> Include volume column</label></div>
+    </fieldset>
+
+    <details>
+      <summary>Individual files</summary>
+      <div class="tbl"><table><thead><tr><th>File</th><th>Size</th><th>Updated</th></tr></thead><tbody id="rows"></tbody></table></div>
+    </details>
+  </div>
+
+  <div class="bar">
     <div class="row">
-      <button class="primary" id="zip">Download ZIP</button>
+      <button class="btn big" id="zip">Download ZIP</button>
       <span id="summary"></span>
     </div>
-    <div class="note" id="status">ZIP-e folder structure hobe: MARKET/MARKET_YEAR_side.csv. Data timezone: UTC.</div>
-  </section>
-
-  <section>
-    <h2>Individual files</h2>
-    <div class="wrap"><table><thead><tr><th>File</th><th>Size</th><th>Updated</th></tr></thead><tbody id="rows"></tbody></table></div>
-  </section>
-</main>
+    <div class="prog"><i id="pbar"></i></div>
+    <div id="status">Ready.</div>
+  </div>
+</div>
 
 <script type="module">
 import { downloadZip } from "https://cdn.jsdelivr.net/npm/client-zip@2.4.5/index.js";
 
 const $ = (id) => document.getElementById(id);
 const fmt = (b) => (b > 1e9 ? (b / 1e9).toFixed(2) + " GB" : (b / 1e6).toFixed(1) + " MB");
-let files = [], markets = [], years = [];
-let selM = new Set(), selY = new Set(), side = "both";
+const GROUP_ORDER = ["Forex Majors", "Forex Crosses", "Crypto", "Metals & Energy", "Indices", "Other"];
 
-function chips(el, items, sel, label) {
-  el.innerHTML = "";
-  items.forEach((v) => {
-    const b = document.createElement("button");
-    b.textContent = label ? label(v) : v;
-    if (sel.has(v)) b.className = "on";
-    b.onclick = () => { sel.has(v) ? sel.delete(v) : sel.add(v); render(); };
-    el.append(b);
-  });
-}
+let files = [], meta = {}, markets = [], years = [], range = {}, maxY = {};
+let selM = new Set(), from = 0, to = 0, side = "both", latestOnly = false;
 
 function filtered() {
   return files
-    .filter((f) => selM.has(f.market) && selY.has(f.year) && (side === "both" || f.side === side))
+    .filter((f) => selM.has(f.market) && (side === "both" || f.side === side) &&
+      (latestOnly ? f.year === maxY[f.market] : f.year >= from && f.year <= to))
     .sort((a, b) => a.market.localeCompare(b.market) || a.year - b.year || a.side.localeCompare(b.side));
 }
 
-function render() {
-  chips($("markets"), markets, selM);
-  chips($("years"), years, selY);
+function renderMarkets() {
+  const groups = {};
+  markets.forEach((m) => { const g = (meta[m] && meta[m].group) || "Other"; (groups[g] = groups[g] || []).push(m); });
+  $("groups").innerHTML = "";
+  GROUP_ORDER.filter((g) => groups[g]).forEach((g) => {
+    const fs = document.createElement("fieldset");
+    const lg = document.createElement("legend");
+    lg.textContent = g + " ";
+    const tg = document.createElement("button");
+    tg.className = "btn sm"; tg.textContent = "toggle";
+    tg.onclick = () => {
+      const all = groups[g].every((m) => selM.has(m));
+      groups[g].forEach((m) => (all ? selM.delete(m) : selM.add(m)));
+      latestOnly = latestOnly; refresh();
+    };
+    lg.append(tg); fs.append(lg);
+    const row = document.createElement("div"); row.className = "row";
+    groups[g].forEach((m) => {
+      const l = document.createElement("label"); l.className = "chip"; l.dataset.key = (m + " " + ((meta[m] && meta[m].name) || "")).toLowerCase();
+      const i = document.createElement("input"); i.type = "checkbox"; i.checked = selM.has(m);
+      i.onchange = () => { i.checked ? selM.add(m) : selM.delete(m); refresh(); };
+      const s = document.createElement("span"); s.textContent = m;
+      s.title = `${(meta[m] && meta[m].name) || m} | ${range[m][0]}-${range[m][1]}`;
+      l.append(i, s); row.append(l);
+    });
+    fs.append(row); $("groups").append(fs);
+  });
+  applySearch();
+}
+
+function applySearch() {
+  const q = $("q").value.trim().toLowerCase();
+  document.querySelectorAll(".chip").forEach((c) => c.classList.toggle("hide", q && !c.dataset.key.includes(q)));
+}
+
+function refresh() {
+  document.querySelectorAll(".chip input").forEach((i) => { i.checked = selM.has(i.nextSibling.textContent); });
+  $("from").value = from; $("to").value = to;
   $("sides").innerHTML = "";
   [["both", "Bid + Ask"], ["bid", "Bid only"], ["ask", "Ask only"]].forEach(([v, t]) => {
-    const b = document.createElement("button");
-    b.textContent = t;
-    if (side === v) b.className = "on";
-    b.onclick = () => { side = v; render(); };
-    $("sides").append(b);
+    const l = document.createElement("label"); l.className = "opt";
+    const r = document.createElement("input"); r.type = "radio"; r.name = "side"; r.checked = side === v;
+    r.onchange = () => { side = v; refresh(); };
+    l.append(r, document.createTextNode(t)); $("sides").append(l);
   });
   const list = filtered();
-  const total = list.reduce((s, f) => s + f.size, 0);
-  $("summary").textContent = `${list.length} files • ${fmt(total)}`;
+  $("summary").textContent = `${list.length} files | ${fmt(list.reduce((s, f) => s + f.size, 0))}${latestOnly ? " | latest year per market" : ""}`;
   $("zip").disabled = !list.length;
   $("rows").innerHTML = list.map((f) =>
-    `<tr><td><a href="/dl/${f.name}">${f.name}</a></td><td>${fmt(f.size)}</td><td>${f.updated.slice(0, 10)}</td></tr>`
-  ).join("");
+    `<tr><td><a href="/dl/${f.name}" data-n="${f.name}">${f.name}</a></td><td>${fmt(f.size)}</td><td>${f.updated.slice(0, 10)}</td></tr>`).join("");
 }
 
-async function init() {
-  const r = await fetch("/api/files");
-  if (!r.ok) { $("meta").textContent = "File list load hoyni (" + r.status + ")"; return; }
-  files = await r.json();
-  if (!files.length) { $("meta").textContent = "Ekhono kono data upload hoyni."; return; }
-  markets = [...new Set(files.map((f) => f.market))].sort();
-  years = [...new Set(files.map((f) => f.year))].sort();
-  selM = new Set(markets);
-  selY = new Set([years[years.length - 1]]);
-  const last = files.map((f) => f.updated).sort().pop();
-  $("meta").textContent = `${markets.length} markets • ${years[0]}–${years[years.length - 1]} • last update ${last.slice(0, 10)}`;
-  render();
+// ---- volume column strip (browser-e, file-er sheshe column bad) ----
+const strip = (s) => s.replace(/,[^,\r\n]*(?=\r?\n|$)/g, "");
+function processStream(body, withVolume, onBytes) {
+  const dec = new TextDecoder(), enc = new TextEncoder();
+  let buf = "", first = true, doStrip = false;
+  return body.pipeThrough(new TransformStream({
+    transform(chunk, c) {
+      onBytes && onBytes(chunk.length);
+      if (withVolume) return c.enqueue(chunk);
+      buf += dec.decode(chunk, { stream: true });
+      if (first) { const nl = buf.indexOf("\n"); if (nl < 0) return; doStrip = /volume/i.test(buf.slice(0, nl)); first = false; }
+      const i = buf.lastIndexOf("\n"); if (i < 0) return;
+      const part = buf.slice(0, i + 1); buf = buf.slice(i + 1);
+      c.enqueue(enc.encode(doStrip ? strip(part) : part));
+    },
+    flush(c) { if (!withVolume && buf) c.enqueue(enc.encode(doStrip ? strip(buf) : buf)); },
+  }));
 }
 
-$("mAll").onclick = () => { selM = new Set(markets); render(); };
-$("mNone").onclick = () => { selM = new Set(); render(); };
-$("yLatest").onclick = () => { selY = new Set([years[years.length - 1]]); render(); };
-$("yAll").onclick = () => { selY = new Set(years); render(); };
+async function saveBlob(blob, name) {
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob); a.download = name; a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 60000);
+}
 
-$("zip").onclick = async () => {
-  const list = filtered();
-  if (!list.length) return;
-  const status = $("status");
-  $("zip").disabled = true;
-  const zipName = "dukascopy-m1-data.zip";
-  let n = 0;
+$("rows").addEventListener("click", async (e) => {
+  const a = e.target.closest("a[data-n]"); if (!a || $("vol").checked) return;
+  e.preventDefault();
+  $("status").textContent = "Preparing " + a.dataset.n + "...";
+  const r = await fetch("/dl/" + a.dataset.n);
+  if (!r.ok) { $("status").textContent = "Error " + r.status; return; }
+  const blob = await new Response(processStream(r.body, false)).blob();
+  saveBlob(blob, a.dataset.n); $("status").textContent = "Done.";
+});
+
+async function startZip() {
+  const list = filtered(); if (!list.length) return;
+  const withVol = $("vol").checked, total = list.reduce((s, f) => s + f.size, 0);
+  let done = 0, n = 0; const t0 = Date.now();
+  $("zip").disabled = true; $("latestAll").disabled = true;
+  const zipName = "dukascopy-m1-" + new Date().toISOString().slice(0, 10) + ".zip";
 
   async function* gen() {
     for (const f of list) {
-      status.textContent = `Downloading ${f.name} (${++n}/${list.length})…`;
+      n++;
       const r = await fetch("/dl/" + f.name);
       if (!r.ok) throw new Error(f.name + " failed: " + r.status);
-      yield { name: `${f.market}/${f.name}`, lastModified: new Date(f.updated), input: r };
+      const body = processStream(r.body, withVol, (b) => {
+        done += b;
+        const pct = Math.min(100, (done / total) * 100), sp = done / 1e6 / Math.max(1, (Date.now() - t0) / 1000);
+        $("pbar").style.width = pct + "%";
+        $("status").textContent = `[${n}/${list.length}] ${f.name} | ${pct.toFixed(0)}% | ${sp.toFixed(1)} MB/s`;
+      });
+      yield { name: `${f.market}/${f.name}`, lastModified: new Date(f.updated), input: new Response(body) };
     }
   }
 
@@ -152,19 +238,44 @@ $("zip").onclick = async () => {
       const w = await h.createWritable();
       await downloadZip(gen()).body.pipeTo(w);
     } else {
-      const blob = await downloadZip(gen()).blob();
-      const a = document.createElement("a");
-      a.href = URL.createObjectURL(blob);
-      a.download = zipName;
-      a.click();
-      setTimeout(() => URL.revokeObjectURL(a.href), 60000);
+      saveBlob(await downloadZip(gen()).blob(), zipName);
     }
-    status.textContent = "Done ✔";
+    $("pbar").style.width = "100%"; $("status").textContent = "Done.";
   } catch (e) {
-    status.textContent = e.name === "AbortError" ? "Cancelled" : "Error: " + e.message;
+    $("status").textContent = e.name === "AbortError" ? "Cancelled." : "Error: " + e.message;
   }
-  $("zip").disabled = false;
-};
+  $("zip").disabled = false; $("latestAll").disabled = false;
+}
+
+async function init() {
+  try { meta = await (await fetch("/markets.json")).json(); } catch { meta = {}; }
+  const r = await fetch("/api/files");
+  if (!r.ok) { $("meta").textContent = "File list load hoyni (" + r.status + ")"; return; }
+  files = await r.json();
+  if (!files.length) { $("meta").textContent = "Ekhono kono data upload hoyni."; return; }
+  markets = [...new Set(files.map((f) => f.market))].sort();
+  years = [...new Set(files.map((f) => f.year))].sort((a, b) => a - b);
+  markets.forEach((m) => {
+    const ys = files.filter((f) => f.market === m).map((f) => f.year);
+    range[m] = [Math.min(...ys), Math.max(...ys)]; maxY[m] = range[m][1];
+  });
+  $("from").innerHTML = $("to").innerHTML = years.map((y) => `<option>${y}</option>`).join("");
+  selM = new Set(markets); from = to = years[years.length - 1];
+  const last = files.map((f) => f.updated).sort().pop();
+  $("meta").textContent = `${markets.length} markets | ${years[0]}-${years[years.length - 1]} | last update ${last.slice(0, 10)} | timezone UTC`;
+  renderMarkets(); refresh();
+}
+
+$("q").oninput = applySearch;
+$("mAll").onclick = () => { selM = new Set(markets); refresh(); };
+$("mNone").onclick = () => { selM = new Set(); refresh(); };
+$("from").onchange = (e) => { from = +e.target.value; if (to < from) to = from; latestOnly = false; refresh(); };
+$("to").onchange = (e) => { to = +e.target.value; if (from > to) from = to; latestOnly = false; refresh(); };
+$("yLatest").onclick = () => { from = to = years[years.length - 1]; latestOnly = false; refresh(); };
+$("y5").onclick = () => { to = years[years.length - 1]; from = Math.max(years[0], to - 4); latestOnly = false; refresh(); };
+$("yAll").onclick = () => { from = years[0]; to = years[years.length - 1]; latestOnly = false; refresh(); };
+$("zip").onclick = startZip;
+$("latestAll").onclick = () => { selM = new Set(markets); side = "both"; latestOnly = true; refresh(); startZip(); };
 
 init();
 </script>

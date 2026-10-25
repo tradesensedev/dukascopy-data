@@ -1,0 +1,42 @@
+name: Dukascopy M1
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 6 * * 6'   # prottek Saturday 06:00 UTC
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dukascopy
+  cancel-in-progress: false
+
+jobs:
+  matrix:
+    runs-on: ubuntu-latest
+    outputs:
+      list: ${{ steps.m.outputs.list }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: m
+        run: echo "list=$(jq -c 'keys' markets.json)" >> "$GITHUB_OUTPUT"
+
+  download:
+    needs: matrix
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        market: ${{ fromJSON(needs.matrix.outputs.list) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install -g dukascopy-node
+      - env:
+          GH_TOKEN: ${{ github.token }}
+        run: bash download_market.sh ${{ matrix.market }}

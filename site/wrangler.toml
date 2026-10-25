@@ -7,4 +7,4 @@ directory = "./public"
 
 [vars]
 GH_REPO = "tradesensedev/dukascopy-data"
-GH_TAG = "data"
+GH_PREFIX = "m1-"
