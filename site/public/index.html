@@ -82,9 +82,9 @@ select:disabled{opacity:.5}
 .seg label:hover span{background:var(--head)}
 .seg input:checked+span{background:var(--ink);color:var(--bg);font-weight:700}
 .seg input:focus-visible+span{outline:2px dotted var(--acc);outline-offset:-3px}
-.opt{display:flex;align-items:center;gap:8px;cursor:pointer;margin-top:8px}
-.opt input{width:16px;height:16px;margin:0;accent-color:var(--ink);cursor:pointer}
-.opt small{color:var(--mut);display:block;font-size:12px;line-height:1.2}
+.opt{display:flex;align-items:flex-start;gap:8px;cursor:pointer;margin-top:8px}
+.opt input{width:16px;height:16px;margin:2px 0 0;accent-color:var(--ink);cursor:pointer;flex:none}
+.opt small{color:var(--mut);display:block;font-size:12px;line-height:1.25}
 .sum{background:var(--head);border:1px solid var(--line);padding:8px 10px;margin-bottom:8px}
 .sum b{font:700 15px ui-monospace,Consolas,monospace;display:block}
 .sum span{color:var(--mut);font-size:12px}
@@ -138,9 +138,7 @@ td a:hover{color:var(--acc)}
   <div id="app" class="layout">
     <div class="card mk-card">
       <div class="tools">
-        <div class="r1">
-          <h2><span class="n">1</span>Markets <span class="cnt" id="mcount"></span></h2>
-        </div>
+        <div class="r1"><h2><span class="n">1</span>Markets <span class="cnt" id="mcount"></span></h2></div>
         <div class="r2">
           <button class="btn sm" id="mAll">All</button>
           <button class="btn sm" id="mNone">None</button>
@@ -164,6 +162,7 @@ td a:hover{color:var(--acc)}
         <div class="seg" id="sides"></div>
         <label class="opt"><input type="checkbox" id="vol" checked><span>Include volume column</span></label>
         <label class="opt"><input type="checkbox" id="folders" checked><span>Folder per market<small>OFF dile shob file ek folder-e</small></span></label>
+        <label class="opt"><input type="checkbox" id="keepgz"><span>Keep compressed (.csv.gz)<small>ZIP onek chhoto, kintu extract kore nite hobe. Off thakle .csv file pabe.</small></span></label>
       </div>
       <h2 style="margin-bottom:8px"><span class="n">4</span>Download</h2>
       <div class="sum"><b id="sumA">-</b><span id="sumB"></span></div>
@@ -181,7 +180,7 @@ td a:hover{color:var(--acc)}
 
   <details class="files" id="filesBox">
     <summary>Browse individual files</summary>
-    <div class="tbl"><table><thead><tr><th>File</th><th>Size</th><th>Updated</th></tr></thead><tbody id="rows"></tbody></table></div>
+    <div class="tbl"><table><thead><tr><th>File</th><th>Download size</th><th>Updated</th></tr></thead><tbody id="rows"></tbody></table></div>
   </details>
 </div>
 
@@ -198,7 +197,8 @@ const el = (t, c) => { const e = document.createElement(t); if (c) e.className =
 const fmt = (b) => (b > 1e9 ? (b / 1e9).toFixed(2) + " GB" : (b / 1e6).toFixed(0) + " MB");
 const GROUP_ORDER = ["Forex Majors", "Forex Crosses", "Crypto", "Metals & Energy", "Indices", "Other"];
 const demo = new URLSearchParams(location.search).has("demo");
-const KEY = "dukascopy-m1-v2";
+const KEY = "dukascopy-m1-v3";
+const PARALLEL = 5;
 
 let files = [], meta = {}, markets = [], years = [], range = {}, maxY = {}, groups = {};
 let selM = new Set(), from = 0, to = 0, side = "both", latestOnly = true, busy = false, ctrl = null;
@@ -210,11 +210,9 @@ const filtered = () => files.filter((f) => selM.has(f.market) && inScope(f))
 
 function save() {
   if (demo) return;
-  try { localStorage.setItem(KEY, JSON.stringify({ m: [...selM], from, to, side, latestOnly, vol: $("vol").checked, folders: $("folders").checked })); } catch {}
+  try { localStorage.setItem(KEY, JSON.stringify({ m: [...selM], from, to, side, latestOnly, vol: $("vol").checked, folders: $("folders").checked, keepgz: $("keepgz").checked })); } catch {}
 }
-function load() {
-  try { return JSON.parse(localStorage.getItem(KEY) || "null"); } catch { return null; }
-}
+function load() { try { return JSON.parse(localStorage.getItem(KEY) || "null"); } catch { return null; } }
 
 function renderMarkets() {
   const root = $("mlist"); root.innerHTML = "";
@@ -247,7 +245,8 @@ function renderOnly() {
   GROUP_ORDER.filter((g) => groups[g]).forEach((g) => {
     const ms = groups[g];
     const active = selM.size === ms.length && ms.every((m) => selM.has(m));
-    const b = el("button", "btn sm" + (active ? " act" : "")); b.textContent = g.replace("Forex ", "FX ").replace("Metals & Energy", "Metals/Energy");
+    const b = el("button", "btn sm" + (active ? " act" : ""));
+    b.textContent = g.replace("Forex ", "FX ").replace("Metals & Energy", "Metals/Energy");
     b.onclick = () => { selM = new Set(ms); refresh(); };
     $("only").append(b);
   });
@@ -285,12 +284,13 @@ function refresh() {
   const nm = new Set(list.map((f) => f.market)).size;
   $("mcount").textContent = `${selM.size}/${markets.length} selected`;
   $("sumA").textContent = `${list.length} files \u00b7 ${fmt(total)}`;
-  $("sumB").textContent = `${nm} markets \u00b7 ` + (latestOnly ? "latest year each" : from === to ? from : `${from}\u2013${to}`);
+  $("sumB").textContent = `download size \u00b7 ${nm} markets \u00b7 ` + (latestOnly ? "latest year each" : from === to ? from : `${from}\u2013${to}`);
   $("mSum").innerHTML = busy ? "Downloading..." : `${list.length} files<small>${fmt(total)}</small>`;
   let note = "";
   if (!selM.size) note = "Kom-pokkhe ekta market select koro.";
   else if (!list.length) note = "Selected market gulo-te ei period-e data nai.";
-  else if (total > 1.5e9 && !window.showSaveFilePicker) note = "Boro download: Chrome ba Edge use koro, nahole puro ZIP RAM-e thakbe.";
+  else if (!$("keepgz").checked && total > 4e8 && !window.showSaveFilePicker) note = "Boro download: Chrome ba Edge use koro, nahole puro ZIP RAM-e thakbe. Ba 'Keep compressed' on koro.";
+  else if (!$("keepgz").checked && total > 4e8) note = "CSV-te expand hole disk-e size prai 4-6x boro hote pare.";
   $("note").textContent = note; $("note").classList.toggle("show", !!note);
   $("zip").disabled = busy || !list.length || demo;
   $("zip2").disabled = demo || (!busy && !list.length);
@@ -302,24 +302,31 @@ function refresh() {
   save();
 }
 
-// volume column strip (browser-e)
+// ---- stream helpers ----
 const strip = (s) => s.replace(/,[^,\r\n]*(?=\r?\n|$)/g, "");
-function processStream(body, withVolume, onBytes) {
+function stripStream(stream) {
   const dec = new TextDecoder(), enc = new TextEncoder();
   let buf = "", first = true, doStrip = false;
-  return body.pipeThrough(new TransformStream({
+  return stream.pipeThrough(new TransformStream({
     transform(chunk, c) {
-      onBytes && onBytes(chunk.length);
-      if (withVolume) return c.enqueue(chunk);
       buf += dec.decode(chunk, { stream: true });
       if (first) { const nl = buf.indexOf("\n"); if (nl < 0) return; doStrip = /volume/i.test(buf.slice(0, nl)); first = false; }
       const i = buf.lastIndexOf("\n"); if (i < 0) return;
       const part = buf.slice(0, i + 1); buf = buf.slice(i + 1);
       c.enqueue(enc.encode(doStrip ? strip(part) : part));
     },
-    flush(c) { if (!withVolume && buf) c.enqueue(enc.encode(doStrip ? strip(buf) : buf)); },
+    flush(c) { if (buf) c.enqueue(enc.encode(doStrip ? strip(buf) : buf)); },
   }));
 }
+function build(blob, f, withVol, keepGz) {
+  if (keepGz && f.gz && withVol) return blob.stream();
+  let s = blob.stream();
+  if (f.gz) s = s.pipeThrough(new DecompressionStream("gzip"));
+  if (!withVol) s = stripStream(s);
+  if (keepGz) s = s.pipeThrough(new CompressionStream("gzip"));
+  return s;
+}
+const outName = (f, keepGz) => f.base + (keepGz ? ".csv.gz" : ".csv");
 function saveBlob(blob, name) {
   const a = document.createElement("a");
   a.href = URL.createObjectURL(blob); a.download = name; a.click();
@@ -327,40 +334,57 @@ function saveBlob(blob, name) {
 }
 const say = (t) => { $("status").textContent = t; $("status").classList.add("show"); };
 
+async function loadBlob(f, signal, onBytes) {
+  const r = await fetch("/dl/" + f.name, { signal });
+  if (!r.ok) throw new Error(f.name + " failed: " + r.status);
+  const reader = r.body.getReader(), parts = [];
+  for (;;) { const { done, value } = await reader.read(); if (done) break; parts.push(value); onBytes && onBytes(value.length); }
+  return new Blob(parts);
+}
+
 $("rows").addEventListener("click", async (e) => {
   const a = e.target.closest("a[data-n]"); if (!a) return;
-  if (demo) { e.preventDefault(); return; }
-  if ($("vol").checked) return;
-  e.preventDefault(); say("Preparing " + a.dataset.n + "...");
-  const r = await fetch("/dl/" + a.dataset.n);
-  if (!r.ok) return say("Error " + r.status);
-  saveBlob(await new Response(processStream(r.body, false)).blob(), a.dataset.n);
-  say("Done.");
+  e.preventDefault(); if (demo) return;
+  const f = files.find((x) => x.name === a.dataset.n); if (!f) return;
+  const keepGz = $("keepgz").checked, withVol = $("vol").checked;
+  say("Preparing " + f.name + "...");
+  try {
+    const blob = await loadBlob(f);
+    if (f.gz === keepGz && withVol) saveBlob(blob, f.name);
+    else saveBlob(await new Response(build(blob, f, withVol, keepGz)).blob(), outName(f, keepGz));
+    say("Done.");
+  } catch (err) { say("Error: " + err.message); }
 });
 
 async function startZip() {
   if (demo) return say("Demo mode: real file nai.");
   const list = filtered(); if (!list.length || busy) return;
-  const withVol = $("vol").checked, perFolder = $("folders").checked;
+  const withVol = $("vol").checked, perFolder = $("folders").checked, keepGz = $("keepgz").checked;
   const total = list.reduce((s, f) => s + f.size, 0);
-  let done = 0, n = 0; const t0 = Date.now();
+  let dl = 0, n = 0; const t0 = Date.now();
   ctrl = new AbortController(); const signal = ctrl.signal;
   busy = true; refresh();
   $("bar").classList.add("show"); $("pbar").style.width = "0";
   const zipName = "dukascopy-m1-" + new Date().toISOString().slice(0, 10) + ".zip";
+  const onBytes = (b) => {
+    dl += b;
+    const pct = Math.min(100, (dl / total) * 100), sp = dl / 1e6 / Math.max(1, (Date.now() - t0) / 1000);
+    $("pbar").style.width = pct + "%";
+    say(`${Math.min(n + 1, list.length)}/${list.length} files \u00b7 ${pct.toFixed(0)}% \u00b7 ${sp.toFixed(1)} MB/s`);
+  };
 
+  const jobs = new Map();
+  const ensure = (i) => {
+    for (let k = i; k < Math.min(list.length, i + PARALLEL); k++) if (!jobs.has(k)) {
+      const p = loadBlob(list[k], signal, onBytes); p.catch(() => {}); jobs.set(k, p);
+    }
+  };
   async function* gen() {
-    for (const f of list) {
-      n++;
-      const r = await fetch("/dl/" + f.name, { signal });
-      if (!r.ok) throw new Error(f.name + " failed: " + r.status);
-      const body = processStream(r.body, withVol, (b) => {
-        done += b;
-        const pct = Math.min(100, (done / total) * 100), sp = done / 1e6 / Math.max(1, (Date.now() - t0) / 1000);
-        $("pbar").style.width = pct + "%";
-        say(`${n}/${list.length} \u00b7 ${f.name} \u00b7 ${pct.toFixed(0)}% \u00b7 ${sp.toFixed(1)} MB/s`);
-      });
-      yield { name: perFolder ? `${f.market}/${f.name}` : f.name, lastModified: new Date(f.updated), input: new Response(body) };
+    for (let i = 0; i < list.length; i++) {
+      ensure(i); n = i;
+      const f = list[i], blob = await jobs.get(i); jobs.delete(i);
+      const nm = outName(f, keepGz);
+      yield { name: perFolder ? `${f.market}/${nm}` : nm, lastModified: new Date(f.updated), input: new Response(build(blob, f, withVol, keepGz)) };
     }
   }
   try {
@@ -381,7 +405,7 @@ function demoFiles() {
   Object.keys(meta).forEach((m, i) => {
     const start = ["BTCUSD", "ETHUSD", "LTCUSD"].includes(m) ? 2017 : 2003 + ((i * 3) % 10);
     for (let y = start; y <= cy; y++) ["bid", "ask"].forEach((s) =>
-      out.push({ name: `${m}_${y}_${s}.csv`, id: 0, market: m, year: y, side: s, size: 18e6 + ((i * 7 + y) % 20) * 1e6, updated: `${y === cy ? cy : y + 1}-01-03T06:00:00Z` }));
+      out.push({ name: `${m}_${y}_${s}.csv.gz`, id: 0, market: m, year: y, side: s, size: 4e6 + ((i * 7 + y) % 5) * 1e6, updated: `${y === cy ? cy : y + 1}-01-03T06:00:00Z` }));
   });
   return out;
 }
@@ -393,12 +417,20 @@ function showEmpty(title, text) {
 
 async function init() {
   try { meta = await (await fetch("/markets.json")).json(); } catch { meta = {}; }
-  if (demo) { files = demoFiles(); $("demoTag").innerHTML = '<span class="demo">Demo preview</span>'; }
+  let raw;
+  if (demo) { raw = demoFiles(); $("demoTag").innerHTML = '<span class="demo">Demo preview</span>'; }
   else {
     let r; try { r = await fetch("/api/files"); } catch { r = { ok: false, status: "network" }; }
     if (!r.ok) return showEmpty("Could not load the file list", "Error " + r.status + ". Kichukkhon pore reload koro.");
-    files = await r.json();
+    raw = await r.json();
   }
+  // same file .csv ar .csv.gz dutoi thakle .gz nibo
+  const by = new Map();
+  raw.forEach((f) => {
+    f.base = f.name.replace(/\.csv(\.gz)?$/, ""); f.gz = f.name.endsWith(".gz");
+    const o = by.get(f.base); if (!o || f.gz) by.set(f.base, f);
+  });
+  files = [...by.values()];
   if (!files.length) return showEmpty("Data is being prepared", "Backfill cholche. Kichukkhon pore reload dao.");
 
   markets = [...new Set(files.map((f) => f.market))].sort();
@@ -413,18 +445,17 @@ async function init() {
 
   const s = !demo && load();
   if (s) {
-    const m = (s.m || []).filter((x) => markets.includes(x));
-    selM = new Set(m);
+    selM = new Set((s.m || []).filter((x) => markets.includes(x)));
     if (years.includes(s.from) && years.includes(s.to) && s.from <= s.to) { from = s.from; to = s.to; }
     if (["both", "bid", "ask"].includes(s.side)) side = s.side;
     latestOnly = s.latestOnly !== false;
-    $("vol").checked = s.vol !== false; $("folders").checked = s.folders !== false;
+    $("vol").checked = s.vol !== false; $("folders").checked = s.folders !== false; $("keepgz").checked = !!s.keepgz;
   }
 
   const last = files.map((f) => f.updated).sort().pop();
   $("stats").innerHTML = [
     [markets.length, "markets"], [years[0] + "\u2013" + years[years.length - 1], ""],
-    [fmt(files.reduce((s, f) => s + f.size, 0)), "total"], ["updated " + last.slice(0, 10), ""],
+    [fmt(files.reduce((s, f) => s + f.size, 0)), "stored"], ["updated " + last.slice(0, 10), ""],
   ].map(([v, l]) => `<span><b>${v}</b> ${l}</span>`).join("");
   refresh();
 }
@@ -434,7 +465,7 @@ $("mNone").onclick = () => { selM = new Set(); refresh(); };
 $("mInv").onclick = () => { selM = new Set(markets.filter((m) => !selM.has(m))); refresh(); };
 $("from").onchange = (e) => { from = +e.target.value; if (to < from) to = from; latestOnly = false; refresh(); };
 $("to").onchange = (e) => { to = +e.target.value; if (from > to) from = to; latestOnly = false; refresh(); };
-$("vol").onchange = $("folders").onchange = refresh;
+$("vol").onchange = $("folders").onchange = $("keepgz").onchange = refresh;
 $("zip").onclick = startZip;
 $("cancel").onclick = cancelZip;
 $("zip2").onclick = () => (busy ? cancelZip() : startZip());

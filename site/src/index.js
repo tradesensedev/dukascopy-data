@@ -1,6 +1,7 @@
 const GH = "https://api.github.com";
 let memo = { t: 0, files: null };
 const TTL = 5 * 60 * 1000;
+const NAME_RE = /^([A-Z0-9]+)_(\d{4})_(bid|ask)\.csv(\.gz)?$/;
 
 const hdr = (env, accept) => ({
   Authorization: `Bearer ${env.GITHUB_TOKEN}`,
@@ -21,7 +22,7 @@ async function listAssets(env, force = false) {
     for (const rel of rels) {
       if (!rel.tag_name.startsWith(env.GH_PREFIX)) continue;
       for (const a of rel.assets || []) {
-        const m = /^([A-Z0-9]+)_(\d{4})_(bid|ask)\.csv$/.exec(a.name);
+        const m = NAME_RE.exec(a.name);
         if (m) out.push({ name: a.name, id: a.id, market: m[1], year: +m[2], side: m[3], size: a.size, updated: a.updated_at });
       }
     }
@@ -31,36 +32,34 @@ async function listAssets(env, force = false) {
   return out;
 }
 
-async function fetchAsset(env, id) {
-  let r = await fetch(`${GH}/repos/${env.GH_REPO}/releases/assets/${id}`, {
-    headers: hdr(env, "application/octet-stream"),
-    redirect: "manual",
+async function viaApi(env, name) {
+  let files = await listAssets(env);
+  let f = files.find((x) => x.name === name);
+  if (!f) files = await listAssets(env, true), (f = files.find((x) => x.name === name));
+  if (!f) return null;
+  let r = await fetch(`${GH}/repos/${env.GH_REPO}/releases/assets/${f.id}`, {
+    headers: hdr(env, "application/octet-stream"), redirect: "manual",
   });
   if (r.status >= 300 && r.status < 400) r = await fetch(r.headers.get("location"));
   return r;
 }
 
 async function download(name, env) {
-  if (!/^[A-Z0-9]+_\d{4}_(bid|ask)\.csv$/.test(name)) return new Response("Bad name", { status: 400 });
-  let files = await listAssets(env);
-  let f = files.find((x) => x.name === name);
-  if (!f) return new Response("Not found", { status: 404 });
-  let r = await fetchAsset(env, f.id);
-  if (r.status === 404) {
-    files = await listAssets(env, true);
-    f = files.find((x) => x.name === name);
-    if (!f) return new Response("Not found", { status: 404 });
-    r = await fetchAsset(env, f.id);
-  }
+  const m = NAME_RE.exec(name);
+  if (!m) return new Response("Bad name", { status: 400 });
+  // public repo: API chhara shorashori stream (fast)
+  let r = await fetch(`https://github.com/${env.GH_REPO}/releases/download/${env.GH_PREFIX}${m[1]}/${name}`);
+  if (!r.ok) r = await viaApi(env, name);
+  if (!r) return new Response("Not found", { status: 404 });
   if (!r.ok) return new Response("Upstream error " + r.status, { status: 502 });
-  return new Response(r.body, {
-    headers: {
-      "content-type": "text/csv",
-      "content-length": String(f.size),
-      "content-disposition": `attachment; filename="${f.name}"`,
-      "cache-control": "no-store",
-    },
+  const h = new Headers({
+    "content-type": "application/octet-stream",
+    "content-disposition": `attachment; filename="${name}"`,
+    "cache-control": "no-store",
   });
+  const len = r.headers.get("content-length");
+  if (len) h.set("content-length", len);
+  return new Response(r.body, { headers: h });
 }
 
 export default {
