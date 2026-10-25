@@ -5,175 +5,164 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dukascopy M1 Data</title>
 <style>
-:root{--ink:#16140f;--mut:#6b6654;--line:#9b957e;--bg:#f2edde;--card:#fffdf5;--acc:#8b1a1a;--sel:#ffe9a8;--link:#1b3a8a;--btn:#e6e0cb;--hi:#fffef8;--lo:#8d8670;--head:#ebe4cd;--warn:#fff0c2}
-@media (prefers-color-scheme:dark){:root{--ink:#ece6d2;--mut:#a39d86;--line:#5a5646;--bg:#1b1a15;--card:#24231c;--acc:#ff8a73;--sel:#4a3d12;--link:#8fb0ff;--btn:#35332a;--hi:#4b4838;--lo:#0e0d0a;--head:#2d2b21;--warn:#3e3410}}
+:root{--ink:#17150f;--mut:#7a7563;--line:#ddd6c1;--bg:#f6f2e6;--card:#fffdf6;--acc:#8b1a1a;--link:#1b3a8a;--hov:#efe9d5;--warn:#fff0c2}
+@media (prefers-color-scheme:dark){:root{--ink:#ece6d2;--mut:#9a947e;--line:#3d3b30;--bg:#1a1913;--card:#22211a;--acc:#ff8a73;--link:#8fb0ff;--hov:#2b2a21;--warn:#3e3410}}
 *{box-sizing:border-box}
-body{margin:0;color:var(--ink);background:var(--bg);font:14px/1.45 Georgia,"Times New Roman",serif}
-.wrap{max-width:1100px;margin:0 auto;padding:0 16px}
-header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:14px 0 8px;border-bottom:3px double var(--ink)}
-.logo{display:flex;align-items:center;gap:9px;font-weight:700;font-size:20px}
-.logo i{background:var(--ink);color:var(--bg);font:700 13px ui-monospace,Consolas,monospace;font-style:normal;padding:3px 7px}
-.stats{display:flex;gap:6px;flex-wrap:wrap;font:12px ui-monospace,Consolas,monospace}
-.stats span{border:1px solid var(--line);background:var(--card);padding:1px 8px;color:var(--mut)}
-.stats b{color:var(--ink)}
-h1{margin:14px 0 2px;font-size:clamp(22px,3.4vw,30px);font-weight:700;line-height:1.15}
-h1 b{color:var(--acc);font-style:italic}
-.sub{color:var(--mut);margin:0 0 12px;font-style:italic}
-.btn{font:inherit;font-weight:700;color:var(--ink);background:var(--btn);border:2px solid;border-color:var(--hi) var(--lo) var(--lo) var(--hi);padding:6px 14px;cursor:pointer;white-space:nowrap;border-radius:0}
-.btn:hover{background:var(--sel)}
-.btn:active{border-color:var(--lo) var(--hi) var(--hi) var(--lo)}
-.btn.sm{padding:2px 10px;font-size:13px;font-weight:400}
-.btn.sm.act{border-color:var(--lo) var(--hi) var(--hi) var(--lo);background:var(--sel);font-weight:700}
-.btn.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+body{margin:0;color:var(--ink);background:var(--bg);font:14px/1.5 Georgia,"Times New Roman",serif}
+.wrap{max-width:1060px;margin:0 auto;padding:0 18px}
+header{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:18px 0 10px;border-bottom:1px solid var(--ink)}
+.logo{font-weight:700;font-size:19px}
+.logo i{font:700 12px ui-monospace,Consolas,monospace;font-style:normal;background:var(--ink);color:var(--bg);padding:2px 6px;margin-right:8px}
+#stats{font:12px ui-monospace,Consolas,monospace;color:var(--mut)}
+.intro{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:18px 0 20px}
+h1{margin:0;font-size:24px;font-weight:700;line-height:1.2}
+.sub{color:var(--mut);margin:2px 0 0;font-style:italic}
+.btn{font:inherit;font-weight:700;color:var(--ink);background:transparent;border:1px solid var(--ink);padding:6px 14px;cursor:pointer;white-space:nowrap;border-radius:0;transition:background .12s,color .12s}
+.btn:hover{background:var(--ink);color:var(--bg)}
+.btn.primary{background:var(--ink);color:var(--bg)}
 .btn.primary:hover{background:var(--acc);border-color:var(--acc);color:#fff}
-.btn.danger{background:var(--acc);border-color:var(--acc);color:#fff}
+.btn.danger{border-color:var(--acc);color:var(--acc)}
+.btn.danger:hover{background:var(--acc);color:#fff}
 .btn.wide{width:100%;padding:9px;font-size:15px}
-.btn:disabled{opacity:.45;cursor:not-allowed}
-.btn:disabled:hover{background:var(--btn)}
-.btn.primary:disabled:hover{background:var(--ink);border-color:var(--ink);color:var(--bg)}
-.quick{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:var(--head);border:1px solid var(--ink);padding:10px 12px;margin-bottom:14px}
-.quick .lbl{font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:12px}
-.quick .hint{color:var(--mut);font-style:italic;font-size:13px;flex:1;min-width:180px}
-.layout{display:grid;grid-template-columns:1fr 320px;gap:16px;align-items:start}
-.card{background:var(--card);border:1px solid var(--ink)}
-.mk-card{padding:0 14px 12px}
-.tools{position:sticky;top:0;z-index:5;background:var(--card);padding:10px 0 8px;border-bottom:1px solid var(--ink);margin-bottom:6px}
-.tools .r1{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-bottom:8px}
-.tools .r2{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
-.tools .sep{width:1px;height:20px;background:var(--line);margin:0 4px}
-.n{display:inline-block;background:var(--ink);color:var(--bg);font:700 12px ui-monospace,Consolas,monospace;padding:0 6px;margin-right:6px}
-h2{margin:0;font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-weight:700}
+.btn:disabled{opacity:.35;cursor:not-allowed}
+.btn:disabled:hover{background:transparent;color:var(--ink)}
+.btn.primary:disabled:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.quick{display:flex;gap:8px;flex-wrap:wrap}
+.layout{display:grid;grid-template-columns:1fr 270px;gap:34px;align-items:start}
+.tools{position:sticky;top:0;z-index:5;background:var(--bg);padding:8px 0;border-bottom:1px solid var(--line);display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.lbl{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--mut)}
 .cnt{font:12px ui-monospace,Consolas,monospace;color:var(--mut)}
-.link{background:none;border:0;color:var(--link);font:inherit;cursor:pointer;padding:0;text-decoration:underline}
-.link:hover{color:var(--acc)}
-.grp{margin-top:10px}
-.gh{display:flex;align-items:center;gap:8px;margin-bottom:5px}
-.gh h3{margin:0;font-size:14px;font-weight:700;font-style:italic}
-.gh small{color:var(--mut);font-family:ui-monospace,Consolas,monospace;font-size:12px}
-.gh .sp{flex:1;border-bottom:1px dotted var(--line);height:1px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:6px}
-.chip{position:relative;display:block;background:var(--card);border:1px solid var(--line);padding:5px 8px;cursor:pointer;user-select:none}
-.chip:hover{border-color:var(--ink);background:var(--head)}
+.tl,.link{background:none;border:0;color:var(--link);font:inherit;cursor:pointer;padding:0;text-decoration:underline;text-underline-offset:2px}
+.tl:hover,.link:hover{color:var(--acc)}
+.tl.act{color:var(--ink);font-weight:700;text-decoration:none;cursor:default}
+.tools .sp{flex:1}
+.grp{margin-top:16px}
+.gh{display:flex;align-items:baseline;gap:8px;margin-bottom:6px}
+.gh h3{margin:0;font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--mut)}
+.gh small{font:11px ui-monospace,Consolas,monospace;color:var(--mut)}
+.gh .sp{flex:1}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:6px}
+.chip{position:relative;display:block;background:var(--card);border:1px solid var(--line);padding:5px 9px;cursor:pointer;user-select:none;transition:background .1s,border-color .1s}
+.chip:hover{border-color:var(--ink)}
 .chip input{position:absolute;opacity:0}
 .chip b{display:block;font:700 13px ui-monospace,Consolas,monospace}
 .chip span{display:block;font:11px ui-monospace,Consolas,monospace;color:var(--mut)}
-.chip.on{border:2px solid var(--ink);background:var(--sel);padding:4px 7px}
-.chip.on::after{content:"\2713";position:absolute;top:2px;right:6px;font:700 12px sans-serif;color:var(--acc)}
-.chip.off{opacity:.45}
+.chip.on{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.chip.on span{color:var(--bg);opacity:.65}
+.chip.off{opacity:.4}
 .chip:has(input:focus-visible){outline:2px dotted var(--acc);outline-offset:2px}
-.side{padding:12px 14px;position:sticky;top:12px;max-height:calc(100vh - 24px);overflow:auto}
-.sec{margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid var(--line)}
-.sec h2{margin-bottom:8px}
+.side{position:sticky;top:14px;max-height:calc(100vh - 28px);overflow:auto;padding-left:22px;border-left:1px solid var(--line)}
+.sec{margin-bottom:20px}
+.sec .lbl{display:block;margin-bottom:8px}
 .pre{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-bottom:8px}
-.pre button{font:inherit;font-size:13px;color:var(--ink);background:var(--btn);border:2px solid;border-color:var(--hi) var(--lo) var(--lo) var(--hi);padding:3px;cursor:pointer;border-radius:0}
-.pre button:hover{background:var(--sel)}
-.pre button.act{border-color:var(--lo) var(--hi) var(--hi) var(--lo);background:var(--sel);font-weight:700}
+.pre button{font:inherit;font-size:13px;color:var(--ink);background:transparent;border:1px solid var(--line);padding:3px;cursor:pointer;border-radius:0}
+.pre button:hover{border-color:var(--ink)}
+.pre button.act{background:var(--ink);border-color:var(--ink);color:var(--bg)}
 .ft{display:flex;align-items:center;gap:8px}
 .ft select{flex:1;min-width:0}
 .ft em{color:var(--mut)}
-select{font:13px ui-monospace,Consolas,monospace;color:var(--ink);background:var(--card);border:1px solid var(--ink);border-radius:0;padding:4px 6px;cursor:pointer}
+select{font:13px ui-monospace,Consolas,monospace;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:0;padding:4px 6px;cursor:pointer}
+select:hover{border-color:var(--ink)}
 select:focus{outline:2px dotted var(--acc);outline-offset:1px}
-select:disabled{opacity:.5}
-.seg{display:flex;border:1px solid var(--ink)}
-.seg label{flex:1;position:relative;cursor:pointer;border-right:1px solid var(--ink)}
-.seg label:last-child{border-right:0}
+select:disabled{opacity:.4}
+.seg{display:flex;border:1px solid var(--line)}
+.seg label{flex:1;position:relative;cursor:pointer}
 .seg input{position:absolute;opacity:0}
-.seg span{display:block;text-align:center;padding:4px;font-size:13px;background:var(--card)}
-.seg label:hover span{background:var(--head)}
+.seg span{display:block;text-align:center;padding:4px;font-size:13px}
+.seg label:hover span{background:var(--hov)}
 .seg input:checked+span{background:var(--ink);color:var(--bg);font-weight:700}
 .seg input:focus-visible+span{outline:2px dotted var(--acc);outline-offset:-3px}
-.opt{display:flex;align-items:center;gap:8px;cursor:pointer;margin-top:8px}
-.opt input{width:16px;height:16px;margin:0;accent-color:var(--ink);cursor:pointer}
+.opt{display:flex;align-items:flex-start;gap:8px;cursor:pointer;margin-top:8px}
+.opt input{width:15px;height:15px;margin:3px 0 0;accent-color:var(--ink);cursor:pointer;flex:none}
 .opt small{color:var(--mut);display:block;font-size:12px;line-height:1.2}
-.sum{background:var(--head);border:1px solid var(--line);padding:8px 10px;margin-bottom:8px}
-.sum b{font:700 15px ui-monospace,Consolas,monospace;display:block}
+.sum{margin-bottom:10px}
+.sum b{font:700 16px ui-monospace,Consolas,monospace;display:block}
 .sum span{color:var(--mut);font-size:12px}
-.note{display:none;background:var(--warn);border:1px solid var(--line);padding:5px 8px;font-size:12.5px;margin-bottom:8px}
+.note{display:none;background:var(--warn);padding:5px 8px;font-size:12.5px;margin-bottom:8px}
 .note.show{display:block}
 .btns{display:flex;gap:6px}
-.btns .btn.primary{flex:1}
-.prog{height:12px;border:1px solid var(--ink);background:var(--card);margin-top:10px;display:none}
+.btns .primary{flex:1}
+.prog{height:4px;background:var(--line);margin-top:10px;display:none}
 .prog.show{display:block}
-.prog i{display:block;height:100%;width:0;background:repeating-linear-gradient(90deg,var(--ink) 0 6px,transparent 6px 8px)}
+.prog i{display:block;height:100%;width:0;background:var(--ink);transition:width .2s}
 #status{font:11.5px ui-monospace,Consolas,monospace;color:var(--mut);margin-top:6px;display:none;word-break:break-all}
 #status.show{display:block}
-details.files{margin:14px 0 90px}
-details.files summary{cursor:pointer;font-weight:700;padding:8px 14px;background:var(--card);border:1px solid var(--ink)}
-.tbl{max-height:280px;overflow:auto;margin-top:6px;background:var(--card);border:1px solid var(--ink)}
+details.files{margin:26px 0 90px}
+details.files summary{cursor:pointer;color:var(--link);text-decoration:underline;text-underline-offset:2px;width:max-content}
+.tbl{max-height:280px;overflow:auto;margin-top:8px;border:1px solid var(--line);background:var(--card)}
 table{width:100%;border-collapse:collapse;font:12.5px ui-monospace,Consolas,monospace}
-th{position:sticky;top:0;background:var(--head);text-align:left;padding:6px 12px;border-bottom:1px solid var(--ink)}
+th{position:sticky;top:0;background:var(--hov);text-align:left;padding:6px 12px}
 td{padding:4px 12px;border-top:1px solid var(--line)}
 td a{color:var(--link)}
 td a:hover{color:var(--acc)}
-.empty{text-align:center;padding:36px 20px;background:var(--card);border:1px dashed var(--ink);color:var(--mut)}
+.empty{text-align:center;padding:40px 20px;border:1px dashed var(--line);color:var(--mut)}
 .empty b{display:block;color:var(--ink);font-size:17px;margin-bottom:4px}
-.demo{background:var(--sel);border:1px solid var(--ink);padding:0 8px;font:11.5px ui-monospace,Consolas,monospace;font-style:normal}
+.demo{background:var(--hov);border:1px solid var(--line);padding:0 8px;font:11.5px ui-monospace,Consolas,monospace;font-style:normal}
 .mbar{display:none}
 @media (max-width:860px){
-  .layout{grid-template-columns:1fr}
-  .side{position:static;max-height:none}
-  .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:30;align-items:center;justify-content:space-between;gap:10px;background:var(--card);border-top:3px double var(--ink);padding:8px 14px}
+  .layout{grid-template-columns:1fr;gap:18px}
+  .side{position:static;max-height:none;padding:18px 0 0;border-left:0;border-top:1px solid var(--line)}
+  .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:30;align-items:center;justify-content:space-between;gap:10px;background:var(--card);border-top:1px solid var(--ink);padding:8px 16px}
   .mbar div{font-weight:700;font-size:13px}.mbar small{display:block;color:var(--mut);font-weight:400;font-size:11.5px}
-  .grid{grid-template-columns:repeat(auto-fill,minmax(104px,1fr))}
+  .grid{grid-template-columns:repeat(auto-fill,minmax(100px,1fr))}
+  details.files{margin-bottom:100px}
 }
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
-    <div class="logo"><i>M1</i> Dukascopy Data</div>
-    <div class="stats" id="stats"></div>
+    <div class="logo"><i>M1</i>Dukascopy Data</div>
+    <div id="stats"></div>
   </header>
 
-  <h1>1-minute market data, <b>ready to download</b></h1>
-  <p class="sub">Bid, ask and volume in organized ZIP folders. Timezone UTC. Updated weekly. <span id="demoTag"></span></p>
-
-  <div class="quick" id="quick">
-    <span class="lbl">Quick</span>
-    <button class="btn primary" id="qAll">&#8595; Latest year &middot; all markets</button>
-    <button class="btn" id="qSel">&#8595; Latest year &middot; selected markets</button>
-    <span class="hint">Quick button gulo dan-dike thaka Price, Volume ar Output option mene cholbe.</span>
+  <div class="intro" id="quick">
+    <div>
+      <h1>1-minute market data</h1>
+      <p class="sub">Bid, ask &amp; volume &middot; UTC &middot; updated weekly <span id="demoTag"></span></p>
+    </div>
+    <div class="quick">
+      <button class="btn primary" id="qAll">Latest year &middot; all markets</button>
+      <button class="btn" id="qSel">Latest year &middot; selected</button>
+    </div>
   </div>
 
   <div id="app" class="layout">
-    <div class="card mk-card">
+    <div>
       <div class="tools">
-        <div class="r1">
-          <h2><span class="n">1</span>Markets <span class="cnt" id="mcount"></span></h2>
-        </div>
-        <div class="r2">
-          <button class="btn sm" id="mAll">All</button>
-          <button class="btn sm" id="mNone">None</button>
-          <button class="btn sm" id="mInv">Invert</button>
-          <span class="sep"></span>
-          <span class="cnt">Only:</span>
-          <span id="only" style="display:contents"></span>
-        </div>
+        <span class="lbl">Markets</span><span class="cnt" id="mcount"></span>
+        <button class="tl" id="mAll">All</button>
+        <button class="tl" id="mNone">None</button>
+        <button class="tl" id="mInv">Invert</button>
+        <span class="sp"></span>
+        <span class="cnt">Only:</span>
+        <span id="only" style="display:contents"></span>
       </div>
       <div id="mlist"></div>
     </div>
 
-    <aside class="card side">
+    <aside class="side">
       <div class="sec">
-        <h2><span class="n">2</span>Period</h2>
+        <span class="lbl">Period</span>
         <div class="pre" id="presets"></div>
         <div class="ft"><select id="from"></select><em>to</em><select id="to"></select></div>
       </div>
       <div class="sec">
-        <h2><span class="n">3</span>Price &amp; output</h2>
+        <span class="lbl">Price &amp; output</span>
         <div class="seg" id="sides"></div>
-        <label class="opt"><input type="checkbox" id="vol" checked><span>Include volume column</span></label>
+        <label class="opt"><input type="checkbox" id="vol" checked><span>Include volume</span></label>
         <label class="opt"><input type="checkbox" id="folders" checked><span>Folder per market<small>OFF dile shob file ek folder-e</small></span></label>
       </div>
-      <h2 style="margin-bottom:8px"><span class="n">4</span>Download</h2>
-      <div class="sum"><b id="sumA">-</b><span id="sumB"></span></div>
-      <div class="note" id="note"></div>
-      <div class="btns">
-        <button class="btn primary wide" id="zip">Download ZIP</button>
-        <button class="btn danger" id="cancel" style="display:none">Cancel</button>
+      <div class="sec" style="margin-bottom:0">
+        <div class="sum"><b id="sumA">-</b><span id="sumB"></span></div>
+        <div class="note" id="note"></div>
+        <div class="btns">
+          <button class="btn primary wide" id="zip">Download ZIP</button>
+          <button class="btn danger" id="cancel" style="display:none">Cancel</button>
+        </div>
+        <div class="prog" id="bar"><i id="pbar"></i></div>
+        <div id="status"></div>
       </div>
-      <div class="prog" id="bar"><i id="pbar"></i></div>
-      <div id="status"></div>
     </aside>
   </div>
 
@@ -197,6 +186,7 @@ const $ = (id) => document.getElementById(id);
 const el = (t, c) => { const e = document.createElement(t); if (c) e.className = c; return e; };
 const fmt = (b) => (b > 1e9 ? (b / 1e9).toFixed(2) + " GB" : (b / 1e6).toFixed(0) + " MB");
 const GROUP_ORDER = ["Forex Majors", "Forex Crosses", "Crypto", "Metals & Energy", "Indices", "Other"];
+const SHORT = { "Forex Majors": "FX Majors", "Forex Crosses": "FX Crosses", "Metals & Energy": "Metals/Energy" };
 const demo = new URLSearchParams(location.search).has("demo");
 const KEY = "dukascopy-m1-v2";
 
@@ -223,7 +213,7 @@ function renderMarkets() {
     const sec = el("div", "grp"), gh = el("div", "gh");
     const h = el("h3"); h.textContent = g;
     const sm = el("small"); sm.textContent = `${n}/${ms.length}`;
-    const tg = el("button", "link"); tg.textContent = all ? "Clear" : "Select all";
+    const tg = el("button", "link"); tg.textContent = all ? "clear" : "select all";
     tg.onclick = () => { ms.forEach((m) => (all ? selM.delete(m) : selM.add(m))); refresh(); };
     gh.append(h, sm, el("span", "sp"), tg); sec.append(gh);
     const grid = el("div", "grid");
@@ -247,7 +237,7 @@ function renderOnly() {
   GROUP_ORDER.filter((g) => groups[g]).forEach((g) => {
     const ms = groups[g];
     const active = selM.size === ms.length && ms.every((m) => selM.has(m));
-    const b = el("button", "btn sm" + (active ? " act" : "")); b.textContent = g.replace("Forex ", "FX ").replace("Metals & Energy", "Metals/Energy");
+    const b = el("button", "tl" + (active ? " act" : "")); b.textContent = SHORT[g] || g;
     b.onclick = () => { selM = new Set(ms); refresh(); };
     $("only").append(b);
   });
@@ -283,7 +273,7 @@ function refresh() {
   renderMarkets(); renderOnly(); renderControls();
   const list = filtered(), total = list.reduce((s, f) => s + f.size, 0);
   const nm = new Set(list.map((f) => f.market)).size;
-  $("mcount").textContent = `${selM.size}/${markets.length} selected`;
+  $("mcount").textContent = `${selM.size}/${markets.length}`;
   $("sumA").textContent = `${list.length} files \u00b7 ${fmt(total)}`;
   $("sumB").textContent = `${nm} markets \u00b7 ` + (latestOnly ? "latest year each" : from === to ? from : `${from}\u2013${to}`);
   $("mSum").innerHTML = busy ? "Downloading..." : `${list.length} files<small>${fmt(total)}</small>`;
@@ -393,7 +383,7 @@ function showEmpty(title, text) {
 
 async function init() {
   try { meta = await (await fetch("/markets.json")).json(); } catch { meta = {}; }
-  if (demo) { files = demoFiles(); $("demoTag").innerHTML = '<span class="demo">Demo preview</span>'; }
+  if (demo) { files = demoFiles(); $("demoTag").innerHTML = '<span class="demo">demo</span>'; }
   else {
     let r; try { r = await fetch("/api/files"); } catch { r = { ok: false, status: "network" }; }
     if (!r.ok) return showEmpty("Could not load the file list", "Error " + r.status + ". Kichukkhon pore reload koro.");
@@ -413,8 +403,7 @@ async function init() {
 
   const s = !demo && load();
   if (s) {
-    const m = (s.m || []).filter((x) => markets.includes(x));
-    selM = new Set(m);
+    selM = new Set((s.m || []).filter((x) => markets.includes(x)));
     if (years.includes(s.from) && years.includes(s.to) && s.from <= s.to) { from = s.from; to = s.to; }
     if (["both", "bid", "ask"].includes(s.side)) side = s.side;
     latestOnly = s.latestOnly !== false;
@@ -422,10 +411,8 @@ async function init() {
   }
 
   const last = files.map((f) => f.updated).sort().pop();
-  $("stats").innerHTML = [
-    [markets.length, "markets"], [years[0] + "\u2013" + years[years.length - 1], ""],
-    [fmt(files.reduce((s, f) => s + f.size, 0)), "total"], ["updated " + last.slice(0, 10), ""],
-  ].map(([v, l]) => `<span><b>${v}</b> ${l}</span>`).join("");
+  $("stats").textContent = [`${markets.length} markets`, `${years[0]}\u2013${years[years.length - 1]}`,
+    fmt(files.reduce((s, f) => s + f.size, 0)), `updated ${last.slice(0, 10)}`].join(" \u00b7 ");
   refresh();
 }
 
