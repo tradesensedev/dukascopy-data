@@ -1,60 +1,67 @@
 const GH = "https://api.github.com";
-let memo = { t: 0, files: null };
+const NAME_RE = /^(.+)_(\d{4})_(bid|ask)\.csv(\.gz)?$/;
 const TTL = 5 * 60 * 1000;
-const NAME_RE = /^([A-Z0-9]+)_(\d{4})_(bid|ask)\.csv(\.gz)?$/;
+let memo = { t: 0, body: null };
 
-const hdr = (env, accept) => ({
-  Authorization: `Bearer ${env.GITHUB_TOKEN}`,
-  "User-Agent": "dukascopy-data-site",
-  "X-GitHub-Api-Version": "2022-11-28",
-  Accept: accept,
-});
+const hdr = (env) => {
+  const h = { "User-Agent": "dukascopy-data-site", Accept: "application/vnd.github+json" };
+  if (env.GITHUB_TOKEN) h.Authorization = `Bearer ${env.GITHUB_TOKEN}`;
+  return h;
+};
 
-async function listAssets(env, force = false) {
-  if (!force && memo.files && Date.now() - memo.t < TTL) return memo.files;
-  const out = [];
-  for (let page = 1; page <= 5; page++) {
-    const r = await fetch(`${GH}/repos/${env.GH_REPO}/releases?per_page=100&page=${page}`, {
-      headers: hdr(env, "application/vnd.github+json"),
-    });
+// fallback: manifest ekhono nai hole API theke banao
+async function indexFromApi(env) {
+  const m = {};
+  for (let page = 1; page <= 20; page++) {
+    const r = await fetch(`${GH}/repos/${env.GH_REPO}/releases?per_page=100&page=${page}`, { headers: hdr(env) });
     if (!r.ok) throw new Error("release list failed: " + r.status);
     const rels = await r.json();
     for (const rel of rels) {
       if (!rel.tag_name.startsWith(env.GH_PREFIX)) continue;
       for (const a of rel.assets || []) {
-        const m = NAME_RE.exec(a.name);
-        if (m) out.push({ name: a.name, id: a.id, market: m[1], year: +m[2], side: m[3], size: a.size, updated: a.updated_at });
+        const x = NAME_RE.exec(a.name); if (!x) continue;
+        const d = (m[x[1]] = m[x[1]] || {}), y = +x[2];
+        const e = (d[y] = d[y] || { b: 0, a: 0, u: "" });
+        e[x[3] === "bid" ? "b" : "a"] = a.size;
+        const u = a.updated_at.slice(0, 10); if (u > e.u) e.u = u;
       }
     }
     if (rels.length < 100) break;
   }
-  memo = { t: Date.now(), files: out };
-  return out;
+  const out = { v: 1, gen: new Date().toISOString(), m: {} };
+  for (const [k, d] of Object.entries(m)) {
+    const ys = Object.keys(d).map(Number).sort((a, b) => a - b);
+    out.m[k] = { y: ys, b: ys.map((y) => d[y].b), a: ys.map((y) => d[y].a), u: ys.map((y) => d[y].u) };
+  }
+  return JSON.stringify(out);
 }
 
-async function viaApi(env, name) {
-  let files = await listAssets(env);
-  let f = files.find((x) => x.name === name);
-  if (!f) files = await listAssets(env, true), (f = files.find((x) => x.name === name));
-  if (!f) return null;
-  let r = await fetch(`${GH}/repos/${env.GH_REPO}/releases/assets/${f.id}`, {
-    headers: hdr(env, "application/octet-stream"), redirect: "manual",
-  });
-  if (r.status >= 300 && r.status < 400) r = await fetch(r.headers.get("location"));
-  return r;
+async function getIndex(env, force) {
+  if (!force && memo.body && Date.now() - memo.t < TTL) return memo.body;
+  let body = null;
+  try {
+    const r = await fetch(`https://github.com/${env.GH_REPO}/releases/download/meta/index.json`);
+    if (r.ok) body = await r.text();
+  } catch {}
+  if (!body) body = await indexFromApi(env);
+  memo = { t: Date.now(), body };
+  return body;
 }
 
 async function download(name, env) {
   const m = NAME_RE.exec(name);
   if (!m) return new Response("Bad name", { status: 400 });
-  // public repo: API chhara shorashori stream (fast)
-  let r = await fetch(`https://github.com/${env.GH_REPO}/releases/download/${env.GH_PREFIX}${m[1]}/${name}`);
-  if (!r.ok) r = await viaApi(env, name);
-  if (!r) return new Response("Not found", { status: 404 });
-  if (!r.ok) return new Response("Upstream error " + r.status, { status: 502 });
+  const base = `https://github.com/${env.GH_REPO}/releases/download/${env.GH_PREFIX}${m[1]}/`;
+  let nm = name, r = await fetch(base + encodeURIComponent(nm));
+  if (!r.ok) {                                   // .gz na thakle .csv, ba ulto
+    nm = nm.endsWith(".gz") ? nm.slice(0, -3) : nm + ".gz";
+    r = await fetch(base + encodeURIComponent(nm));
+  }
+  if (!r.ok) return new Response("Not found", { status: 404 });
   const h = new Headers({
     "content-type": "application/octet-stream",
-    "content-disposition": `attachment; filename="${name}"`,
+    "content-disposition": `attachment; filename="${nm}"`,
+    "x-gz": nm.endsWith(".gz") ? "1" : "0",
     "cache-control": "no-store",
   });
   const len = r.headers.get("content-length");
@@ -66,9 +73,10 @@ export default {
   async fetch(req, env) {
     const url = new URL(req.url);
     try {
-      if (url.pathname === "/api/files") {
-        const files = await listAssets(env, url.searchParams.has("fresh"));
-        return Response.json(files, { headers: { "cache-control": "no-store" } });
+      if (url.pathname === "/api/index") {
+        return new Response(await getIndex(env, url.searchParams.has("fresh")), {
+          headers: { "content-type": "application/json", "cache-control": "public, max-age=300" },
+        });
       }
       if (url.pathname.startsWith("/dl/")) return await download(decodeURIComponent(url.pathname.slice(4)), env);
     } catch (e) {

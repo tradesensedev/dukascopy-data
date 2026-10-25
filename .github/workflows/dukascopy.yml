@@ -2,35 +2,51 @@ name: Dukascopy M1
 
 on:
   workflow_dispatch:
+    inputs:
+      shards:
+        description: "Parallel shard jobs (1-20)"
+        default: "12"
+      rounds:
+        description: "Auto-continue rounds (1 = single run)"
+        default: "1"
+      prev:
+        description: "internal: previous file count"
+        default: "0"
   schedule:
-    - cron: '0 6 * * 6'   # prottek Saturday 06:00 UTC
+    - cron: '0 6 * * 6'
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: dukascopy
   cancel-in-progress: false
 
 jobs:
-  matrix:
+  plan:
     runs-on: ubuntu-latest
     outputs:
-      list: ${{ steps.m.outputs.list }}
+      shards: ${{ steps.p.outputs.shards }}
+      n: ${{ steps.p.outputs.n }}
     steps:
-      - uses: actions/checkout@v4
-      - id: m
-        run: echo "list=$(jq -c 'keys' markets.json)" >> "$GITHUB_OUTPUT"
+      - id: p
+        env:
+          S: ${{ inputs.shards || '12' }}
+        run: |
+          n=$S; [ "$n" -lt 1 ] && n=1; [ "$n" -gt 20 ] && n=20
+          echo "n=$n" >> "$GITHUB_OUTPUT"
+          echo "shards=$(seq 0 $((n-1)) | jq -cs .)" >> "$GITHUB_OUTPUT"
 
   download:
-    needs: matrix
+    needs: plan
     runs-on: ubuntu-latest
     timeout-minutes: 350
     strategy:
       fail-fast: false
       max-parallel: 3
       matrix:
-        market: ${{ fromJSON(needs.matrix.outputs.list) }}
+        shard: ${{ fromJSON(needs.plan.outputs.shards) }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -39,4 +55,32 @@ jobs:
       - run: npm install -g dukascopy-node
       - env:
           GH_TOKEN: ${{ github.token }}
-        run: bash download_market.sh ${{ matrix.market }}
+        run: bash download_market.sh ${{ matrix.shard }} ${{ needs.plan.outputs.n }}
+
+  manifest:
+    needs: [plan, download]
+    if: ${{ !cancelled() && needs.plan.result == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - id: idx
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api --paginate "repos/${{ github.repository }}/releases?per_page=100" \
+            --jq '.[] | select(.tag_name|startswith("m1-")) | {t:.tag_name,a:[.assets[]|{n:.name,s:.size,u:.updated_at}]}' > raw.jsonl
+          node build_manifest.js raw.jsonl index.json
+          gh release view meta >/dev/null 2>&1 || gh release create meta --title "Index" --notes "Site manifest"
+          gh release upload meta index.json --clobber
+          echo "count=$(jq -s '[.[].a|length]|add // 0' raw.jsonl)" >> "$GITHUB_OUTPUT"
+      - name: Continue backfill
+        if: ${{ steps.idx.outputs.count != (inputs.prev || '0') && fromJSON(inputs.rounds || '1') > 1 }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          R: ${{ inputs.rounds }}
+          S: ${{ inputs.shards || '12' }}
+          C: ${{ steps.idx.outputs.count }}
+        run: gh workflow run dukascopy.yml --repo "${{ github.repository }}" -f shards="$S" -f rounds="$((R-1))" -f prev="$C"

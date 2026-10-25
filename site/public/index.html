@@ -9,7 +9,7 @@
 @media (prefers-color-scheme:dark){:root{--ink:#ece6d2;--mut:#a39d86;--line:#5a5646;--bg:#1b1a15;--card:#24231c;--acc:#ff8a73;--sel:#4a3d12;--link:#8fb0ff;--btn:#35332a;--hi:#4b4838;--lo:#0e0d0a;--head:#2d2b21;--warn:#3e3410}}
 *{box-sizing:border-box}
 body{margin:0;color:var(--ink);background:var(--bg);font:14px/1.45 Georgia,"Times New Roman",serif}
-.wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+.wrap{max-width:1280px;margin:0 auto;padding:0 16px}
 header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:14px 0 8px;border-bottom:3px double var(--ink)}
 .logo{display:flex;align-items:center;gap:9px;font-weight:700;font-size:20px}
 .logo i{background:var(--ink);color:var(--bg);font:700 13px ui-monospace,Consolas,monospace;font-style:normal;padding:3px 7px}
@@ -23,7 +23,6 @@ h1 b{color:var(--acc);font-style:italic}
 .btn:hover{background:var(--sel)}
 .btn:active{border-color:var(--lo) var(--hi) var(--hi) var(--lo)}
 .btn.sm{padding:2px 10px;font-size:13px;font-weight:400}
-.btn.sm.act{border-color:var(--lo) var(--hi) var(--hi) var(--lo);background:var(--sel);font-weight:700}
 .btn.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .btn.primary:hover{background:var(--acc);border-color:var(--acc);color:#fff}
 .btn.danger{background:var(--acc);border-color:var(--acc);color:#fff}
@@ -33,34 +32,46 @@ h1 b{color:var(--acc);font-style:italic}
 .btn.primary:disabled:hover{background:var(--ink);border-color:var(--ink);color:var(--bg)}
 .quick{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:var(--head);border:1px solid var(--ink);padding:10px 12px;margin-bottom:14px}
 .quick .lbl{font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:12px}
-.quick .hint{color:var(--mut);font-style:italic;font-size:13px;flex:1;min-width:180px}
-.layout{display:grid;grid-template-columns:1fr 320px;gap:16px;align-items:start}
+.quick .hint{color:var(--mut);font-style:italic;font-size:13px;flex:1;min-width:160px}
+.layout{display:grid;grid-template-columns:210px minmax(0,1fr) 310px;gap:14px;align-items:start}
 .card{background:var(--card);border:1px solid var(--ink)}
-.mk-card{padding:0 14px 12px}
-.tools{position:sticky;top:0;z-index:5;background:var(--card);padding:10px 0 8px;border-bottom:1px solid var(--ink);margin-bottom:6px}
+.cats{position:sticky;top:12px;max-height:calc(100vh - 24px);overflow:auto}
+.cat{display:flex;justify-content:space-between;gap:8px;width:100%;text-align:left;font:inherit;color:var(--ink);background:none;border:0;border-bottom:1px dotted var(--line);padding:7px 10px;cursor:pointer}
+.cat:hover{background:var(--head)}
+.cat.act{background:var(--ink);color:var(--bg);font-weight:700}
+.cat .bd{font:12px ui-monospace,Consolas,monospace;color:var(--mut)}
+.cat.act .bd{color:var(--bg)}
+.cat .bd b.s{color:var(--acc)}
+.cat.act .bd b.s{color:var(--sel)}
+.list{min-width:0}
+.tools{position:sticky;top:0;z-index:5;background:var(--card);padding:10px 12px 8px;border-bottom:1px solid var(--ink)}
 .tools .r1{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-bottom:8px}
 .tools .r2{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
-.tools .sep{width:1px;height:20px;background:var(--line);margin:0 4px}
+.tools .r3{display:flex;gap:5px;flex-wrap:wrap;margin-top:8px}
+.tools .r3:empty{display:none}
 .n{display:inline-block;background:var(--ink);color:var(--bg);font:700 12px ui-monospace,Consolas,monospace;padding:0 6px;margin-right:6px}
 h2{margin:0;font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-weight:700}
-.cnt{font:12px ui-monospace,Consolas,monospace;color:var(--mut)}
-.link{background:none;border:0;color:var(--link);font:inherit;cursor:pointer;padding:0;text-decoration:underline}
-.link:hover{color:var(--acc)}
-.grp{margin-top:10px}
-.gh{display:flex;align-items:center;gap:8px;margin-bottom:5px}
-.gh h3{margin:0;font-size:14px;font-weight:700;font-style:italic}
-.gh small{color:var(--mut);font-family:ui-monospace,Consolas,monospace;font-size:12px}
-.gh .sp{flex:1;border-bottom:1px dotted var(--line);height:1px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:6px}
-.chip{position:relative;display:block;background:var(--card);border:1px solid var(--line);padding:5px 8px;cursor:pointer;user-select:none}
-.chip:hover{border-color:var(--ink);background:var(--head)}
-.chip input{position:absolute;opacity:0}
-.chip b{display:block;font:700 13px ui-monospace,Consolas,monospace}
-.chip span{display:block;font:11px ui-monospace,Consolas,monospace;color:var(--mut)}
-.chip.on{border:2px solid var(--ink);background:var(--sel);padding:4px 7px}
-.chip.on::after{content:"\2713";position:absolute;top:2px;right:6px;font:700 12px sans-serif;color:var(--acc)}
-.chip.off{opacity:.45}
-.chip:has(input:focus-visible){outline:2px dotted var(--acc);outline-offset:2px}
+.cnt{font:12px ui-monospace,Consolas,monospace;color:var(--mut);text-transform:none;letter-spacing:0}
+input[type=search]{font:13px ui-monospace,Consolas,monospace;color:var(--ink);background:var(--card);border:1px solid var(--ink);border-radius:0;padding:4px 8px;width:210px}
+input[type=search]:focus{outline:2px dotted var(--acc);outline-offset:1px}
+.fchip{font:12px ui-monospace,Consolas,monospace;color:var(--ink);background:var(--card);border:1px solid var(--line);padding:1px 8px;cursor:pointer;border-radius:0}
+.fchip i{font-style:normal;color:var(--mut)}
+.fchip:hover{border-color:var(--ink)}
+.fchip.act{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.fchip.act i{color:var(--bg)}
+.mhead,.mrow{display:grid;grid-template-columns:26px 120px minmax(0,1fr) 92px 42px 66px;gap:8px;align-items:center;padding:4px 12px}
+.mhead{font:700 11px ui-monospace,Consolas,monospace;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);background:var(--head);border-bottom:1px solid var(--line)}
+.mrow{border-bottom:1px solid var(--head);cursor:pointer;user-select:none}
+.mrow:hover{background:var(--head)}
+.mrow.on{background:var(--sel)}
+.mrow.off{opacity:.45}
+.mrow input{width:16px;height:16px;margin:0;accent-color:var(--ink);cursor:pointer}
+.sym{font:700 13px ui-monospace,Consolas,monospace;overflow:hidden;text-overflow:ellipsis}
+.nm{color:var(--mut);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:13px}
+.yr,.fc,.sz{font:12px ui-monospace,Consolas,monospace;color:var(--mut);text-align:right}
+.mhead span:nth-child(n+4){text-align:right}
+.more{display:block;width:100%;font:inherit;background:var(--head);border:0;border-top:1px solid var(--line);padding:8px;cursor:pointer;color:var(--link);text-decoration:underline}
+.none{padding:30px;text-align:center;color:var(--mut)}
 .side{padding:12px 14px;position:sticky;top:12px;max-height:calc(100vh - 24px);overflow:auto}
 .sec{margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid var(--line)}
 .sec h2{margin-bottom:8px}
@@ -104,18 +115,19 @@ table{width:100%;border-collapse:collapse;font:12.5px ui-monospace,Consolas,mono
 th{position:sticky;top:0;background:var(--head);text-align:left;padding:6px 12px;border-bottom:1px solid var(--ink)}
 td{padding:4px 12px;border-top:1px solid var(--line)}
 td a{color:var(--link)}
-td a:hover{color:var(--acc)}
 .empty{text-align:center;padding:36px 20px;background:var(--card);border:1px dashed var(--ink);color:var(--mut)}
 .empty b{display:block;color:var(--ink);font-size:17px;margin-bottom:4px}
-.demo{background:var(--sel);border:1px solid var(--ink);padding:0 8px;font:11.5px ui-monospace,Consolas,monospace;font-style:normal}
 .mbar{display:none}
-@media (max-width:860px){
+@media (max-width:1060px){
   .layout{grid-template-columns:1fr}
+  .cats{position:static;max-height:none;display:flex;overflow-x:auto}
+  .cat{white-space:nowrap;border-bottom:0;border-right:1px dotted var(--line);width:auto;flex:none}
   .side{position:static;max-height:none}
+  .tools{position:static}
   .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:30;align-items:center;justify-content:space-between;gap:10px;background:var(--card);border-top:3px double var(--ink);padding:8px 14px}
   .mbar div{font-weight:700;font-size:13px}.mbar small{display:block;color:var(--mut);font-weight:400;font-size:11.5px}
-  .grid{grid-template-columns:repeat(auto-fill,minmax(104px,1fr))}
 }
+@media (max-width:620px){.mhead,.mrow{grid-template-columns:26px 100px minmax(0,1fr) 62px}.mhead span:nth-child(3),.mrow .nm,.mhead span:nth-child(5),.mrow .fc,.mhead span:nth-child(4),.mrow .yr{display:none}}
 </style>
 </head>
 <body>
@@ -126,30 +138,36 @@ td a:hover{color:var(--acc)}
   </header>
 
   <h1>1-minute market data, <b>ready to download</b></h1>
-  <p class="sub">Bid, ask and volume in organized ZIP folders. Timezone UTC. Updated weekly. <span id="demoTag"></span></p>
+  <p class="sub">Bid, ask and volume in organized ZIP folders. Timezone UTC. Updated weekly.</p>
 
   <div class="quick" id="quick">
     <span class="lbl">Quick</span>
-    <button class="btn primary" id="qAll">&#8595; Latest year &middot; all markets</button>
-    <button class="btn" id="qSel">&#8595; Latest year &middot; selected markets</button>
-    <span class="hint">Quick button gulo dan-dike thaka Price, Volume ar Output option mene cholbe.</span>
+    <button class="btn" id="qPop">Select popular (24)</button>
+    <button class="btn primary" id="qPopDl">&#8595; Latest year &middot; popular</button>
+    <button class="btn" id="qSel">&#8595; Latest year &middot; selected</button>
+    <span class="hint">Download-er Price, Volume ar Output option dan-dike thaka setting onujayi hobe.</span>
   </div>
 
   <div id="app" class="layout">
-    <div class="card mk-card">
+    <nav class="card cats" id="cats"></nav>
+
+    <section class="card list">
       <div class="tools">
-        <div class="r1"><h2><span class="n">1</span>Markets <span class="cnt" id="mcount"></span></h2></div>
-        <div class="r2">
-          <button class="btn sm" id="mAll">All</button>
-          <button class="btn sm" id="mNone">None</button>
-          <button class="btn sm" id="mInv">Invert</button>
-          <span class="sep"></span>
-          <span class="cnt">Only:</span>
-          <span id="only" style="display:contents"></span>
+        <div class="r1">
+          <h2><span class="n">1</span><span id="vtitle">Markets</span> <span class="cnt" id="vcount"></span></h2>
+          <input type="search" id="q" placeholder="Filter this list...">
         </div>
+        <div class="r2">
+          <button class="btn sm" id="selShown">Select all shown</button>
+          <button class="btn sm" id="clrShown">Clear shown</button>
+          <button class="btn sm" id="clrAll">Clear everything</button>
+          <span class="cnt" id="selcount"></span>
+        </div>
+        <div class="r3" id="chips"></div>
       </div>
-      <div id="mlist"></div>
-    </div>
+      <div class="mhead"><span></span><span>Symbol</span><span>Name</span><span>Data</span><span>Files</span><span>Size</span></div>
+      <div id="mrows"></div>
+    </section>
 
     <aside class="card side">
       <div class="sec">
@@ -162,7 +180,7 @@ td a:hover{color:var(--acc)}
         <div class="seg" id="sides"></div>
         <label class="opt"><input type="checkbox" id="vol" checked><span>Include volume column</span></label>
         <label class="opt"><input type="checkbox" id="folders" checked><span>Folder per market<small>OFF dile shob file ek folder-e</small></span></label>
-        <label class="opt"><input type="checkbox" id="keepgz"><span>Keep compressed (.csv.gz)<small>ZIP onek chhoto, kintu extract kore nite hobe. Off thakle .csv file pabe.</small></span></label>
+        <label class="opt"><input type="checkbox" id="keepgz"><span>Keep compressed (.csv.gz)<small>ZIP onek chhoto, kintu extract kore nite hobe.</small></span></label>
       </div>
       <h2 style="margin-bottom:8px"><span class="n">4</span>Download</h2>
       <div class="sum"><b id="sumA">-</b><span id="sumB"></span></div>
@@ -179,7 +197,7 @@ td a:hover{color:var(--acc)}
   <div id="emptyBox"></div>
 
   <details class="files" id="filesBox">
-    <summary>Browse individual files</summary>
+    <summary>Selected files (first 300)</summary>
     <div class="tbl"><table><thead><tr><th>File</th><th>Download size</th><th>Updated</th></tr></thead><tbody id="rows"></tbody></table></div>
   </details>
 </div>
@@ -193,116 +211,145 @@ td a:hover{color:var(--acc)}
 import { downloadZip } from "https://cdn.jsdelivr.net/npm/client-zip@2.4.5/index.js";
 
 const $ = (id) => document.getElementById(id);
-const el = (t, c) => { const e = document.createElement(t); if (c) e.className = c; return e; };
-const fmt = (b) => (b > 1e9 ? (b / 1e9).toFixed(2) + " GB" : (b / 1e6).toFixed(0) + " MB");
-const GROUP_ORDER = ["Forex Majors", "Forex Crosses", "Crypto", "Metals & Energy", "Indices", "Other"];
-const demo = new URLSearchParams(location.search).has("demo");
-const KEY = "dukascopy-m1-v3";
-const PARALLEL = 5;
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const fmt = (b) => (b >= 1e9 ? (b / 1e9).toFixed(2) + " GB" : (b >= 1e7 ? (b / 1e6).toFixed(0) : (b / 1e6).toFixed(1)) + " MB");
+const KEY = "dukascopy-m1-v4", PARALLEL = 5;
+const POPULAR = ["EURUSD","GBPUSD","USDJPY","USDCHF","USDCAD","AUDUSD","NZDUSD","EURJPY","GBPJPY","EURGBP","BTCUSD","ETHUSD","LTCUSD","XAUUSD","XCUUSD","USOIL","US100","US500","GER40","UK100","JP225","HK50","AUS200","DXY"];
+const CAT_ORDER = ["Forex Majors","Forex Crosses","Metals","Indices","Energy","Agriculture","Crypto","Bonds","ETFs","Funds","Stocks","Other"];
+const FXCATS = ["Forex Majors","Forex Crosses","Metals"];
 
-let files = [], meta = {}, markets = [], years = [], range = {}, maxY = {}, groups = {};
+let META = {}, M = {}, syms = [], minY = 0, maxYr = 0, curList = [];
 let selM = new Set(), from = 0, to = 0, side = "both", latestOnly = true, busy = false, ctrl = null;
+let view = { cat: "All", sub: "", cur: "", q: "", limit: 500 };
 
-const inScope = (f) => (side === "both" || f.side === side) &&
-  (latestOnly ? f.year === maxY[f.market] : f.year >= from && f.year <= to);
-const filtered = () => files.filter((f) => selM.has(f.market) && inScope(f))
-  .sort((a, b) => a.market.localeCompare(b.market) || a.year - b.year || a.side.localeCompare(b.side));
+const info = (s) => META[s] || { name: "", cat: "Other", sub: "" };
+const isFx = (s) => /^[A-Z]{6}$/.test(s);
 
-function save() {
-  if (demo) return;
-  try { localStorage.setItem(KEY, JSON.stringify({ m: [...selM], from, to, side, latestOnly, vol: $("vol").checked, folders: $("folders").checked, keepgz: $("keepgz").checked })); } catch {}
+function filesOf(s) {
+  const d = M[s]; if (!d) return [];
+  const ly = d.y[d.y.length - 1], out = [];
+  d.y.forEach((y, i) => {
+    if (latestOnly ? y !== ly : y < from || y > to) return;
+    for (const k of ["bid", "ask"]) {
+      if (side !== "both" && side !== k) continue;
+      const size = d[k === "bid" ? "b" : "a"][i]; if (!size) continue;
+      out.push({ market: s, year: y, side: k, size, updated: d.u[i], base: `${s}_${y}_${k}` });
+    }
+  });
+  return out;
 }
-function load() { try { return JSON.parse(localStorage.getItem(KEY) || "null"); } catch { return null; } }
+const selFiles = () => { const o = []; [...selM].sort().forEach((s) => o.push(...filesOf(s))); return o; };
 
-function renderMarkets() {
-  const root = $("mlist"); root.innerHTML = "";
-  GROUP_ORDER.filter((g) => groups[g]).forEach((g) => {
-    const ms = groups[g], n = ms.filter((m) => selM.has(m)).length, all = n === ms.length;
-    const sec = el("div", "grp"), gh = el("div", "gh");
-    const h = el("h3"); h.textContent = g;
-    const sm = el("small"); sm.textContent = `${n}/${ms.length}`;
-    const tg = el("button", "link"); tg.textContent = all ? "Clear" : "Select all";
-    tg.onclick = () => { ms.forEach((m) => (all ? selM.delete(m) : selM.add(m))); refresh(); };
-    gh.append(h, sm, el("span", "sp"), tg); sec.append(gh);
-    const grid = el("div", "grid");
-    ms.forEach((m) => {
-      const on = selM.has(m);
-      const hasData = latestOnly || (range[m][1] >= from && range[m][0] <= to);
-      const chip = el("label", "chip" + (on ? " on" : "") + (!hasData ? " off" : ""));
-      chip.title = ((meta[m] && meta[m].name) || m) + (hasData ? "" : " (no data in this period)");
-      const c = el("input"); c.type = "checkbox"; c.checked = on;
-      c.onchange = () => { c.checked ? selM.add(m) : selM.delete(m); refresh(); };
-      const b = el("b"); b.textContent = m;
-      const s = el("span"); s.textContent = `${range[m][0]}\u2013${range[m][1]}`;
-      chip.append(c, b, s); grid.append(chip);
-    });
-    sec.append(grid); root.append(sec);
+function shown() {
+  const q = view.q.toLowerCase();
+  return syms.filter((s) => {
+    const i = info(s);
+    if (view.cat === "Selected" && !selM.has(s)) return false;
+    if (view.cat !== "All" && view.cat !== "Selected" && i.cat !== view.cat) return false;
+    if (view.sub && i.sub !== view.sub) return false;
+    if (view.cur && !(isFx(s) && (s.slice(0, 3) === view.cur || s.slice(3) === view.cur))) return false;
+    if (q && !(s.toLowerCase().includes(q) || i.name.toLowerCase().includes(q))) return false;
+    return true;
   });
 }
 
-function renderOnly() {
-  $("only").innerHTML = "";
-  GROUP_ORDER.filter((g) => groups[g]).forEach((g) => {
-    const ms = groups[g];
-    const active = selM.size === ms.length && ms.every((m) => selM.has(m));
-    const b = el("button", "btn sm" + (active ? " act" : ""));
-    b.textContent = g.replace("Forex ", "FX ").replace("Metals & Energy", "Metals/Energy");
-    b.onclick = () => { selM = new Set(ms); refresh(); };
-    $("only").append(b);
-  });
+function renderNav() {
+  const cnt = {}, sel = {};
+  syms.forEach((s) => { const c = info(s).cat; cnt[c] = (cnt[c] || 0) + 1; if (selM.has(s)) sel[c] = (sel[c] || 0) + 1; });
+  const cats = [...CAT_ORDER.filter((c) => cnt[c]), ...Object.keys(cnt).filter((c) => !CAT_ORDER.includes(c))];
+  const items = [["All", syms.length, 0], ["Selected", selM.size, 0], ...cats.map((c) => [c, cnt[c], sel[c] || 0])];
+  $("cats").innerHTML = items.map(([c, n, k]) =>
+    `<button class="cat${view.cat === c ? " act" : ""}" data-c="${esc(c)}"><span>${c === "Selected" ? "\u2605 Selected" : esc(c)}</span>` +
+    `<span class="bd">${k ? `<b class="s">${k}</b>/` : ""}${n}</span></button>`).join("");
+}
+
+const chip = (t, v, label) => `<button class="fchip${view[t] === v ? " act" : ""}" data-t="${t}" data-v="${esc(v)}">${label}</button>`;
+function renderChips() {
+  let html = "";
+  if (view.cat !== "All" && view.cat !== "Selected") {
+    const base = syms.filter((s) => info(s).cat === view.cat), c = {};
+    if (FXCATS.includes(view.cat)) {
+      base.forEach((s) => { if (isFx(s)) [s.slice(0, 3), s.slice(3)].forEach((x) => (c[x] = (c[x] || 0) + 1)); });
+      const arr = Object.entries(c).sort((a, b) => b[1] - a[1]);
+      if (arr.length > 1) html = chip("cur", "", "All") + arr.map(([x, n]) => chip("cur", x, `${x} <i>${n}</i>`)).join("");
+    } else {
+      base.forEach((s) => { const x = info(s).sub; if (x) c[x] = (c[x] || 0) + 1; });
+      const arr = Object.entries(c).sort((a, b) => a[0].localeCompare(b[0]));
+      if (arr.length > 1) html = chip("sub", "", "All") + arr.map(([x, n]) => chip("sub", x, `${esc(x)} <i>${n}</i>`)).join("");
+    }
+  }
+  $("chips").innerHTML = html;
+}
+
+function rowHtml(s) {
+  const d = M[s], i = info(s), fs = filesOf(s), n = fs.length, sz = fs.reduce((a, f) => a + f.size, 0), on = selM.has(s);
+  return `<label class="mrow${on ? " on" : ""}${n ? "" : " off"}"><input type="checkbox" data-m="${esc(s)}"${on ? " checked" : ""}>` +
+    `<b class="sym" title="${esc(s)}">${esc(s)}</b><span class="nm" title="${esc(i.name)}">${esc(i.name)}</span>` +
+    `<span class="yr">${d.y[0]}\u2013${d.y[d.y.length - 1]}</span><span class="fc">${n}</span><span class="sz">${n ? fmt(sz) : "-"}</span></label>`;
+}
+
+function renderRows() {
+  curList = shown();
+  $("vtitle").textContent = view.cat === "Selected" ? "Selected markets" : view.cat === "All" ? "All markets" : view.cat;
+  $("vcount").textContent = `${curList.length} shown`;
+  const part = curList.slice(0, view.limit), left = curList.length - part.length;
+  $("mrows").innerHTML = curList.length
+    ? part.map(rowHtml).join("") + (left > 0 ? `<button class="more" id="more">Show ${Math.min(500, left)} more (${left} left)</button>` : "")
+    : `<div class="none">Kichu pawa jayni.</div>`;
 }
 
 function renderControls() {
-  const last = years[years.length - 1];
-  const p3 = Math.max(years[0], last - 2), p5 = Math.max(years[0], last - 4);
-  const active = latestOnly ? "latest" : to === last && from === p3 ? "3" : to === last && from === p5 ? "5" :
-    from === years[0] && to === last ? "all" : "";
+  const last = maxYr, p3 = Math.max(minY, last - 2), p5 = Math.max(minY, last - 4);
+  const active = latestOnly ? "latest" : to === last && from === p3 ? "3" : to === last && from === p5 ? "5" : from === minY && to === last ? "all" : "";
   $("presets").innerHTML = "";
   [["latest", "Latest year"], ["3", "Last 3 yrs"], ["5", "Last 5 yrs"], ["all", "Full history"]].forEach(([k, t]) => {
-    const b = el("button", active === k ? "act" : ""); b.textContent = t;
+    const b = document.createElement("button"); b.textContent = t; if (active === k) b.className = "act";
     b.onclick = () => {
       latestOnly = k === "latest";
-      if (k === "all") { from = years[0]; to = last; }
-      else if (k !== "latest") { to = last; from = Math.max(years[0], last - (+k - 1)); }
-      refresh();
+      if (k === "all") { from = minY; to = last; } else if (k !== "latest") { to = last; from = Math.max(minY, last - (+k - 1)); }
+      renderAll();
     };
     $("presets").append(b);
   });
-  $("from").value = from; $("to").value = to;
-  $("from").disabled = $("to").disabled = latestOnly;
+  $("from").value = from; $("to").value = to; $("from").disabled = $("to").disabled = latestOnly;
   $("sides").innerHTML = "";
   [["both", "Bid + Ask"], ["bid", "Bid"], ["ask", "Ask"]].forEach(([v, t]) => {
-    const l = el("label"), r = el("input"); r.type = "radio"; r.name = "side"; r.checked = side === v;
-    r.onchange = () => { side = v; refresh(); };
-    const s = el("span"); s.textContent = t; l.append(r, s); $("sides").append(l);
+    const l = document.createElement("label"), r = document.createElement("input"), s = document.createElement("span");
+    r.type = "radio"; r.name = "side"; r.checked = side === v; r.onchange = () => { side = v; renderAll(); };
+    s.textContent = t; l.append(r, s); $("sides").append(l);
   });
 }
 
-function refresh() {
-  renderMarkets(); renderOnly(); renderControls();
-  const list = filtered(), total = list.reduce((s, f) => s + f.size, 0);
+function renderSide() {
+  const list = selFiles(), total = list.reduce((s, f) => s + f.size, 0);
   const nm = new Set(list.map((f) => f.market)).size;
-  $("mcount").textContent = `${selM.size}/${markets.length} selected`;
+  $("selcount").textContent = `${selM.size} selected`;
   $("sumA").textContent = `${list.length} files \u00b7 ${fmt(total)}`;
-  $("sumB").textContent = `download size \u00b7 ${nm} markets \u00b7 ` + (latestOnly ? "latest year each" : from === to ? from : `${from}\u2013${to}`);
-  $("mSum").innerHTML = busy ? "Downloading..." : `${list.length} files<small>${fmt(total)}</small>`;
+  $("sumB").textContent = `download size \u00b7 ${nm}/${selM.size} markets \u00b7 ` + (latestOnly ? "latest year each" : from === to ? from : `${from}\u2013${to}`);
+  $("mSum").innerHTML = busy ? "Downloading..." : `${list.length} files<small>${fmt(total)} \u00b7 ${nm} markets</small>`;
+  const keep = $("keepgz").checked;
   let note = "";
   if (!selM.size) note = "Kom-pokkhe ekta market select koro.";
   else if (!list.length) note = "Selected market gulo-te ei period-e data nai.";
-  else if (!$("keepgz").checked && total > 4e8 && !window.showSaveFilePicker) note = "Boro download: Chrome ba Edge use koro, nahole puro ZIP RAM-e thakbe. Ba 'Keep compressed' on koro.";
-  else if (!$("keepgz").checked && total > 4e8) note = "CSV-te expand hole disk-e size prai 4-6x boro hote pare.";
+  else if (total > 2e9 && !window.showSaveFilePicker) note = "Boro download: Chrome ba Edge use koro, nahole puro ZIP RAM-e thakbe.";
+  else if (total > 2e9) note = "Boro download. Disk-e jayga ache kina dekho" + (keep ? "." : " (CSV expand hole 4-6x boro hote pare).");
   $("note").textContent = note; $("note").classList.toggle("show", !!note);
-  $("zip").disabled = busy || !list.length || demo;
-  $("zip2").disabled = demo || (!busy && !list.length);
+  $("zip").disabled = busy || !list.length;
+  $("zip2").disabled = !busy && !list.length;
   $("zip2").textContent = busy ? "Cancel" : "Download ZIP";
-  $("qAll").disabled = busy || demo; $("qSel").disabled = busy || demo || !selM.size;
+  ["qPop", "qPopDl", "qSel"].forEach((id) => ($(id).disabled = busy));
   $("cancel").style.display = busy ? "" : "none";
-  $("rows").innerHTML = list.map((f) =>
-    `<tr><td><a href="/dl/${f.name}" data-n="${f.name}">${f.name}</a></td><td>${fmt(f.size)}</td><td>${f.updated.slice(0, 10)}</td></tr>`).join("");
-  save();
+  $("rows").innerHTML = list.slice(0, 300).map((f) =>
+    `<tr><td><a href="/dl/${esc(f.base)}.csv.gz" data-n="${esc(f.base)}">${esc(f.base)}</a></td><td>${fmt(f.size)}</td><td>${f.updated}</td></tr>`).join("");
 }
 
-// ---- stream helpers ----
+function save() {
+  try { localStorage.setItem(KEY, JSON.stringify({ m: [...selM], from, to, side, latestOnly, cat: view.cat,
+    vol: $("vol").checked, folders: $("folders").checked, keepgz: $("keepgz").checked })); } catch {}
+}
+function renderAll() { renderNav(); renderChips(); renderRows(); renderControls(); renderSide(); save(); }
+
+// ---------- stream helpers ----------
 const strip = (s) => s.replace(/,[^,\r\n]*(?=\r?\n|$)/g, "");
 function stripStream(stream) {
   const dec = new TextDecoder(), enc = new TextEncoder();
@@ -318,15 +365,15 @@ function stripStream(stream) {
     flush(c) { if (buf) c.enqueue(enc.encode(doStrip ? strip(buf) : buf)); },
   }));
 }
-function build(blob, f, withVol, keepGz) {
-  if (keepGz && f.gz && withVol) return blob.stream();
+function build({ blob, gz }, withVol, keepGz) {
+  if (keepGz && gz && withVol) return blob.stream();
   let s = blob.stream();
-  if (f.gz) s = s.pipeThrough(new DecompressionStream("gzip"));
+  if (gz) s = s.pipeThrough(new DecompressionStream("gzip"));
   if (!withVol) s = stripStream(s);
   if (keepGz) s = s.pipeThrough(new CompressionStream("gzip"));
   return s;
 }
-const outName = (f, keepGz) => f.base + (keepGz ? ".csv.gz" : ".csv");
+const outName = (base, keepGz) => base + (keepGz ? ".csv.gz" : ".csv");
 function saveBlob(blob, name) {
   const a = document.createElement("a");
   a.href = URL.createObjectURL(blob); a.download = name; a.click();
@@ -334,36 +381,21 @@ function saveBlob(blob, name) {
 }
 const say = (t) => { $("status").textContent = t; $("status").classList.add("show"); };
 
-async function loadBlob(f, signal, onBytes) {
-  const r = await fetch("/dl/" + f.name, { signal });
-  if (!r.ok) throw new Error(f.name + " failed: " + r.status);
-  const reader = r.body.getReader(), parts = [];
+async function loadBlob(base, signal, onBytes) {
+  const r = await fetch("/dl/" + base + ".csv.gz", { signal });
+  if (!r.ok) throw new Error(base + " failed: " + r.status);
+  const gz = r.headers.get("x-gz") === "1", reader = r.body.getReader(), parts = [];
   for (;;) { const { done, value } = await reader.read(); if (done) break; parts.push(value); onBytes && onBytes(value.length); }
-  return new Blob(parts);
+  return { blob: new Blob(parts), gz };
 }
 
-$("rows").addEventListener("click", async (e) => {
-  const a = e.target.closest("a[data-n]"); if (!a) return;
-  e.preventDefault(); if (demo) return;
-  const f = files.find((x) => x.name === a.dataset.n); if (!f) return;
-  const keepGz = $("keepgz").checked, withVol = $("vol").checked;
-  say("Preparing " + f.name + "...");
-  try {
-    const blob = await loadBlob(f);
-    if (f.gz === keepGz && withVol) saveBlob(blob, f.name);
-    else saveBlob(await new Response(build(blob, f, withVol, keepGz)).blob(), outName(f, keepGz));
-    say("Done.");
-  } catch (err) { say("Error: " + err.message); }
-});
-
 async function startZip() {
-  if (demo) return say("Demo mode: real file nai.");
-  const list = filtered(); if (!list.length || busy) return;
+  const list = selFiles(); if (!list.length || busy) return;
   const withVol = $("vol").checked, perFolder = $("folders").checked, keepGz = $("keepgz").checked;
   const total = list.reduce((s, f) => s + f.size, 0);
   let dl = 0, n = 0; const t0 = Date.now();
   ctrl = new AbortController(); const signal = ctrl.signal;
-  busy = true; refresh();
+  busy = true; renderSide();
   $("bar").classList.add("show"); $("pbar").style.width = "0";
   const zipName = "dukascopy-m1-" + new Date().toISOString().slice(0, 10) + ".zip";
   const onBytes = (b) => {
@@ -372,19 +404,15 @@ async function startZip() {
     $("pbar").style.width = pct + "%";
     say(`${Math.min(n + 1, list.length)}/${list.length} files \u00b7 ${pct.toFixed(0)}% \u00b7 ${sp.toFixed(1)} MB/s`);
   };
-
   const jobs = new Map();
-  const ensure = (i) => {
-    for (let k = i; k < Math.min(list.length, i + PARALLEL); k++) if (!jobs.has(k)) {
-      const p = loadBlob(list[k], signal, onBytes); p.catch(() => {}); jobs.set(k, p);
-    }
-  };
+  const ensure = (i) => { for (let k = i; k < Math.min(list.length, i + PARALLEL); k++) if (!jobs.has(k)) {
+    const p = loadBlob(list[k].base, signal, onBytes); p.catch(() => {}); jobs.set(k, p); } };
   async function* gen() {
     for (let i = 0; i < list.length; i++) {
       ensure(i); n = i;
-      const f = list[i], blob = await jobs.get(i); jobs.delete(i);
-      const nm = outName(f, keepGz);
-      yield { name: perFolder ? `${f.market}/${nm}` : nm, lastModified: new Date(f.updated), input: new Response(build(blob, f, withVol, keepGz)) };
+      const f = list[i], got = await jobs.get(i); jobs.delete(i);
+      const nm = outName(f.base, keepGz);
+      yield { name: perFolder ? `${f.market}/${nm}` : nm, lastModified: new Date(f.updated), input: new Response(build(got, withVol, keepGz)) };
     }
   }
   try {
@@ -396,19 +424,51 @@ async function startZip() {
   } catch (e) {
     say(signal.aborted || e.name === "AbortError" ? "Cancelled." : "Error: " + e.message);
   }
-  busy = false; ctrl = null; refresh();
+  busy = false; ctrl = null; renderSide();
 }
 const cancelZip = () => ctrl && ctrl.abort();
 
-function demoFiles() {
-  const out = [], cy = new Date().getFullYear();
-  Object.keys(meta).forEach((m, i) => {
-    const start = ["BTCUSD", "ETHUSD", "LTCUSD"].includes(m) ? 2017 : 2003 + ((i * 3) % 10);
-    for (let y = start; y <= cy; y++) ["bid", "ask"].forEach((s) =>
-      out.push({ name: `${m}_${y}_${s}.csv.gz`, id: 0, market: m, year: y, side: s, size: 4e6 + ((i * 7 + y) % 5) * 1e6, updated: `${y === cy ? cy : y + 1}-01-03T06:00:00Z` }));
-  });
-  return out;
-}
+// ---------- events ----------
+$("cats").onclick = (e) => {
+  const b = e.target.closest(".cat"); if (!b) return;
+  view = { ...view, cat: b.dataset.c, sub: "", cur: "", limit: 500 }; renderAll();
+};
+$("chips").onclick = (e) => {
+  const b = e.target.closest(".fchip"); if (!b) return;
+  view[b.dataset.t] = b.dataset.v; view.limit = 500; renderChips(); renderRows();
+};
+$("mrows").addEventListener("change", (e) => {
+  const c = e.target.closest("input[data-m]"); if (!c) return;
+  c.checked ? selM.add(c.dataset.m) : selM.delete(c.dataset.m);
+  c.closest(".mrow").classList.toggle("on", c.checked);
+  renderNav(); renderSide(); save();
+});
+$("mrows").addEventListener("click", (e) => { if (e.target.id === "more") { view.limit += 500; renderRows(); } });
+let qt; $("q").oninput = (e) => { clearTimeout(qt); qt = setTimeout(() => { view.q = e.target.value.trim(); view.limit = 500; renderRows(); }, 120); };
+$("selShown").onclick = () => { curList.forEach((s) => selM.add(s)); renderAll(); };
+$("clrShown").onclick = () => { curList.forEach((s) => selM.delete(s)); renderAll(); };
+$("clrAll").onclick = () => { selM = new Set(); renderAll(); };
+$("from").onchange = (e) => { from = +e.target.value; if (to < from) to = from; latestOnly = false; renderAll(); };
+$("to").onchange = (e) => { to = +e.target.value; if (from > to) from = to; latestOnly = false; renderAll(); };
+$("vol").onchange = $("folders").onchange = $("keepgz").onchange = () => { renderSide(); save(); };
+$("zip").onclick = startZip;
+$("cancel").onclick = cancelZip;
+$("zip2").onclick = () => (busy ? cancelZip() : startZip());
+$("rows").addEventListener("click", async (e) => {
+  const a = e.target.closest("a[data-n]"); if (!a) return;
+  e.preventDefault();
+  const keepGz = $("keepgz").checked, withVol = $("vol").checked;
+  say("Preparing " + a.dataset.n + "...");
+  try {
+    const got = await loadBlob(a.dataset.n);
+    saveBlob(await new Response(build(got, withVol, keepGz)).blob(), outName(a.dataset.n, keepGz));
+    say("Done.");
+  } catch (err) { say("Error: " + err.message); }
+});
+const pickPopular = () => { selM = new Set(POPULAR.filter((s) => M[s])); };
+$("qPop").onclick = () => { pickPopular(); renderAll(); };
+$("qPopDl").onclick = () => { pickPopular(); latestOnly = true; side = "both"; renderAll(); startZip(); };
+$("qSel").onclick = () => { if (!selM.size) return; latestOnly = true; renderAll(); startZip(); };
 
 function showEmpty(title, text) {
   $("app").style.display = "none"; $("filesBox").style.display = "none"; $("mbar").style.display = "none"; $("quick").style.display = "none";
@@ -416,62 +476,30 @@ function showEmpty(title, text) {
 }
 
 async function init() {
-  try { meta = await (await fetch("/markets.json")).json(); } catch { meta = {}; }
-  let raw;
-  if (demo) { raw = demoFiles(); $("demoTag").innerHTML = '<span class="demo">Demo preview</span>'; }
-  else {
-    let r; try { r = await fetch("/api/files"); } catch { r = { ok: false, status: "network" }; }
-    if (!r.ok) return showEmpty("Could not load the file list", "Error " + r.status + ". Kichukkhon pore reload koro.");
-    raw = await r.json();
+  try { META = await (await fetch("/markets.json")).json(); } catch { META = {}; }
+  let r; try { r = await fetch("/api/index"); } catch { r = { ok: false, status: "network" }; }
+  if (!r.ok) return showEmpty("Could not load the market index", "Error " + r.status + ". Kichukkhon pore reload koro.");
+  const idx = await r.json(); M = idx.m || {};
+  syms = Object.keys(M).sort();
+  if (!syms.length) return showEmpty("Data is being prepared", "Backfill cholche. Kichukkhon pore reload dao.");
+  minY = Math.min(...syms.map((s) => M[s].y[0])); maxYr = Math.max(...syms.map((s) => M[s].y[M[s].y.length - 1]));
+  $("from").innerHTML = $("to").innerHTML = Array.from({ length: maxYr - minY + 1 }, (_, i) => `<option>${minY + i}</option>`).join("");
+  from = to = maxYr;
+  pickPopular();
+  let total = 0, nf = 0; syms.forEach((s) => M[s].y.forEach((_, i) => { total += M[s].b[i] + M[s].a[i]; nf += (M[s].b[i] ? 1 : 0) + (M[s].a[i] ? 1 : 0); }));
+  $("stats").innerHTML = [[syms.length, "markets"], [minY + "\u2013" + maxYr, ""], [nf, "files"], [fmt(total), "stored"], ["index " + (idx.gen || "").slice(0, 10), ""]]
+    .map(([v, l]) => `<span><b>${v}</b> ${l}</span>`).join("");
+  let st = null; try { st = JSON.parse(localStorage.getItem(KEY) || "null"); } catch {}
+  if (st) {
+    selM = new Set((st.m || []).filter((x) => M[x]));
+    if (st.from >= minY && st.to <= maxYr && st.from <= st.to) { from = st.from; to = st.to; }
+    if (["both", "bid", "ask"].includes(st.side)) side = st.side;
+    latestOnly = st.latestOnly !== false;
+    if (st.cat) view.cat = st.cat;
+    $("vol").checked = st.vol !== false; $("folders").checked = st.folders !== false; $("keepgz").checked = !!st.keepgz;
   }
-  // same file .csv ar .csv.gz dutoi thakle .gz nibo
-  const by = new Map();
-  raw.forEach((f) => {
-    f.base = f.name.replace(/\.csv(\.gz)?$/, ""); f.gz = f.name.endsWith(".gz");
-    const o = by.get(f.base); if (!o || f.gz) by.set(f.base, f);
-  });
-  files = [...by.values()];
-  if (!files.length) return showEmpty("Data is being prepared", "Backfill cholche. Kichukkhon pore reload dao.");
-
-  markets = [...new Set(files.map((f) => f.market))].sort();
-  years = [...new Set(files.map((f) => f.year))].sort((a, b) => a - b);
-  markets.forEach((m) => {
-    const ys = files.filter((f) => f.market === m).map((f) => f.year);
-    range[m] = [Math.min(...ys), Math.max(...ys)]; maxY[m] = range[m][1];
-    const g = (meta[m] && meta[m].group) || "Other"; (groups[g] = groups[g] || []).push(m);
-  });
-  $("from").innerHTML = $("to").innerHTML = years.map((y) => `<option>${y}</option>`).join("");
-  selM = new Set(markets); from = to = years[years.length - 1]; latestOnly = true;
-
-  const s = !demo && load();
-  if (s) {
-    selM = new Set((s.m || []).filter((x) => markets.includes(x)));
-    if (years.includes(s.from) && years.includes(s.to) && s.from <= s.to) { from = s.from; to = s.to; }
-    if (["both", "bid", "ask"].includes(s.side)) side = s.side;
-    latestOnly = s.latestOnly !== false;
-    $("vol").checked = s.vol !== false; $("folders").checked = s.folders !== false; $("keepgz").checked = !!s.keepgz;
-  }
-
-  const last = files.map((f) => f.updated).sort().pop();
-  $("stats").innerHTML = [
-    [markets.length, "markets"], [years[0] + "\u2013" + years[years.length - 1], ""],
-    [fmt(files.reduce((s, f) => s + f.size, 0)), "stored"], ["updated " + last.slice(0, 10), ""],
-  ].map(([v, l]) => `<span><b>${v}</b> ${l}</span>`).join("");
-  refresh();
+  renderAll();
 }
-
-$("mAll").onclick = () => { selM = new Set(markets); refresh(); };
-$("mNone").onclick = () => { selM = new Set(); refresh(); };
-$("mInv").onclick = () => { selM = new Set(markets.filter((m) => !selM.has(m))); refresh(); };
-$("from").onchange = (e) => { from = +e.target.value; if (to < from) to = from; latestOnly = false; refresh(); };
-$("to").onchange = (e) => { to = +e.target.value; if (from > to) from = to; latestOnly = false; refresh(); };
-$("vol").onchange = $("folders").onchange = $("keepgz").onchange = refresh;
-$("zip").onclick = startZip;
-$("cancel").onclick = cancelZip;
-$("zip2").onclick = () => (busy ? cancelZip() : startZip());
-$("qAll").onclick = () => { selM = new Set(markets); latestOnly = true; refresh(); startZip(); };
-$("qSel").onclick = () => { if (!selM.size) return; latestOnly = true; refresh(); startZip(); };
-
 init();
 </script>
 </body>
