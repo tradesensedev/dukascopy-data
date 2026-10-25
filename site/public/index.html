@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dukascopy M1 Data</title>
+<style>
+  :root { --bg:#0f1115; --card:#181b22; --line:#2a2f3a; --txt:#e6e8ee; --mut:#8b93a5; --acc:#3b82f6; }
+  * { box-sizing:border-box }
+  body { margin:0; background:var(--bg); color:var(--txt); font:15px/1.5 system-ui,sans-serif }
+  main { max-width:900px; margin:0 auto; padding:24px 16px 60px }
+  h1 { margin:0 0 4px; font-size:24px }
+  h2 { font-size:13px; text-transform:uppercase; letter-spacing:.06em; color:var(--mut); margin:0 0 10px }
+  .sub { color:var(--mut); margin:0 0 20px }
+  section { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px; margin-bottom:14px }
+  .row { display:flex; flex-wrap:wrap; gap:8px; align-items:center }
+  button { font:inherit; color:var(--txt); background:#222733; border:1px solid var(--line); border-radius:8px; padding:6px 12px; cursor:pointer }
+  button:hover { border-color:var(--acc) }
+  button.on { background:var(--acc); border-color:var(--acc); color:#fff }
+  button.primary { background:var(--acc); border-color:var(--acc); color:#fff; padding:10px 18px; font-weight:600 }
+  button:disabled { opacity:.5; cursor:wait }
+  .mini { margin-top:10px }
+  .mini button { font-size:12px; padding:3px 9px; color:var(--mut) }
+  table { width:100%; border-collapse:collapse; font-size:14px }
+  th, td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--line) }
+  th { color:var(--mut); font-weight:500 }
+  a { color:var(--acc); text-decoration:none }
+  .wrap { max-height:380px; overflow:auto }
+  .note { color:var(--mut); font-size:13px; margin-top:10px }
+</style>
+</head>
+<body>
+<main>
+  <h1>Dukascopy 1-Minute Data</h1>
+  <p class="sub" id="meta">Loading…</p>
+
+  <section>
+    <h2>Markets</h2>
+    <div class="row" id="markets"></div>
+    <div class="mini row"><button id="mAll">All</button><button id="mNone">None</button></div>
+  </section>
+
+  <section>
+    <h2>Years</h2>
+    <div class="row" id="years"></div>
+    <div class="mini row"><button id="yLatest">Latest year</button><button id="yAll">All years</button></div>
+  </section>
+
+  <section>
+    <h2>Price side</h2>
+    <div class="row" id="sides"></div>
+  </section>
+
+  <section>
+    <div class="row">
+      <button class="primary" id="zip">Download ZIP</button>
+      <span id="summary"></span>
+    </div>
+    <div class="note" id="status">ZIP-e folder structure hobe: MARKET/MARKET_YEAR_side.csv. Data timezone: UTC.</div>
+  </section>
+
+  <section>
+    <h2>Individual files</h2>
+    <div class="wrap"><table><thead><tr><th>File</th><th>Size</th><th>Updated</th></tr></thead><tbody id="rows"></tbody></table></div>
+  </section>
+</main>
+
+<script type="module">
+import { downloadZip } from "https://cdn.jsdelivr.net/npm/client-zip@2.4.5/index.js";
+
+const $ = (id) => document.getElementById(id);
+const fmt = (b) => (b > 1e9 ? (b / 1e9).toFixed(2) + " GB" : (b / 1e6).toFixed(1) + " MB");
+let files = [], markets = [], years = [];
+let selM = new Set(), selY = new Set(), side = "both";
+
+function chips(el, items, sel, label) {
+  el.innerHTML = "";
+  items.forEach((v) => {
+    const b = document.createElement("button");
+    b.textContent = label ? label(v) : v;
+    if (sel.has(v)) b.className = "on";
+    b.onclick = () => { sel.has(v) ? sel.delete(v) : sel.add(v); render(); };
+    el.append(b);
+  });
+}
+
+function filtered() {
+  return files
+    .filter((f) => selM.has(f.market) && selY.has(f.year) && (side === "both" || f.side === side))
+    .sort((a, b) => a.market.localeCompare(b.market) || a.year - b.year || a.side.localeCompare(b.side));
+}
+
+function render() {
+  chips($("markets"), markets, selM);
+  chips($("years"), years, selY);
+  $("sides").innerHTML = "";
+  [["both", "Bid + Ask"], ["bid", "Bid only"], ["ask", "Ask only"]].forEach(([v, t]) => {
+    const b = document.createElement("button");
+    b.textContent = t;
+    if (side === v) b.className = "on";
+    b.onclick = () => { side = v; render(); };
+    $("sides").append(b);
+  });
+  const list = filtered();
+  const total = list.reduce((s, f) => s + f.size, 0);
+  $("summary").textContent = `${list.length} files • ${fmt(total)}`;
+  $("zip").disabled = !list.length;
+  $("rows").innerHTML = list.map((f) =>
+    `<tr><td><a href="/dl/${f.name}">${f.name}</a></td><td>${fmt(f.size)}</td><td>${f.updated.slice(0, 10)}</td></tr>`
+  ).join("");
+}
+
+async function init() {
+  const r = await fetch("/api/files");
+  if (!r.ok) { $("meta").textContent = "File list load hoyni (" + r.status + ")"; return; }
+  files = await r.json();
+  if (!files.length) { $("meta").textContent = "Ekhono kono data upload hoyni."; return; }
+  markets = [...new Set(files.map((f) => f.market))].sort();
+  years = [...new Set(files.map((f) => f.year))].sort();
+  selM = new Set(markets);
+  selY = new Set([years[years.length - 1]]);
+  const last = files.map((f) => f.updated).sort().pop();
+  $("meta").textContent = `${markets.length} markets • ${years[0]}–${years[years.length - 1]} • last update ${last.slice(0, 10)}`;
+  render();
+}
+
+$("mAll").onclick = () => { selM = new Set(markets); render(); };
+$("mNone").onclick = () => { selM = new Set(); render(); };
+$("yLatest").onclick = () => { selY = new Set([years[years.length - 1]]); render(); };
+$("yAll").onclick = () => { selY = new Set(years); render(); };
+
+$("zip").onclick = async () => {
+  const list = filtered();
+  if (!list.length) return;
+  const status = $("status");
+  $("zip").disabled = true;
+  const zipName = "dukascopy-m1-data.zip";
+  let n = 0;
+
+  async function* gen() {
+    for (const f of list) {
+      status.textContent = `Downloading ${f.name} (${++n}/${list.length})…`;
+      const r = await fetch("/dl/" + f.name);
+      if (!r.ok) throw new Error(f.name + " failed: " + r.status);
+      yield { name: `${f.market}/${f.name}`, lastModified: new Date(f.updated), input: r };
+    }
+  }
+
+  try {
+    if (window.showSaveFilePicker) {
+      const h = await showSaveFilePicker({ suggestedName: zipName, types: [{ description: "ZIP", accept: { "application/zip": [".zip"] } }] });
+      const w = await h.createWritable();
+      await downloadZip(gen()).body.pipeTo(w);
+    } else {
+      const blob = await downloadZip(gen()).blob();
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = zipName;
+      a.click();
+      setTimeout(() => URL.revokeObjectURL(a.href), 60000);
+    }
+    status.textContent = "Done ✔";
+  } catch (e) {
+    status.textContent = e.name === "AbortError" ? "Cancelled" : "Error: " + e.message;
+  }
+  $("zip").disabled = false;
+};
+
+init();
+</script>
+</body>
+</html>

@@ -19,6 +19,7 @@ id=${MAP[$folder]}
 START_YEAR=2018
 END_YEAR=$(date +%Y)
 TODAY=$(date +%Y-%m-%d)
+if [ "$(date +%m)" = "01" ]; then REFRESH_FROM=$((END_YEAR-1)); else REFRESH_FROM=$END_YEAR; fi
 
 mkdir -p out
 existing=$(gh release view data --json assets -q '.assets[].name')
@@ -29,7 +30,7 @@ for year in $(seq $START_YEAR $END_YEAR); do
 
   for side in bid ask; do
     fname="${folder}_${year}_${side}"
-    if echo "$existing" | grep -qx "$fname.csv"; then
+    if [ "$year" -lt "$REFRESH_FROM" ] && echo "$existing" | grep -qx "$fname.csv"; then
       echo "SKIP: $fname.csv"
       continue
     fi

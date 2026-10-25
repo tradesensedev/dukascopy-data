@@ -1,0 +1,10 @@
+name = "dukascopy-data"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+[assets]
+directory = "./public"
+
+[vars]
+GH_REPO = "tradesensedev/dukascopy-data"
+GH_TAG = "data"

@@ -2,6 +2,8 @@ name: Download Dukascopy Data
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '0 6 * * 6'   # every Saturday 06:00 UTC
 
 permissions:
   contents: write
