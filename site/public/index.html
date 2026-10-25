@@ -3,172 +3,165 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Dukascopy M1 Data - 1-minute market data, bid, ask &amp; volume</title>
+<title>Dukascopy M1 Data</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#0b1220;--mut:#5b6678;--line:#e6eaf2;--bg:#fafbff;--card:#fff;--brand:#4f46e5;--brand2:#2563eb;--cyan:#06b6d4;--soft:#eef2ff;--ok:#10b981;
-  --grad:linear-gradient(135deg,#4f46e5 0%,#2563eb 55%,#06b6d4 100%);--sh:0 1px 2px rgba(16,24,40,.04),0 8px 24px rgba(16,24,40,.06)}
+:root{--ink:#0b1220;--mut:#64708a;--line:#e5e9f2;--bg:#f7f8fd;--card:#fff;--brand:#4f46e5;--soft:#eef0ff;
+  --grad:linear-gradient(135deg,#4f46e5,#2563eb 55%,#06b6d4);--sh:0 1px 2px rgba(16,24,40,.05),0 6px 18px rgba(16,24,40,.05)}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;color:var(--ink);background:var(--bg);font:15px/1.55 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
-body::before{content:"";position:absolute;inset:0 0 auto 0;height:620px;z-index:-1;
-  background:radial-gradient(600px 300px at 15% 0%,rgba(79,70,229,.16),transparent 70%),radial-gradient(520px 280px at 85% 10%,rgba(6,182,212,.16),transparent 70%)}
-.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
-nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
-.logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.02em}
-.logo i{width:30px;height:30px;border-radius:9px;background:var(--grad);display:grid;place-items:center;color:#fff;font-style:normal;font-size:15px}
-.pill{font-size:13px;font-weight:600;color:var(--brand);background:var(--soft);border:1px solid #dfe5ff;border-radius:999px;padding:5px 12px}
-.hero{text-align:center;padding:44px 0 34px}
-.hero h1{font-size:clamp(34px,6vw,60px);line-height:1.04;letter-spacing:-.035em;font-weight:800;margin:16px auto 14px;max-width:820px}
-.hero h1 b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero p{color:var(--mut);font-size:18px;max-width:600px;margin:0 auto 26px}
-.btn{font:inherit;font-weight:600;border:0;border-radius:12px;padding:12px 22px;cursor:pointer;transition:transform .15s,box-shadow .15s,background .15s}
+body{margin:0;color:var(--ink);background:var(--bg);font:14px/1.45 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:absolute;inset:0 0 auto 0;height:300px;z-index:-1;background:radial-gradient(500px 220px at 10% 0,rgba(79,70,229,.13),transparent 70%),radial-gradient(460px 220px at 90% 0,rgba(6,182,212,.13),transparent 70%)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:16px 0 12px}
+.logo{display:flex;align-items:center;gap:9px;font-weight:800;font-size:17px;letter-spacing:-.02em}
+.logo i{width:28px;height:28px;border-radius:8px;background:var(--grad);display:grid;place-items:center;color:#fff;font-style:normal;font-size:13px}
+.stats{display:flex;gap:6px;flex-wrap:wrap}
+.stats span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:3px 11px;font-size:12px;color:var(--mut);font-weight:500}
+.stats b{color:var(--ink);font-weight:700}
+.title{display:flex;align-items:end;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:6px 0 14px}
+h1{margin:0;font-size:clamp(22px,3.4vw,30px);letter-spacing:-.03em;font-weight:800;line-height:1.1}
+h1 b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:var(--mut);margin:4px 0 0}
+.btn{font:inherit;font-weight:600;border:0;border-radius:10px;padding:9px 16px;cursor:pointer;transition:transform .12s,box-shadow .12s,background .12s;white-space:nowrap}
 .btn:active{transform:scale(.98)}
-.btn.primary{color:#fff;background:var(--grad);box-shadow:0 8px 22px rgba(37,99,235,.35)}
-.btn.primary:hover{box-shadow:0 12px 28px rgba(37,99,235,.45);transform:translateY(-1px)}
-.btn.ghost{color:var(--ink);background:#fff;border:1px solid var(--line);box-shadow:var(--sh)}
-.btn.ghost:hover{border-color:#c9d2e6}
-.btn:disabled{opacity:.45;cursor:not-allowed;transform:none;box-shadow:none}
-.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:38px 0 8px}
-.stat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:var(--sh);text-align:left}
-.stat b{display:block;font-size:28px;letter-spacing:-.03em;font-weight:800}
-.stat span{color:var(--mut);font-size:13px}
-section.step{margin-top:36px}
-.sh{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:14px}
-.sh h2{display:flex;align-items:center;gap:12px;font-size:22px;letter-spacing:-.02em;margin:0}
-.num{width:28px;height:28px;border-radius:50%;background:var(--ink);color:#fff;font-size:13px;display:grid;place-items:center}
-.link{background:none;border:0;color:var(--brand);font:inherit;font-weight:600;cursor:pointer;padding:0}
+.btn.primary{color:#fff;background:var(--grad);box-shadow:0 6px 16px rgba(37,99,235,.3)}
+.btn.primary:hover{box-shadow:0 8px 20px rgba(37,99,235,.42)}
+.btn.ghost{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.btn.ghost:hover{border-color:#c4cde4}
+.btn.wide{width:100%;padding:11px}
+.btn:disabled{opacity:.45;cursor:not-allowed;box-shadow:none}
+.layout{display:grid;grid-template-columns:1fr 310px;gap:16px;align-items:start}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--sh)}
+.mk-card{padding:14px 16px}
+.bar-h{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.bar-h h2,.side h2{margin:0;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);font-weight:700}
+.link{background:none;border:0;color:var(--brand);font:inherit;font-weight:600;cursor:pointer;padding:0;font-size:12.5px}
 .link:hover{text-decoration:underline}
-.mut{color:var(--mut);font-size:13px}
-.grp{margin-bottom:22px}
-.gh{display:flex;align-items:center;gap:10px;margin:0 0 10px}
-.gh h3{margin:0;font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--mut)}
-.gh .line{flex:1;height:1px;background:var(--line)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
-.mk{position:relative;display:flex;flex-direction:column;gap:2px;background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:14px 16px;cursor:pointer;transition:all .15s;box-shadow:var(--sh)}
-.mk:hover{transform:translateY(-2px);border-color:#c7d2fe}
-.mk input{position:absolute;opacity:0}
-.mk .sym{font-weight:800;letter-spacing:-.01em;font-size:16px}
-.mk .nm{color:var(--mut);font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding-right:26px}
-.mk .meta{display:flex;justify-content:space-between;margin-top:8px;font-size:12px;color:var(--mut)}
-.mk .meta em{font-style:normal;font-weight:700;color:var(--brand)}
-.mk .tick{position:absolute;top:14px;right:14px;width:20px;height:20px;border-radius:50%;border:1.5px solid #cbd5e1;display:grid;place-items:center;color:transparent;font-size:12px;font-weight:800;transition:all .15s}
-.mk.on{border-color:var(--brand);background:linear-gradient(#fff,#f5f7ff)}
-.mk.on .tick{background:var(--brand);border-color:var(--brand);color:#fff}
-.mk input:focus-visible~.tick{outline:2px solid var(--brand);outline-offset:2px}
-.panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:var(--sh)}
-.row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
-.seg{display:inline-flex;background:#eef1f7;border-radius:12px;padding:4px;gap:2px}
-.seg button,.seg label{font:inherit;font-weight:600;font-size:14px;color:var(--mut);background:transparent;border:0;border-radius:9px;padding:7px 14px;cursor:pointer;transition:all .15s}
-.seg .act,.seg input:checked+span{background:#fff;color:var(--ink);box-shadow:0 1px 3px rgba(16,24,40,.15)}
-.seg label{padding:0;position:relative}
-.seg label input{position:absolute;opacity:0}
-.seg label span{display:block;padding:7px 14px;border-radius:9px}
-.seg input:focus-visible+span{outline:2px solid var(--brand)}
-select{font:inherit;font-weight:600;color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:8px 12px;cursor:pointer}
+.links{display:flex;gap:12px;align-items:center}
+.grp{margin-top:10px}
+.gh{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.gh h3{margin:0;font-size:13px;font-weight:700}
+.gh small{color:var(--mut)}
+.gh .sp{flex:1;height:1px;background:var(--line)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:7px}
+.chip{position:relative;display:block;background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:7px 10px;cursor:pointer;transition:all .12s;user-select:none}
+.chip:hover{border-color:#c4cdf5;transform:translateY(-1px)}
+.chip input{position:absolute;opacity:0}
+.chip b{display:block;font-size:13.5px;font-weight:700;letter-spacing:-.01em}
+.chip span{display:block;font-size:11px;color:var(--mut)}
+.chip.on{border-color:var(--brand);background:var(--soft)}
+.chip.on::after{content:"\2713";position:absolute;top:6px;right:8px;font-size:11px;font-weight:800;color:var(--brand)}
+.chip.off{opacity:.45}
+.chip:has(input:focus-visible){outline:2px solid var(--brand);outline-offset:2px}
+.side{padding:14px 16px;position:sticky;top:12px}
+.sec{margin-bottom:14px}
+.sec:last-of-type{margin-bottom:12px}
+.pre{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:8px 0}
+.pre button{font:inherit;font-weight:600;font-size:12.5px;color:var(--mut);background:#fff;border:1.5px solid var(--line);border-radius:8px;padding:6px 4px;cursor:pointer;transition:all .12s}
+.pre button:hover{border-color:#c4cdf5;color:var(--ink)}
+.pre button.act{background:var(--soft);border-color:var(--brand);color:var(--brand)}
+.ft{display:flex;align-items:center;gap:8px}
+.ft select{flex:1;min-width:0}
+.ft em{font-style:normal;color:var(--mut)}
+select{font:inherit;font-weight:600;color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:8px;padding:6px 8px;cursor:pointer}
 select:focus{outline:2px solid var(--brand);outline-offset:1px}
-.field{display:flex;align-items:center;gap:8px;color:var(--mut);font-size:14px}
-.sw{display:inline-flex;align-items:center;gap:10px;cursor:pointer;font-weight:600}
+.seg{display:flex;background:#eef1f7;border-radius:9px;padding:3px;margin-top:8px}
+.seg label{flex:1;position:relative;cursor:pointer}
+.seg input{position:absolute;opacity:0}
+.seg span{display:block;text-align:center;padding:5px 4px;border-radius:7px;font-weight:600;font-size:12.5px;color:var(--mut);transition:all .12s}
+.seg input:checked+span{background:#fff;color:var(--ink);box-shadow:0 1px 3px rgba(16,24,40,.18)}
+.seg input:focus-visible+span{outline:2px solid var(--brand)}
+.sw{display:flex;align-items:center;justify-content:space-between;cursor:pointer;font-weight:600;margin-top:12px}
 .sw input{position:absolute;opacity:0}
-.sw i{width:44px;height:26px;border-radius:999px;background:#cbd5e1;position:relative;transition:background .2s}
-.sw i::after{content:"";position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.3);transition:transform .2s}
+.sw i{width:38px;height:22px;border-radius:99px;background:#cbd5e1;position:relative;transition:background .18s;flex:none}
+.sw i::after{content:"";position:absolute;top:3px;left:3px;width:16px;height:16px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.3);transition:transform .18s}
 .sw input:checked+i{background:var(--brand)}
-.sw input:checked+i::after{transform:translateX(18px)}
+.sw input:checked+i::after{transform:translateX(16px)}
 .sw input:focus-visible+i{outline:2px solid var(--brand);outline-offset:2px}
-details.files{margin-top:36px}
-details.files summary{cursor:pointer;font-weight:700;font-size:17px;padding:14px 18px;background:var(--card);border:1px solid var(--line);border-radius:14px}
-.tbl{max-height:320px;overflow:auto;margin-top:10px;background:var(--card);border:1px solid var(--line);border-radius:14px}
-table{width:100%;border-collapse:collapse;font-size:13px}
-th{position:sticky;top:0;background:#f4f6fb;text-align:left;padding:9px 14px;color:var(--mut);font-weight:600}
-td{padding:8px 14px;border-top:1px solid var(--line)}
+.sum{background:#f4f6fc;border-radius:10px;padding:10px 12px;margin-bottom:10px}
+.sum b{font-size:15px;display:block}
+.sum span{color:var(--mut);font-size:12px}
+.prog{height:5px;background:#e8ecf5;border-radius:99px;margin-top:10px;overflow:hidden;display:none}
+.prog.show{display:block}
+.prog i{display:block;height:100%;width:0;background:var(--grad);transition:width .2s}
+#status{font-size:11.5px;color:var(--mut);margin-top:6px;display:none;word-break:break-all}
+#status.show{display:block}
+details.files{margin:14px 0 90px}
+details.files summary{cursor:pointer;font-weight:700;font-size:13px;padding:11px 16px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.tbl{max-height:280px;overflow:auto;margin-top:8px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+th{position:sticky;top:0;background:#f4f6fb;text-align:left;padding:7px 12px;color:var(--mut);font-weight:600}
+td{padding:6px 12px;border-top:1px solid var(--line)}
 td a{color:var(--brand);font-weight:600;text-decoration:none}
 td a:hover{text-decoration:underline}
-footer{margin:46px 0 150px;text-align:center;color:var(--mut);font-size:13px}
-.dock{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);width:min(760px,calc(100% - 24px));background:rgba(255,255,255,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:18px;box-shadow:0 18px 50px rgba(16,24,40,.22);padding:12px 14px;z-index:20}
-.dock .top{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.dock .sum{font-weight:700}
-.dock .sum small{display:block;font-weight:500;color:var(--mut);font-size:12px}
-.bar{height:5px;background:#e8ecf5;border-radius:99px;margin-top:10px;overflow:hidden;display:none}
-.bar.show{display:block}
-.bar i{display:block;height:100%;width:0;background:var(--grad);transition:width .2s}
-#status{font-size:12px;color:var(--mut);margin-top:6px;display:none}
-#status.show{display:block}
-.empty{text-align:center;padding:48px 20px;background:var(--card);border:1px dashed #c9d2e6;border-radius:18px;color:var(--mut)}
-.empty b{display:block;color:var(--ink);font-size:18px;margin-bottom:6px}
-.demo{display:inline-block;margin-top:12px;background:#fff7e0;color:#8a5a00;border:1px solid #f1d98c;border-radius:999px;padding:4px 12px;font-size:12px;font-weight:600}
-@media (max-width:700px){.stats{grid-template-columns:repeat(2,1fr)}.hero p{font-size:16px}.dock .btn{padding:10px 16px}}
+.empty{text-align:center;padding:40px 20px;background:var(--card);border:1px dashed #c9d2e6;border-radius:14px;color:var(--mut)}
+.empty b{display:block;color:var(--ink);font-size:16px;margin-bottom:4px}
+.demo{background:#fff7e0;color:#8a5a00;border:1px solid #f1d98c;border-radius:99px;padding:3px 10px;font-size:11.5px;font-weight:600}
+.mbar{display:none}
+@media (max-width:860px){
+  .layout{grid-template-columns:1fr}
+  .side{position:static}
+  .mbar{display:flex;position:fixed;left:10px;right:10px;bottom:10px;z-index:30;align-items:center;justify-content:space-between;gap:10px;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 34px rgba(16,24,40,.22);padding:9px 12px}
+  .mbar div{font-weight:700;font-size:13px}.mbar small{display:block;color:var(--mut);font-weight:500;font-size:11.5px}
+  .grid{grid-template-columns:repeat(auto-fill,minmax(104px,1fr))}
+}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <nav>
+  <header>
     <div class="logo"><i>M1</i> Dukascopy Data</div>
-    <span class="pill" id="updated">Updated weekly</span>
-  </nav>
-
-  <header class="hero">
-    <span class="pill">1-minute OHLC &middot; Bid &amp; Ask &middot; Volume</span>
-    <h1>Years of market data, <b>one click away</b></h1>
-    <p>Forex, indices, metals, energy and crypto. Pick your markets, choose a period, and get an organized ZIP.</p>
-    <div class="cta">
-      <button class="btn primary" id="latestAll">Download latest &middot; all markets</button>
-      <button class="btn ghost" id="custom">Customize download</button>
-    </div>
-    <div id="demoTag"></div>
     <div class="stats" id="stats"></div>
   </header>
 
-  <div id="app">
-    <section class="step" id="s1">
-      <div class="sh">
-        <h2><span class="num">1</span>Choose markets</h2>
-        <div class="row" style="gap:16px"><span class="mut" id="mcount"></span><button class="link" id="mAll">Select all</button><button class="link" id="mNone">Clear</button></div>
+  <div class="title">
+    <div>
+      <h1>1-minute market data, <b>ready to download</b></h1>
+      <p class="sub">Bid, ask and volume in organized ZIP folders. Timezone UTC. Updated weekly. <span id="demoTag"></span></p>
+    </div>
+    <button class="btn ghost" id="latestAll">Latest year &middot; all markets</button>
+  </div>
+
+  <div id="app" class="layout">
+    <div class="card mk-card">
+      <div class="bar-h">
+        <h2>Markets <span id="mcount" style="text-transform:none;letter-spacing:0;font-weight:500"></span></h2>
+        <div class="links"><button class="link" id="mAll">Select all</button><button class="link" id="mNone">Clear</button></div>
       </div>
       <div id="mlist"></div>
-    </section>
+    </div>
 
-    <section class="step">
-      <div class="sh"><h2><span class="num">2</span>Select period</h2><span class="mut" id="pdesc"></span></div>
-      <div class="panel">
-        <div class="row">
-          <div class="seg" id="presets"></div>
-          <div class="field">From <select id="from"></select></div>
-          <div class="field">To <select id="to"></select></div>
-        </div>
-        <div class="mut" style="margin-top:12px">Jei market-e oi period-e data nai, shey market-er file ashbe na.</div>
+    <aside class="card side">
+      <div class="sec">
+        <h2>Period</h2>
+        <div class="pre" id="presets"></div>
+        <div class="ft"><select id="from"></select><em>to</em><select id="to"></select></div>
       </div>
-    </section>
-
-    <section class="step">
-      <div class="sh"><h2><span class="num">3</span>Options</h2></div>
-      <div class="panel">
-        <div class="row" style="justify-content:space-between">
-          <div class="seg" id="sides"></div>
-          <label class="sw"><input type="checkbox" id="vol" checked><i></i>Include volume column</label>
-        </div>
+      <div class="sec">
+        <h2>Price</h2>
+        <div class="seg" id="sides"></div>
+        <label class="sw"><span>Include volume</span><input type="checkbox" id="vol" checked><i></i></label>
       </div>
-    </section>
-
-    <details class="files">
-      <summary>Browse individual files</summary>
-      <div class="tbl"><table><thead><tr><th>File</th><th>Size</th><th>Updated</th></tr></thead><tbody id="rows"></tbody></table></div>
-    </details>
+      <div class="sum"><b id="sumA">-</b><span id="sumB"></span></div>
+      <button class="btn primary wide" id="zip">Download ZIP</button>
+      <div class="prog" id="bar"><i id="pbar"></i></div>
+      <div id="status"></div>
+    </aside>
   </div>
 
   <div id="emptyBox"></div>
-  <footer>Data from Dukascopy &middot; Timezone UTC &middot; Files organized as MARKET/MARKET_YEAR_side.csv</footer>
+
+  <details class="files" id="filesBox">
+    <summary>Browse individual files</summary>
+    <div class="tbl"><table><thead><tr><th>File</th><th>Size</th><th>Updated</th></tr></thead><tbody id="rows"></tbody></table></div>
+  </details>
 </div>
 
-<div class="dock">
-  <div class="top">
-    <div class="sum" id="summary">-</div>
-    <button class="btn primary" id="zip">Download ZIP</button>
-  </div>
-  <div class="bar" id="bar"><i id="pbar"></i></div>
-  <div id="status"></div>
+<div class="mbar" id="mbar">
+  <div id="mSum">-</div>
+  <button class="btn primary" id="zip2">Download ZIP</button>
 </div>
 
 <script type="module">
@@ -180,7 +173,7 @@ const fmt = (b) => (b > 1e9 ? (b / 1e9).toFixed(2) + " GB" : (b / 1e6).toFixed(0
 const GROUP_ORDER = ["Forex Majors", "Forex Crosses", "Crypto", "Metals & Energy", "Indices", "Other"];
 const demo = new URLSearchParams(location.search).has("demo");
 
-let files = [], meta = {}, markets = [], years = [], range = {}, maxY = {}, counts = {};
+let files = [], meta = {}, markets = [], years = [], range = {}, maxY = {};
 let selM = new Set(), from = 0, to = 0, side = "both", latestOnly = false, busy = false;
 
 const inScope = (f) => (side === "both" || f.side === side) &&
@@ -193,26 +186,24 @@ function renderMarkets() {
   markets.forEach((m) => { const g = (meta[m] && meta[m].group) || "Other"; (groups[g] = groups[g] || []).push(m); });
   const root = $("mlist"); root.innerHTML = "";
   GROUP_ORDER.filter((g) => groups[g]).forEach((g) => {
-    const ms = groups[g], all = ms.every((m) => selM.has(m));
+    const ms = groups[g], n = ms.filter((m) => selM.has(m)).length, all = n === ms.length;
     const sec = el("div", "grp"), gh = el("div", "gh");
     const h = el("h3"); h.textContent = g;
-    const ln = el("span", "line");
-    const tg = el("button", "link"); tg.textContent = all ? "Clear group" : "Select group";
+    const sm = el("small"); sm.textContent = `${n}/${ms.length}`;
+    const tg = el("button", "link"); tg.textContent = all ? "Clear" : "Select all";
     tg.onclick = () => { ms.forEach((m) => (all ? selM.delete(m) : selM.add(m))); refresh(); };
-    gh.append(h, ln, tg); sec.append(gh);
+    gh.append(h, sm, el("span", "sp"), tg); sec.append(gh);
     const grid = el("div", "grid");
     ms.forEach((m) => {
-      const card = el("label", "mk" + (selM.has(m) ? " on" : ""));
-      const c = el("input"); c.type = "checkbox"; c.checked = selM.has(m);
+      const on = selM.has(m);
+      const hasData = latestOnly || (range[m][1] >= from && range[m][0] <= to);
+      const chip = el("label", "chip" + (on ? " on" : "") + (!hasData ? " off" : ""));
+      chip.title = ((meta[m] && meta[m].name) || m) + (hasData ? "" : " (no data in this period)");
+      const c = el("input"); c.type = "checkbox"; c.checked = on;
       c.onchange = () => { c.checked ? selM.add(m) : selM.delete(m); refresh(); };
-      const tick = el("span", "tick"); tick.textContent = "\u2713";
-      const s = el("span", "sym"); s.textContent = m;
-      const n = el("span", "nm"); n.textContent = (meta[m] && meta[m].name) || "";
-      const mt = el("div", "meta");
-      const a = el("span"); a.textContent = `${range[m][0]} - ${range[m][1]}`;
-      const b = el("em"); b.textContent = (counts[m] || 0) + " files";
-      mt.append(a, b);
-      card.append(c, tick, s, n, mt); grid.append(card);
+      const b = el("b"); b.textContent = m;
+      const s = el("span"); s.textContent = `${range[m][0]}\u2013${range[m][1]}`;
+      chip.append(c, b, s); grid.append(chip);
     });
     sec.append(grid); root.append(sec);
   });
@@ -220,28 +211,24 @@ function renderMarkets() {
 
 function renderControls() {
   const last = years[years.length - 1];
-  const presets = [["latest", "Latest year"], ["3", "Last 3 years"], ["5", "Last 5 years"], ["all", "Full history"]];
-  const active = latestOnly ? null :
-    from === last && to === last ? "latest" :
-    to === last && from === Math.max(years[0], last - 2) ? "3" :
-    to === last && from === Math.max(years[0], last - 4) ? "5" :
-    from === years[0] && to === last ? "all" : null;
+  const p3 = Math.max(years[0], last - 2), p5 = Math.max(years[0], last - 4);
+  const active = latestOnly ? "latest" : to === last && from === p3 ? "3" : to === last && from === p5 ? "5" :
+    from === years[0] && to === last ? "all" : "";
   $("presets").innerHTML = "";
-  presets.forEach(([k, t]) => {
+  [["latest", "Latest year"], ["3", "Last 3 yrs"], ["5", "Last 5 yrs"], ["all", "Full history"]].forEach(([k, t]) => {
     const b = el("button", active === k ? "act" : ""); b.textContent = t;
     b.onclick = () => {
-      latestOnly = false;
-      if (k === "latest") from = to = last;
-      else if (k === "all") { from = years[0]; to = last; }
-      else { to = last; from = Math.max(years[0], last - (+k - 1)); }
+      latestOnly = k === "latest";
+      if (k === "all") { from = years[0]; to = last; }
+      else if (k !== "latest") { to = last; from = Math.max(years[0], last - (+k - 1)); }
       refresh();
     };
     $("presets").append(b);
   });
   $("from").value = from; $("to").value = to;
-  $("pdesc").textContent = latestOnly ? "Latest year of each market" : from === to ? String(from) : `${from} to ${to}`;
+  $("from").disabled = $("to").disabled = latestOnly;
   $("sides").innerHTML = "";
-  [["both", "Bid + Ask"], ["bid", "Bid only"], ["ask", "Ask only"]].forEach(([v, t]) => {
+  [["both", "Bid + Ask"], ["bid", "Bid"], ["ask", "Ask"]].forEach(([v, t]) => {
     const l = el("label"), r = el("input"); r.type = "radio"; r.name = "side"; r.checked = side === v;
     r.onchange = () => { side = v; refresh(); };
     const s = el("span"); s.textContent = t; l.append(r, s); $("sides").append(l);
@@ -249,13 +236,13 @@ function renderControls() {
 }
 
 function refresh() {
-  counts = {};
-  files.forEach((f) => { if (inScope(f)) counts[f.market] = (counts[f.market] || 0) + 1; });
   renderMarkets(); renderControls();
   const list = filtered(), total = list.reduce((s, f) => s + f.size, 0);
-  $("mcount").textContent = `${selM.size} of ${markets.length} selected`;
-  $("summary").innerHTML = `${selM.size} markets &middot; ${list.length} files<small>${fmt(total)}${latestOnly ? " &middot; latest year each" : ""}</small>`;
-  $("zip").disabled = busy || !list.length || demo;
+  $("mcount").textContent = `\u00b7 ${selM.size}/${markets.length} selected`;
+  $("sumA").textContent = `${list.length} files \u00b7 ${fmt(total)}`;
+  $("sumB").textContent = `${selM.size} markets \u00b7 ` + (latestOnly ? "latest year each" : from === to ? from : `${from}\u2013${to}`);
+  $("mSum").innerHTML = `${list.length} files<small>${fmt(total)}</small>`;
+  $("zip").disabled = $("zip2").disabled = busy || !list.length || demo;
   $("rows").innerHTML = list.map((f) =>
     `<tr><td><a href="/dl/${f.name}" data-n="${f.name}">${f.name}</a></td><td>${fmt(f.size)}</td><td>${f.updated.slice(0, 10)}</td></tr>`).join("");
 }
@@ -301,7 +288,7 @@ async function startZip() {
   const list = filtered(); if (!list.length || busy) return;
   const withVol = $("vol").checked, total = list.reduce((s, f) => s + f.size, 0);
   let done = 0, n = 0; const t0 = Date.now();
-  busy = true; $("zip").disabled = $("latestAll").disabled = true;
+  busy = true; $("zip").disabled = $("zip2").disabled = $("latestAll").disabled = true;
   $("bar").classList.add("show"); $("pbar").style.width = "0";
   const zipName = "dukascopy-m1-" + new Date().toISOString().slice(0, 10) + ".zip";
 
@@ -342,15 +329,14 @@ function demoFiles() {
 }
 
 function showEmpty(title, text) {
-  $("app").style.display = "none"; $("stats").innerHTML = "";
+  $("app").style.display = "none"; $("filesBox").style.display = "none"; $("mbar").style.display = "none";
+  $("latestAll").disabled = true;
   $("emptyBox").innerHTML = `<div class="empty"><b>${title}</b>${text}</div>`;
-  $("zip").disabled = $("latestAll").disabled = $("custom").disabled = true;
-  $("summary").textContent = "No data yet";
 }
 
 async function init() {
   try { meta = await (await fetch("/markets.json")).json(); } catch { meta = {}; }
-  if (demo) { files = demoFiles(); $("demoTag").innerHTML = '<span class="demo">Demo preview: fake files, downloads off</span>'; }
+  if (demo) { files = demoFiles(); $("demoTag").innerHTML = '<span class="demo">Demo preview</span>'; }
   else {
     let r; try { r = await fetch("/api/files"); } catch { r = { ok: false, status: "network" }; }
     if (!r.ok) return showEmpty("Could not load the file list", "Error " + r.status + ". Kichukkhon pore reload koro.");
@@ -365,13 +351,12 @@ async function init() {
     range[m] = [Math.min(...ys), Math.max(...ys)]; maxY[m] = range[m][1];
   });
   $("from").innerHTML = $("to").innerHTML = years.map((y) => `<option>${y}</option>`).join("");
-  selM = new Set(markets); from = to = years[years.length - 1];
+  selM = new Set(markets); from = to = years[years.length - 1]; latestOnly = true;
   const last = files.map((f) => f.updated).sort().pop();
-  $("updated").textContent = "Updated " + last.slice(0, 10);
   $("stats").innerHTML = [
-    [markets.length, "Markets"], [years[0] + "-" + years[years.length - 1], "Years covered"],
-    [files.length, "CSV files"], [fmt(files.reduce((s, f) => s + f.size, 0)), "Total data"],
-  ].map(([v, l]) => `<div class="stat"><b>${v}</b><span>${l}</span></div>`).join("");
+    [markets.length, "markets"], [years[0] + "\u2013" + years[years.length - 1], ""],
+    [fmt(files.reduce((s, f) => s + f.size, 0)), "total"], ["updated " + last.slice(0, 10), ""],
+  ].map(([v, l]) => `<span><b>${v}</b> ${l}</span>`).join("");
   refresh();
 }
 
@@ -379,9 +364,8 @@ $("mAll").onclick = () => { selM = new Set(markets); refresh(); };
 $("mNone").onclick = () => { selM = new Set(); refresh(); };
 $("from").onchange = (e) => { from = +e.target.value; if (to < from) to = from; latestOnly = false; refresh(); };
 $("to").onchange = (e) => { to = +e.target.value; if (from > to) from = to; latestOnly = false; refresh(); };
-$("zip").onclick = startZip;
+$("zip").onclick = $("zip2").onclick = startZip;
 $("latestAll").onclick = () => { selM = new Set(markets); side = "both"; latestOnly = true; refresh(); startZip(); };
-$("custom").onclick = () => $("s1").scrollIntoView({ behavior: "smooth" });
 
 init();
 </script>
