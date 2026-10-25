@@ -5,178 +5,191 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dukascopy M1 Data</title>
 <style>
-:root{--ink:#17150f;--mut:#7a7563;--line:#ddd6c1;--bg:#f6f2e6;--card:#fffdf6;--acc:#8b1a1a;--link:#1b3a8a;--hov:#efe9d5;--warn:#fff0c2}
-@media (prefers-color-scheme:dark){:root{--ink:#ece6d2;--mut:#9a947e;--line:#3d3b30;--bg:#1a1913;--card:#22211a;--acc:#ff8a73;--link:#8fb0ff;--hov:#2b2a21;--warn:#3e3410}}
+:root{--desk:#008080;--face:#c0c0c0;--face2:#dcdcdc;--hi:#fff;--sh:#808080;--dk:#000;--txt:#000;--field:#fff;--t1:#000080;--t2:#1084d0;--selbg:#000080;--seltx:#fff;--mut:#4d4d4d;--link:#0000cc;--warn:#ffffe1;--glow:rgba(16,132,208,.35)}
+@media (prefers-color-scheme:dark){:root{--desk:#0e2a2d;--face:#2d2d33;--face2:#3a3a42;--hi:#5a5a66;--sh:#16161a;--dk:#000;--txt:#e8e8ee;--field:#1b1b20;--t1:#1b2d78;--t2:#3b6fc4;--selbg:#3b6fc4;--seltx:#fff;--mut:#a0a0ac;--link:#8fb0ff;--warn:#3d3715;--glow:rgba(59,111,196,.45)}}
 *{box-sizing:border-box}
-body{margin:0;color:var(--ink);background:var(--bg);font:14px/1.5 Georgia,"Times New Roman",serif}
-.wrap{max-width:1060px;margin:0 auto;padding:0 18px}
-header{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:18px 0 10px;border-bottom:1px solid var(--ink)}
-.logo{font-weight:700;font-size:19px}
-.logo i{font:700 12px ui-monospace,Consolas,monospace;font-style:normal;background:var(--ink);color:var(--bg);padding:2px 6px;margin-right:8px}
-#stats{font:12px ui-monospace,Consolas,monospace;color:var(--mut)}
-.intro{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:18px 0 20px}
-h1{margin:0;font-size:24px;font-weight:700;line-height:1.2}
-.sub{color:var(--mut);margin:2px 0 0;font-style:italic}
-.btn{font:inherit;font-weight:700;color:var(--ink);background:transparent;border:1px solid var(--ink);padding:6px 14px;cursor:pointer;white-space:nowrap;border-radius:0;transition:background .12s,color .12s}
-.btn:hover{background:var(--ink);color:var(--bg)}
-.btn.primary{background:var(--ink);color:var(--bg)}
-.btn.primary:hover{background:var(--acc);border-color:var(--acc);color:#fff}
-.btn.danger{border-color:var(--acc);color:var(--acc)}
-.btn.danger:hover{background:var(--acc);color:#fff}
-.btn.wide{width:100%;padding:9px;font-size:15px}
-.btn:disabled{opacity:.35;cursor:not-allowed}
-.btn:disabled:hover{background:transparent;color:var(--ink)}
-.btn.primary:disabled:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.quick{display:flex;gap:8px;flex-wrap:wrap}
-.layout{display:grid;grid-template-columns:1fr 270px;gap:34px;align-items:start}
-.tools{position:sticky;top:0;z-index:5;background:var(--bg);padding:8px 0;border-bottom:1px solid var(--line);display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
-.lbl{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--mut)}
-.cnt{font:12px ui-monospace,Consolas,monospace;color:var(--mut)}
-.tl,.link{background:none;border:0;color:var(--link);font:inherit;cursor:pointer;padding:0;text-decoration:underline;text-underline-offset:2px}
-.tl:hover,.link:hover{color:var(--acc)}
-.tl.act{color:var(--ink);font-weight:700;text-decoration:none;cursor:default}
+body{margin:0;min-height:100vh;background:var(--desk);color:var(--txt);font:13px/1.4 "Segoe UI",Tahoma,Verdana,sans-serif;padding:20px 12px 64px}
+.win{max-width:1060px;margin:0 auto;background:var(--face);border:2px solid;border-color:var(--hi) var(--dk) var(--dk) var(--hi);box-shadow:inset -1px -1px var(--sh),inset 1px 1px var(--face2),0 24px 60px rgba(0,0,0,.4);padding:3px}
+.titlebar{display:flex;align-items:center;gap:8px;background:linear-gradient(90deg,var(--t1),var(--t2));color:#fff;font-weight:700;padding:3px 4px 3px 6px;user-select:none}
+.titlebar .ti{background:#fff;color:var(--t1);font:700 10px Consolas,monospace;padding:0 3px}
+.titlebar .tt{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wc{display:flex;gap:2px}
+.wc b{width:18px;height:16px;display:grid;place-items:center;background:var(--face);color:var(--txt);border:2px solid;border-color:var(--hi) var(--dk) var(--dk) var(--hi);font:700 11px/1 Tahoma,sans-serif;cursor:default}
+.menubar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:3px 6px;border-bottom:1px solid var(--sh);box-shadow:0 1px 0 var(--hi)}
+#stats{font:12px Consolas,"Courier New",monospace;color:var(--mut)}
+.menubar span.m{color:var(--txt)}
+.toolbar{display:flex;align-items:center;gap:6px;flex-wrap:wrap;padding:6px;border-bottom:1px solid var(--sh);box-shadow:0 1px 0 var(--hi)}
+.toolbar .l{color:var(--mut);margin-right:2px}
+.btn{font:inherit;color:var(--txt);background:var(--face);border:2px solid;border-color:var(--hi) var(--dk) var(--dk) var(--hi);box-shadow:inset -1px -1px var(--sh),inset 1px 1px var(--face2);padding:4px 14px;cursor:pointer;white-space:nowrap;border-radius:0;transition:filter .12s}
+.btn:hover{filter:brightness(1.07)}
+.btn:active{border-color:var(--dk) var(--hi) var(--hi) var(--dk);box-shadow:inset 1px 1px var(--sh);padding:5px 13px 3px 15px}
+.btn:focus-visible{outline:1px dotted var(--txt);outline-offset:-5px}
+.btn.primary{font-weight:700;outline:1px solid var(--dk)}
+.btn.wide{width:100%;padding:7px;font-size:14px}
+.btn:disabled{color:var(--sh);text-shadow:1px 1px var(--hi);cursor:not-allowed;filter:none}
+.btn.sm{padding:1px 10px}
+.body{padding:8px}
+.layout{display:grid;grid-template-columns:1fr 290px;gap:8px;align-items:start}
+.pane{border:1px solid var(--sh);box-shadow:1px 1px 0 var(--hi);padding:8px}
+.tools{position:sticky;top:0;z-index:5;background:var(--face);padding:2px 0 8px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.tools .t{font-weight:700;margin-right:4px}
+.cnt{font:12px Consolas,monospace;color:var(--mut)}
+.tl{font:inherit;color:var(--txt);background:var(--face);border:2px solid;border-color:var(--hi) var(--dk) var(--dk) var(--hi);box-shadow:inset -1px -1px var(--sh),inset 1px 1px var(--face2);padding:0 9px;cursor:pointer;border-radius:0;transition:filter .12s}
+.tl:hover{filter:brightness(1.07)}
+.tl:active,.tl.act{border-color:var(--dk) var(--hi) var(--hi) var(--dk);box-shadow:inset 1px 1px var(--sh);background:var(--face2);font-weight:700}
 .tools .sp{flex:1}
-.grp{margin-top:16px}
-.gh{display:flex;align-items:baseline;gap:8px;margin-bottom:6px}
-.gh h3{margin:0;font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--mut)}
-.gh small{font:11px ui-monospace,Consolas,monospace;color:var(--mut)}
+.list{background:var(--field);border:2px solid;border-color:var(--sh) var(--hi) var(--hi) var(--sh);box-shadow:inset 1px 1px var(--dk);padding:4px 10px 12px}
+.grp{margin-top:10px}
+.gh{display:flex;align-items:center;gap:8px;margin-bottom:6px;border-bottom:1px solid var(--sh);box-shadow:0 1px 0 var(--hi);padding-bottom:3px}
+.gh h3{margin:0;font-size:13px;font-weight:700}
+.gh small{font:11px Consolas,monospace;color:var(--mut)}
 .gh .sp{flex:1}
+.link{background:none;border:0;color:var(--link);font:inherit;cursor:pointer;padding:0;text-decoration:underline}
+.link:hover{text-decoration:none}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:6px}
-.chip{position:relative;display:block;background:var(--card);border:1px solid var(--line);padding:5px 9px;cursor:pointer;user-select:none;transition:background .1s,border-color .1s}
-.chip:hover{border-color:var(--ink)}
+.chip{position:relative;display:block;background:var(--face);color:var(--txt);border:2px solid;border-color:var(--hi) var(--dk) var(--dk) var(--hi);box-shadow:inset -1px -1px var(--sh),inset 1px 1px var(--face2);padding:3px 8px;cursor:pointer;user-select:none;transition:filter .12s,box-shadow .15s}
+.chip:hover{filter:brightness(1.08)}
 .chip input{position:absolute;opacity:0}
-.chip b{display:block;font:700 13px ui-monospace,Consolas,monospace}
-.chip span{display:block;font:11px ui-monospace,Consolas,monospace;color:var(--mut)}
-.chip.on{background:var(--ink);border-color:var(--ink);color:var(--bg)}
-.chip.on span{color:var(--bg);opacity:.65}
-.chip.off{opacity:.4}
-.chip:has(input:focus-visible){outline:2px dotted var(--acc);outline-offset:2px}
-.side{position:sticky;top:14px;max-height:calc(100vh - 28px);overflow:auto;padding-left:22px;border-left:1px solid var(--line)}
-.sec{margin-bottom:20px}
-.sec .lbl{display:block;margin-bottom:8px}
+.chip b{display:block;font:700 13px Consolas,"Courier New",monospace}
+.chip span{display:block;font:11px Consolas,monospace;color:var(--mut)}
+.chip.on{border-color:var(--dk) var(--hi) var(--hi) var(--dk);box-shadow:inset 1px 1px var(--sh),0 0 0 2px var(--glow);background:var(--selbg);color:var(--seltx);padding:4px 7px 2px 9px}
+.chip.on span{color:var(--seltx);opacity:.75}
+.chip.off{opacity:.45}
+.chip:has(input:focus-visible){outline:1px dotted var(--txt);outline-offset:2px}
+.side{position:sticky;top:8px;max-height:calc(100vh - 100px);overflow:auto;display:flex;flex-direction:column;gap:10px}
+fieldset{margin:0;border:1px solid var(--sh);box-shadow:1px 1px 0 var(--hi);padding:8px 10px 10px;min-width:0}
+legend{padding:0 4px;font-weight:700}
 .pre{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-bottom:8px}
-.pre button{font:inherit;font-size:13px;color:var(--ink);background:transparent;border:1px solid var(--line);padding:3px;cursor:pointer;border-radius:0}
-.pre button:hover{border-color:var(--ink)}
-.pre button.act{background:var(--ink);border-color:var(--ink);color:var(--bg)}
-.ft{display:flex;align-items:center;gap:8px}
+.pre button{font:inherit;color:var(--txt);background:var(--face);border:2px solid;border-color:var(--hi) var(--dk) var(--dk) var(--hi);box-shadow:inset -1px -1px var(--sh),inset 1px 1px var(--face2);padding:2px;cursor:pointer;border-radius:0;transition:filter .12s}
+.pre button:hover{filter:brightness(1.07)}
+.pre button.act{border-color:var(--dk) var(--hi) var(--hi) var(--dk);box-shadow:inset 1px 1px var(--sh);background:var(--face2);font-weight:700}
+.ft{display:flex;align-items:center;gap:6px}
 .ft select{flex:1;min-width:0}
-.ft em{color:var(--mut)}
-select{font:13px ui-monospace,Consolas,monospace;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:0;padding:4px 6px;cursor:pointer}
-select:hover{border-color:var(--ink)}
-select:focus{outline:2px dotted var(--acc);outline-offset:1px}
-select:disabled{opacity:.4}
-.seg{display:flex;border:1px solid var(--line)}
+select{font:12.5px Consolas,monospace;color:var(--txt);background:var(--field);border:2px solid;border-color:var(--sh) var(--hi) var(--hi) var(--sh);box-shadow:inset 1px 1px var(--dk);border-radius:0;padding:2px 4px;cursor:pointer}
+select:focus{outline:1px dotted var(--txt);outline-offset:1px}
+select:disabled{color:var(--sh);background:var(--face)}
+.seg{display:flex;gap:0}
 .seg label{flex:1;position:relative;cursor:pointer}
 .seg input{position:absolute;opacity:0}
-.seg span{display:block;text-align:center;padding:4px;font-size:13px}
-.seg label:hover span{background:var(--hov)}
-.seg input:checked+span{background:var(--ink);color:var(--bg);font-weight:700}
-.seg input:focus-visible+span{outline:2px dotted var(--acc);outline-offset:-3px}
+.seg span{display:block;text-align:center;padding:3px 2px;background:var(--face);border:2px solid;border-color:var(--hi) var(--dk) var(--dk) var(--hi);box-shadow:inset -1px -1px var(--sh),inset 1px 1px var(--face2);transition:filter .12s}
+.seg label:hover span{filter:brightness(1.07)}
+.seg input:checked+span{border-color:var(--dk) var(--hi) var(--hi) var(--dk);box-shadow:inset 1px 1px var(--sh);background:var(--face2);font-weight:700}
+.seg input:focus-visible+span{outline:1px dotted var(--txt);outline-offset:-5px}
 .opt{display:flex;align-items:flex-start;gap:8px;cursor:pointer;margin-top:8px}
-.opt input{width:15px;height:15px;margin:3px 0 0;accent-color:var(--ink);cursor:pointer;flex:none}
-.opt small{color:var(--mut);display:block;font-size:12px;line-height:1.2}
-.sum{margin-bottom:10px}
-.sum b{font:700 16px ui-monospace,Consolas,monospace;display:block}
+.opt small{display:block;color:var(--mut);font-size:11.5px;line-height:1.2}
+input[type=checkbox]{appearance:none;-webkit-appearance:none;flex:none;margin:2px 0 0;width:14px;height:14px;background:var(--field);border:2px solid;border-color:var(--sh) var(--hi) var(--hi) var(--sh);box-shadow:inset 1px 1px var(--dk);display:grid;place-items:center;cursor:pointer}
+input[type=checkbox]:checked::after{content:"";width:3px;height:7px;border:solid var(--txt);border-width:0 2px 2px 0;transform:rotate(45deg) translate(-1px,-1px)}
+input[type=checkbox]:focus-visible{outline:1px dotted var(--txt);outline-offset:2px}
+.sum{background:var(--field);border:2px solid;border-color:var(--sh) var(--hi) var(--hi) var(--sh);box-shadow:inset 1px 1px var(--dk);padding:5px 8px;margin-bottom:8px}
+.sum b{font:700 15px Consolas,monospace;display:block}
 .sum span{color:var(--mut);font-size:12px}
-.note{display:none;background:var(--warn);padding:5px 8px;font-size:12.5px;margin-bottom:8px}
+.note{display:none;background:var(--warn);border:1px solid var(--dk);padding:4px 8px;font-size:12px;margin-bottom:8px}
 .note.show{display:block}
 .btns{display:flex;gap:6px}
 .btns .primary{flex:1}
-.prog{height:4px;background:var(--line);margin-top:10px;display:none}
+.prog{height:18px;margin-top:8px;border:2px solid;border-color:var(--sh) var(--hi) var(--hi) var(--sh);box-shadow:inset 1px 1px var(--dk);background:var(--field);padding:1px;display:none}
 .prog.show{display:block}
-.prog i{display:block;height:100%;width:0;background:var(--ink);transition:width .2s}
-#status{font:11.5px ui-monospace,Consolas,monospace;color:var(--mut);margin-top:6px;display:none;word-break:break-all}
+.prog i{display:block;height:100%;width:0;background:repeating-linear-gradient(90deg,var(--selbg) 0 8px,transparent 8px 10px);transition:width .2s}
+#status{font:11.5px Consolas,monospace;color:var(--mut);margin-top:6px;display:none;word-break:break-all}
 #status.show{display:block}
-details.files{margin:26px 0 90px}
-details.files summary{cursor:pointer;color:var(--link);text-decoration:underline;text-underline-offset:2px;width:max-content}
-.tbl{max-height:280px;overflow:auto;margin-top:8px;border:1px solid var(--line);background:var(--card)}
-table{width:100%;border-collapse:collapse;font:12.5px ui-monospace,Consolas,monospace}
-th{position:sticky;top:0;background:var(--hov);text-align:left;padding:6px 12px}
-td{padding:4px 12px;border-top:1px solid var(--line)}
+details.files{margin-top:8px}
+details.files summary{cursor:pointer;font-weight:700;padding:2px 4px;width:max-content;user-select:none}
+.tbl{max-height:280px;overflow:auto;margin-top:6px;background:var(--field);border:2px solid;border-color:var(--sh) var(--hi) var(--hi) var(--sh);box-shadow:inset 1px 1px var(--dk)}
+table{width:100%;border-collapse:collapse;font:12px Consolas,monospace}
+th{position:sticky;top:0;background:var(--face);text-align:left;padding:3px 10px;border-bottom:2px solid var(--sh);font-family:"Segoe UI",Tahoma,sans-serif;font-weight:400}
+td{padding:2px 10px}
+tbody tr:hover{background:var(--selbg);color:var(--seltx)}
+tbody tr:hover a{color:var(--seltx)}
 td a{color:var(--link)}
-td a:hover{color:var(--acc)}
-.empty{text-align:center;padding:40px 20px;border:1px dashed var(--line);color:var(--mut)}
-.empty b{display:block;color:var(--ink);font-size:17px;margin-bottom:4px}
-.demo{background:var(--hov);border:1px solid var(--line);padding:0 8px;font:11.5px ui-monospace,Consolas,monospace;font-style:normal}
-.mbar{display:none}
+.statusbar{display:flex;gap:3px;padding:3px 0 0}
+.statusbar div{border:1px solid;border-color:var(--sh) var(--hi) var(--hi) var(--sh);padding:1px 8px;font-size:12px;color:var(--mut)}
+.statusbar div:first-child{flex:1}
+.empty{text-align:center;padding:30px 20px;background:var(--field);border:2px solid;border-color:var(--sh) var(--hi) var(--hi) var(--sh);color:var(--mut)}
+.empty b{display:block;color:var(--txt);font-size:15px;margin-bottom:4px}
+.demo{background:var(--warn);border:1px solid var(--dk);padding:0 6px;font:11px Consolas,monospace;color:#000}
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;align-items:center;gap:8px;height:36px;background:var(--face);border-top:2px solid var(--hi);box-shadow:0 -1px 0 var(--sh);padding:3px 6px}
+.mbar .btn{padding:2px 12px;font-weight:700}
+#mSum{flex:1;font-size:12.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border:1px solid;border-color:var(--sh) var(--hi) var(--hi) var(--sh);padding:3px 10px}
+#mSum small{margin-left:8px;color:var(--mut)}
+#clock{border:1px solid;border-color:var(--sh) var(--hi) var(--hi) var(--sh);padding:3px 10px;font:12px Consolas,monospace}
 @media (max-width:860px){
-  .layout{grid-template-columns:1fr;gap:18px}
-  .side{position:static;max-height:none;padding:18px 0 0;border-left:0;border-top:1px solid var(--line)}
-  .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:30;align-items:center;justify-content:space-between;gap:10px;background:var(--card);border-top:1px solid var(--ink);padding:8px 16px}
-  .mbar div{font-weight:700;font-size:13px}.mbar small{display:block;color:var(--mut);font-weight:400;font-size:11.5px}
+  body{padding:0 0 44px}
+  .win{border-width:0;box-shadow:none;max-width:none}
+  .layout{grid-template-columns:1fr}
+  .side{position:static;max-height:none}
   .grid{grid-template-columns:repeat(auto-fill,minmax(100px,1fr))}
-  details.files{margin-bottom:100px}
+  #clock{display:none}
+  .menubar{flex-wrap:wrap}
 }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <div class="logo"><i>M1</i>Dukascopy Data</div>
-    <div id="stats"></div>
-  </header>
+<div class="win">
+  <div class="titlebar"><span class="ti">M1</span><span class="tt">Dukascopy Data Explorer - 1-minute bid / ask / volume</span><span class="wc" aria-hidden="true"><b>_</b><b>&#9633;</b><b>&times;</b></span></div>
+  <div class="menubar"><span class="m">Data &middot; UTC &middot; updated weekly <span id="demoTag"></span></span><div id="stats"></div></div>
 
-  <div class="intro" id="quick">
-    <div>
-      <h1>1-minute market data</h1>
-      <p class="sub">Bid, ask &amp; volume &middot; UTC &middot; updated weekly <span id="demoTag"></span></p>
-    </div>
-    <div class="quick">
-      <button class="btn primary" id="qAll">Latest year &middot; all markets</button>
-      <button class="btn" id="qSel">Latest year &middot; selected</button>
-    </div>
+  <div class="toolbar" id="quick">
+    <span class="l">Quick:</span>
+    <button class="btn primary" id="qAll">Latest year &middot; all markets</button>
+    <button class="btn" id="qSel">Latest year &middot; selected</button>
   </div>
 
-  <div id="app" class="layout">
-    <div>
-      <div class="tools">
-        <span class="lbl">Markets</span><span class="cnt" id="mcount"></span>
-        <button class="tl" id="mAll">All</button>
-        <button class="tl" id="mNone">None</button>
-        <button class="tl" id="mInv">Invert</button>
-        <span class="sp"></span>
-        <span class="cnt">Only:</span>
-        <span id="only" style="display:contents"></span>
-      </div>
-      <div id="mlist"></div>
-    </div>
-
-    <aside class="side">
-      <div class="sec">
-        <span class="lbl">Period</span>
-        <div class="pre" id="presets"></div>
-        <div class="ft"><select id="from"></select><em>to</em><select id="to"></select></div>
-      </div>
-      <div class="sec">
-        <span class="lbl">Price &amp; output</span>
-        <div class="seg" id="sides"></div>
-        <label class="opt"><input type="checkbox" id="vol" checked><span>Include volume</span></label>
-        <label class="opt"><input type="checkbox" id="folders" checked><span>Folder per market<small>OFF dile shob file ek folder-e</small></span></label>
-      </div>
-      <div class="sec" style="margin-bottom:0">
-        <div class="sum"><b id="sumA">-</b><span id="sumB"></span></div>
-        <div class="note" id="note"></div>
-        <div class="btns">
-          <button class="btn primary wide" id="zip">Download ZIP</button>
-          <button class="btn danger" id="cancel" style="display:none">Cancel</button>
+  <div class="body">
+    <div id="app" class="layout">
+      <div class="pane">
+        <div class="tools">
+          <span class="t">Markets</span><span class="cnt" id="mcount"></span>
+          <button class="tl" id="mAll">All</button>
+          <button class="tl" id="mNone">None</button>
+          <button class="tl" id="mInv">Invert</button>
+          <span class="sp"></span>
+          <span class="cnt">Only:</span>
+          <span id="only" style="display:contents"></span>
         </div>
-        <div class="prog" id="bar"><i id="pbar"></i></div>
-        <div id="status"></div>
+        <div class="list" id="mlist"></div>
       </div>
-    </aside>
+
+      <aside class="side">
+        <fieldset>
+          <legend>Period</legend>
+          <div class="pre" id="presets"></div>
+          <div class="ft"><select id="from"></select><span>to</span><select id="to"></select></div>
+        </fieldset>
+        <fieldset>
+          <legend>Price &amp; output</legend>
+          <div class="seg" id="sides"></div>
+          <label class="opt"><input type="checkbox" id="vol" checked><span>Include volume</span></label>
+          <label class="opt"><input type="checkbox" id="folders" checked><span>Folder per market<small>OFF dile shob file ek folder-e</small></span></label>
+        </fieldset>
+        <fieldset>
+          <legend>Download</legend>
+          <div class="sum"><b id="sumA">-</b><span id="sumB"></span></div>
+          <div class="note" id="note"></div>
+          <div class="btns">
+            <button class="btn primary wide" id="zip">Download ZIP</button>
+            <button class="btn" id="cancel" style="display:none">Cancel</button>
+          </div>
+          <div class="prog" id="bar"><i id="pbar"></i></div>
+          <div id="status"></div>
+        </fieldset>
+      </aside>
+    </div>
+
+    <div id="emptyBox"></div>
+
+    <details class="files" id="filesBox">
+      <summary>Browse individual files</summary>
+      <div class="tbl"><table><thead><tr><th>File</th><th>Size</th><th>Updated</th></tr></thead><tbody id="rows"></tbody></table></div>
+    </details>
   </div>
 
-  <div id="emptyBox"></div>
-
-  <details class="files" id="filesBox">
-    <summary>Browse individual files</summary>
-    <div class="tbl"><table><thead><tr><th>File</th><th>Size</th><th>Updated</th></tr></thead><tbody id="rows"></tbody></table></div>
-  </details>
+  <div class="statusbar"><div id="sb1">Ready</div><div id="sb2">-</div><div id="sb3">-</div></div>
 </div>
 
 <div class="mbar" id="mbar">
+  <button class="btn" id="zip2">Download ZIP</button>
   <div id="mSum">-</div>
-  <button class="btn primary" id="zip2">Download ZIP</button>
+  <div id="clock"></div>
 </div>
 
 <script type="module">
@@ -273,10 +286,14 @@ function refresh() {
   renderMarkets(); renderOnly(); renderControls();
   const list = filtered(), total = list.reduce((s, f) => s + f.size, 0);
   const nm = new Set(list.map((f) => f.market)).size;
+  const period = latestOnly ? "latest year each" : from === to ? String(from) : `${from}\u2013${to}`;
   $("mcount").textContent = `${selM.size}/${markets.length}`;
   $("sumA").textContent = `${list.length} files \u00b7 ${fmt(total)}`;
-  $("sumB").textContent = `${nm} markets \u00b7 ` + (latestOnly ? "latest year each" : from === to ? from : `${from}\u2013${to}`);
+  $("sumB").textContent = `${nm} markets \u00b7 ${period}`;
   $("mSum").innerHTML = busy ? "Downloading..." : `${list.length} files<small>${fmt(total)}</small>`;
+  $("sb1").textContent = busy ? "Downloading..." : "Ready";
+  $("sb2").textContent = `${list.length} file(s) \u00b7 ${fmt(total)}`;
+  $("sb3").textContent = period;
   let note = "";
   if (!selM.size) note = "Kom-pokkhe ekta market select koro.";
   else if (!list.length) note = "Selected market gulo-te ei period-e data nai.";
@@ -379,6 +396,7 @@ function demoFiles() {
 function showEmpty(title, text) {
   $("app").style.display = "none"; $("filesBox").style.display = "none"; $("mbar").style.display = "none"; $("quick").style.display = "none";
   $("emptyBox").innerHTML = `<div class="empty"><b>${title}</b>${text}</div>`;
+  $("sb1").textContent = title;
 }
 
 async function init() {
@@ -427,6 +445,9 @@ $("cancel").onclick = cancelZip;
 $("zip2").onclick = () => (busy ? cancelZip() : startZip());
 $("qAll").onclick = () => { selM = new Set(markets); latestOnly = true; refresh(); startZip(); };
 $("qSel").onclick = () => { if (!selM.size) return; latestOnly = true; refresh(); startZip(); };
+
+const tick = () => { $("clock").textContent = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }); };
+tick(); setInterval(tick, 30000);
 
 init();
 </script>
