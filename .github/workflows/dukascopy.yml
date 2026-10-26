@@ -5,13 +5,16 @@ on:
     inputs:
       shards:
         description: "Parallel shard jobs (1-20)"
-        default: "12"
+        default: "20"
       rounds:
         description: "Auto-continue rounds (1 = single run)"
         default: "1"
       prev:
         description: "internal: previous file count"
         default: "0"
+      tail:
+        description: "Refresh current year (true/false)"
+        default: "true"
   schedule:
     - cron: '0 6 * * 6'
 
@@ -32,7 +35,7 @@ jobs:
     steps:
       - id: p
         env:
-          S: ${{ inputs.shards || '12' }}
+          S: ${{ inputs.shards || '20' }}
         run: |
           n=$S; [ "$n" -lt 1 ] && n=1; [ "$n" -gt 20 ] && n=20
           echo "n=$n" >> "$GITHUB_OUTPUT"
@@ -41,10 +44,10 @@ jobs:
   download:
     needs: plan
     runs-on: ubuntu-latest
-    timeout-minutes: 350
+    timeout-minutes: 230
     strategy:
       fail-fast: false
-      max-parallel: 6
+      max-parallel: 20
       matrix:
         shard: ${{ fromJSON(needs.plan.outputs.shards) }}
     steps:
@@ -55,6 +58,9 @@ jobs:
       - run: npm install -g dukascopy-node
       - env:
           GH_TOKEN: ${{ github.token }}
+          BUDGET: "10000"
+          MAX_NEW: "8"
+          DO_TAIL: ${{ inputs.tail || 'true' }}
         run: bash download_market.sh ${{ matrix.shard }} ${{ needs.plan.outputs.n }}
 
   manifest:
@@ -81,6 +87,6 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           R: ${{ inputs.rounds }}
-          S: ${{ inputs.shards || '12' }}
+          S: ${{ inputs.shards || '20' }}
           C: ${{ steps.idx.outputs.count }}
-        run: gh workflow run dukascopy.yml --repo "${{ github.repository }}" -f shards="$S" -f rounds="$((R-1))" -f prev="$C"
+        run: gh workflow run dukascopy.yml --repo "${{ github.repository }}" -f shards="$S" -f rounds="$((R-1))" -f prev="$C" -f tail=false
