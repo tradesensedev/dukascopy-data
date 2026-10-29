@@ -4,25 +4,25 @@ on:
   workflow_dispatch:
     inputs:
       shards:
-        description: "Parallel shard jobs (1-20) = ekshathe koyta runner"
-        default: "4"
+        description: "Runners at once (1-20)"
+        default: "6"
       rounds:
-        description: "Auto-continue rounds (1 = single run)"
-        default: "1"
+        description: "Auto-continue rounds"
+        default: "12"
       prev:
-        description: "internal: previous file count"
+        description: "internal"
         default: "0"
       tail:
-        description: "Refresh current year (true/false)"
-        default: "true"
+        description: "Refresh current year: auto/true/false"
+        default: "auto"
       level:
         description: "Speed level 0(fast)..3(slow)"
         default: "2"
       budget:
-        description: "Seconds per job before it stops"
-        default: "10000"
+        description: "Seconds per job"
+        default: "7200"
   schedule:
-    - cron: '0 6 * * 6'
+    - cron: '0 6 * * *'
 
 permissions:
   contents: write
@@ -38,14 +38,40 @@ jobs:
     outputs:
       shards: ${{ steps.p.outputs.shards }}
       n: ${{ steps.p.outputs.n }}
+      rounds: ${{ steps.p.outputs.rounds }}
+      tail: ${{ steps.p.outputs.tl }}
+      level: ${{ steps.p.outputs.level }}
+      budget: ${{ steps.p.outputs.budget }}
+      prev: ${{ steps.p.outputs.prev }}
     steps:
       - id: p
         env:
-          S: ${{ inputs.shards || '4' }}
+          I_SHARDS: ${{ inputs.shards }}
+          I_ROUNDS: ${{ inputs.rounds }}
+          I_PREV: ${{ inputs.prev }}
+          I_TAIL: ${{ inputs.tail }}
+          I_LEVEL: ${{ inputs.level }}
+          I_BUDGET: ${{ inputs.budget }}
         run: |
-          n=$S; [ "$n" -lt 1 ] && n=1; [ "$n" -gt 20 ] && n=20
-          echo "n=$n" >> "$GITHUB_OUTPUT"
-          echo "shards=$(seq 0 $((n-1)) | jq -cs .)" >> "$GITHUB_OUTPUT"
+          n=${I_SHARDS:-6}; [ "$n" -lt 1 ] && n=1; [ "$n" -gt 20 ] && n=20
+          case "$I_TAIL" in
+            true|false) tl=$I_TAIL ;;
+            *) if [ "$(date -u +%u)" = 6 ]; then tl=true; else tl=false; fi ;;
+          esac
+          prev=${I_PREV:-0}
+          if [ "$prev" = 0 ]; then
+            curl -fsSL "https://github.com/${{ github.repository }}/releases/download/meta/index.json" -o i.json 2>/dev/null || echo '{"m":{}}' > i.json
+            prev=$(jq '[.m[]|(.b+.a)|map(select(.>0))|length]|add // 0' i.json 2>/dev/null || echo 0)
+          fi
+          {
+            echo "n=$n"
+            echo "shards=$(seq 0 $((n-1)) | jq -cs .)"
+            echo "rounds=${I_ROUNDS:-12}"
+            echo "tl=$tl"
+            echo "level=${I_LEVEL:-2}"
+            echo "budget=${I_BUDGET:-7200}"
+            echo "prev=$prev"
+          } >> "$GITHUB_OUTPUT"
 
   download:
     needs: plan
@@ -64,11 +90,11 @@ jobs:
       - run: npm install -g dukascopy-node
       - env:
           GH_TOKEN: ${{ github.token }}
-          BUDGET: ${{ inputs.budget || '10000' }}
+          BUDGET: ${{ needs.plan.outputs.budget }}
           MAX_NEW: "8"
-          DO_TAIL: ${{ inputs.tail || 'true' }}
-          START_LEVEL: ${{ inputs.level || '2' }}
-          FASTEST: ${{ inputs.level || '2' }}
+          DO_TAIL: ${{ needs.plan.outputs.tail }}
+          START_LEVEL: ${{ needs.plan.outputs.level }}
+          FASTEST: ${{ needs.plan.outputs.level }}
         run: bash download_market.sh ${{ matrix.shard }} ${{ needs.plan.outputs.n }}
 
   manifest:
@@ -89,14 +115,33 @@ jobs:
           node build_manifest.js raw.jsonl index.json
           gh release view meta >/dev/null 2>&1 || gh release create meta --title "Index" --notes "Site manifest"
           gh release upload meta index.json --clobber
-          echo "count=$(jq -s '[.[].a|length]|add // 0' raw.jsonl)" >> "$GITHUB_OUTPUT"
-      - name: Continue backfill
-        if: ${{ steps.idx.outputs.count != (inputs.prev || '0') && fromJSON(inputs.rounds || '1') > 1 }}
+          echo "count=$(jq '[.m[]|(.b+.a)|map(select(.>0))|length]|add // 0' index.json)" >> "$GITHUB_OUTPUT"
+      - name: Keepalive (monthly empty commit)
+        run: |
+          last=$(git log -1 --format=%ct)
+          if [ $(( $(date +%s) - last )) -gt 2592000 ]; then
+            git config user.name "github-actions"
+            git config user.email "actions@github.com"
+            git commit --allow-empty -m "keepalive" && git push
+          fi
+      - name: Continue next round
+        if: ${{ steps.idx.outputs.count != needs.plan.outputs.prev && fromJSON(needs.plan.outputs.rounds) > 1 }}
         env:
           GH_TOKEN: ${{ github.token }}
-          R: ${{ inputs.rounds }}
-          S: ${{ inputs.shards || '4' }}
-          L: ${{ inputs.level || '2' }}
-          B: ${{ inputs.budget || '10000' }}
-          C: ${{ steps.idx.outputs.count }}
-        run: gh workflow run dukascopy.yml --repo "${{ github.repository }}" -f shards="$S" -f rounds="$((R-1))" -f prev="$C" -f tail=false -f level="$L" -f budget="$B"
+          R: ${{ needs.plan.outputs.rounds }}
+          SH: ${{ needs.plan.outputs.n }}
+          BUD: ${{ needs.plan.outputs.budget }}
+          LV: ${{ needs.plan.outputs.level }}
+          PREV: ${{ needs.plan.outputs.prev }}
+          TL: ${{ needs.plan.outputs.tail }}
+          COUNT: ${{ steps.idx.outputs.count }}
+        run: |
+          S=$SH; D=$((COUNT-PREV))
+          if [ "$TL" != "true" ]; then
+            POT=$((S*BUD/50))
+            if [ $((D*10)) -lt $((POT*3)) ] && [ "$S" -gt 2 ]; then S=$((S-1))
+            elif [ $((D*10)) -gt $((POT*8)) ] && [ "$S" -lt 8 ]; then S=$((S+1)); fi
+          fi
+          echo "round delta=$D shards $SH -> $S"
+          gh workflow run dukascopy.yml --repo "${{ github.repository }}" \
+            -f shards="$S" -f rounds="$((R-1))" -f prev="$COUNT" -f tail=false -f level="$LV" -f budget="$BUD"
