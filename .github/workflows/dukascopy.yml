@@ -4,8 +4,8 @@ on:
   workflow_dispatch:
     inputs:
       shards:
-        description: "Parallel shard jobs (1-20)"
-        default: "20"
+        description: "Parallel shard jobs (1-20) = ekshathe koyta runner"
+        default: "4"
       rounds:
         description: "Auto-continue rounds (1 = single run)"
         default: "1"
@@ -15,6 +15,12 @@ on:
       tail:
         description: "Refresh current year (true/false)"
         default: "true"
+      level:
+        description: "Speed level 0(fast)..3(slow)"
+        default: "2"
+      budget:
+        description: "Seconds per job before it stops"
+        default: "10000"
   schedule:
     - cron: '0 6 * * 6'
 
@@ -35,7 +41,7 @@ jobs:
     steps:
       - id: p
         env:
-          S: ${{ inputs.shards || '20' }}
+          S: ${{ inputs.shards || '4' }}
         run: |
           n=$S; [ "$n" -lt 1 ] && n=1; [ "$n" -gt 20 ] && n=20
           echo "n=$n" >> "$GITHUB_OUTPUT"
@@ -58,9 +64,11 @@ jobs:
       - run: npm install -g dukascopy-node
       - env:
           GH_TOKEN: ${{ github.token }}
-          BUDGET: "10000"
+          BUDGET: ${{ inputs.budget || '10000' }}
           MAX_NEW: "8"
           DO_TAIL: ${{ inputs.tail || 'true' }}
+          START_LEVEL: ${{ inputs.level || '2' }}
+          FASTEST: ${{ inputs.level || '2' }}
         run: bash download_market.sh ${{ matrix.shard }} ${{ needs.plan.outputs.n }}
 
   manifest:
@@ -87,6 +95,8 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           R: ${{ inputs.rounds }}
-          S: ${{ inputs.shards || '20' }}
+          S: ${{ inputs.shards || '4' }}
+          L: ${{ inputs.level || '2' }}
+          B: ${{ inputs.budget || '10000' }}
           C: ${{ steps.idx.outputs.count }}
-        run: gh workflow run dukascopy.yml --repo "${{ github.repository }}" -f shards="$S" -f rounds="$((R-1))" -f prev="$C" -f tail=false
+        run: gh workflow run dukascopy.yml --repo "${{ github.repository }}" -f shards="$S" -f rounds="$((R-1))" -f prev="$C" -f tail=false -f level="$L" -f budget="$B"

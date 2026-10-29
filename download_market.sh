@@ -11,7 +11,7 @@ if [ "$(date -u +%m)" = "01" ]; then REFRESH_FROM=$((END_YEAR-1)); else REFRESH_
 mkdir -p out prev stage
 
 LEVELS=("40 250" "20 500" "10 1000" "5 2000")
-LEVEL=${START_LEVEL:-1}; OKSTREAK=0; streak=0; STAGED=0
+LEVEL=${START_LEVEL:-2}; FASTEST=${FASTEST:-$LEVEL}; OKSTREAK=0; streak=0; STAGED=0
 
 # return: 0 ok, 1 error, 2 no data, 4 invalid instrument
 fetch() {
@@ -24,7 +24,7 @@ fetch() {
       -f csv -dir out -fn "$name" -bs "$bs" -bp "$bp" -r 5 > log.txt 2>&1
     if [ -f "out/$name.csv" ]; then
       OKSTREAK=$((OKSTREAK+1))
-      if [ $OKSTREAK -ge 4 ] && [ $LEVEL -gt 0 ]; then LEVEL=$((LEVEL-1)); OKSTREAK=0; fi
+      if [ $OKSTREAK -ge 4 ] && [ $LEVEL -gt $FASTEST ]; then LEVEL=$((LEVEL-1)); OKSTREAK=0; fi
       if [ "$(wc -l < "out/$name.csv")" -gt 1 ]; then return 0; fi
       rm -f "out/$name.csv"; return 2
     fi
@@ -142,7 +142,7 @@ process_market() {
       fetch "$name" "$year-01-01" "$to" "$side"; rc=$?
       case $rc in
         0) publish "$name"; echo "DONE: $name ($((SECONDS-T0))s, L$LEVEL)"; new=$((new+1)); seen=1; streak=0; sleep 1 ;;
-        2) echo "NO DATA: $name"
+        2) echo "NO DATA: $name"; tail -n 3 log.txt
            if [ $seen -eq 1 ] && [ "$year" -lt "$END_YEAR" ]; then echo "Reached start of history."; return 0; fi
            empties=$((empties+1))
            if [ $empties -ge 8 ]; then echo "No data found, skipping market."; return 0; fi ;;

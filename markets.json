@@ -4085,7 +4085,7 @@
   "cat": "Stocks",
   "sub": "Austria",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "RBIATEUR": {
   "id": "rbiateur",
@@ -4093,7 +4093,7 @@
   "cat": "Stocks",
   "sub": "Austria",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "VOEATEUR": {
   "id": "voeateur",
@@ -4101,7 +4101,7 @@
   "cat": "Stocks",
   "sub": "Austria",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ABIBEEUR": {
   "id": "abibeeur",
@@ -4109,7 +4109,7 @@
   "cat": "Stocks",
   "sub": "Belgium",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AGSBEEUR": {
   "id": "agsbeeur",
@@ -4117,7 +4117,7 @@
   "cat": "Stocks",
   "sub": "Belgium",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BELGBEEUR": {
   "id": "belgbeeur",
@@ -4125,7 +4125,7 @@
   "cat": "Stocks",
   "sub": "Belgium",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "KBCBEEUR": {
   "id": "kbcbeeur",
@@ -4133,7 +4133,7 @@
   "cat": "Stocks",
   "sub": "Belgium",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SOLBBEEUR": {
   "id": "solbbeeur",
@@ -4141,7 +4141,7 @@
   "cat": "Stocks",
   "sub": "Belgium",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "UCBBEEUR": {
   "id": "ucbbeeur",
@@ -4149,7 +4149,7 @@
   "cat": "Stocks",
   "sub": "Belgium",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "UMIBEEUR": {
   "id": "umibeeur",
@@ -4157,7 +4157,7 @@
   "cat": "Stocks",
   "sub": "Belgium",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CARLBDKDKK": {
   "id": "carlbdkdkk",
@@ -4165,7 +4165,7 @@
   "cat": "Stocks",
   "sub": "Denmark",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "COLOBDKDKK": {
   "id": "colobdkdkk",
@@ -4173,7 +4173,7 @@
   "cat": "Stocks",
   "sub": "Denmark",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "DANSKEDKDKK": {
   "id": "danskedkdkk",
@@ -4181,7 +4181,7 @@
   "cat": "Stocks",
   "sub": "Denmark",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MAERSKBDKDKK": {
   "id": "maerskbdkdkk",
@@ -4189,7 +4189,7 @@
   "cat": "Stocks",
   "sub": "Denmark",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "NOVOBDKDKK": {
   "id": "novobdkdkk",
@@ -4197,7 +4197,7 @@
   "cat": "Stocks",
   "sub": "Denmark",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "NZYMBDKDKK": {
   "id": "nzymbdkdkk",
@@ -4205,7 +4205,7 @@
   "cat": "Stocks",
   "sub": "Denmark",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "PNDORADKDKK": {
   "id": "pndoradkdkk",
@@ -4213,7 +4213,7 @@
   "cat": "Stocks",
   "sub": "Denmark",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "VWSDKDKK": {
   "id": "vwsdkdkk",
@@ -4221,7 +4221,7 @@
   "cat": "Stocks",
   "sub": "Denmark",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ELI1VFIEUR": {
   "id": "eli1vfieur",
@@ -4229,7 +4229,7 @@
   "cat": "Stocks",
   "sub": "Finland",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "NES1VFIEUR": {
   "id": "nes1vfieur",
@@ -4237,7 +4237,7 @@
   "cat": "Stocks",
   "sub": "Finland",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "NRE1VFIEUR": {
   "id": "nre1vfieur",
@@ -4245,7 +4245,7 @@
   "cat": "Stocks",
   "sub": "Finland",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "OTE1VFIEUR": {
   "id": "ote1vfieur",
@@ -4253,7 +4253,7 @@
   "cat": "Stocks",
   "sub": "Finland",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "OUT1VFIEUR": {
   "id": "out1vfieur",
@@ -4261,7 +4261,7 @@
   "cat": "Stocks",
   "sub": "Finland",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "STERVFIEUR": {
   "id": "stervfieur",
@@ -4269,7 +4269,7 @@
   "cat": "Stocks",
   "sub": "Finland",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TLS1VFIEUR": {
   "id": "tls1vfieur",
@@ -4277,7 +4277,7 @@
   "cat": "Stocks",
   "sub": "Finland",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ACAFREUR": {
   "id": "acafreur",
@@ -4285,7 +4285,7 @@
   "cat": "Stocks",
   "sub": "France",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "ACFREUR": {
   "id": "acfreur",
@@ -4293,7 +4293,7 @@
   "cat": "Stocks",
   "sub": "France",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AFFREUR": {
   "id": "affreur",
@@ -4301,7 +4301,7 @@
   "cat": "Stocks",
   "sub": "France",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AIFREUR": {
   "id": "aifreur",
@@ -4309,7 +4309,7 @@
   "cat": "Stocks",
   "sub": "France",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AIRFREUR": {
   "id": "airfreur",
@@ -4317,7 +4317,7 @@
   "cat": "Stocks",
   "sub": "France",
   "start": 2014,
-  "on": false
+  "on": true
  },
  "ALOFREUR": {
   "id": "alofreur",
@@ -4325,7 +4325,7 @@
   "cat": "Stocks",
   "sub": "France",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "BNFREUR": {
   "id": "bnfreur",
@@ -4333,7 +4333,7 @@
   "cat": "Stocks",
   "sub": "France",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "BNPFREUR": {
   "id": "bnpfreur",
@@ -4341,7 +4341,7 @@
   "cat": "Stocks",
   "sub": "France",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "CAFREUR": {
   "id": "cafreur",
@@ -4349,7 +4349,7 @@
   "cat": "Stocks",
   "sub": "France",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "CAPFREUR": {
   "id": "capfreur",
@@ -4357,7 +4357,7 @@
   "cat": "Stocks",
   "sub": "France",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "CSFREUR": {
   "id": "csfreur",
@@ -4365,7 +4365,7 @@
   "cat": "Stocks",
   "sub": "France",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "DGFREUR": {
   "id": "dgfreur",
@@ -4373,7 +4373,7 @@
   "cat": "Stocks",
   "sub": "France",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "DSYFREUR": {
   "id": "dsyfreur",
@@ -4381,7 +4381,7 @@
   "cat": "Stocks",
   "sub": "France",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ENFREUR": {
   "id": "enfreur",
@@ -4389,7 +4389,7 @@
   "cat": "Stocks",
   "sub": "France",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "ENGIFREUR": {
   "id": "engifreur",
@@ -4397,7 +4397,7 @@
   "cat": "Stocks",
   "sub": "France",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "FPFREUR": {
   "id": "fpfreur",
@@ -4405,7 +4405,7 @@
   "cat": "Stocks",
   "sub": "France",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "FRFREUR": {
   "id": "frfreur",
@@ -4413,7 +4413,7 @@
   "cat": "Stocks",
   "sub": "France",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "GLEFREUR": {
   "id": "glefreur",
@@ -4421,7 +4421,7 @@
   "cat": "Stocks",
   "sub": "France",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "HOFREUR": {
   "id": "hofreur",
@@ -4429,7 +4429,7 @@
   "cat": "Stocks",
   "sub": "France",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "KERFREUR": {
   "id": "kerfreur",
@@ -4437,7 +4437,7 @@
   "cat": "Stocks",
   "sub": "France",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "LIFREUR": {
   "id": "lifreur",
@@ -4445,7 +4445,7 @@
   "cat": "Stocks",
   "sub": "France",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "LRFREUR": {
   "id": "lrfreur",
@@ -4453,7 +4453,7 @@
   "cat": "Stocks",
   "sub": "France",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "MCFREUR": {
   "id": "mcfreur",
@@ -4461,7 +4461,7 @@
   "cat": "Stocks",
   "sub": "France",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "MLFREUR": {
   "id": "mlfreur",
@@ -4469,7 +4469,7 @@
   "cat": "Stocks",
   "sub": "France",
   "start": 2022,
-  "on": false
+  "on": true
  },
  "ORAFREUR": {
   "id": "orafreur",
@@ -4477,7 +4477,7 @@
   "cat": "Stocks",
   "sub": "France",
   "start": 2013,
-  "on": false
+  "on": true
  },
  "ORFREUR": {
   "id": "orfreur",
@@ -4485,7 +4485,7 @@
   "cat": "Stocks",
   "sub": "France",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "PUBFREUR": {
   "id": "pubfreur",
@@ -4493,7 +4493,7 @@
   "cat": "Stocks",
   "sub": "France",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "RIFREUR": {
   "id": "rifreur",
@@ -4501,7 +4501,7 @@
   "cat": "Stocks",
   "sub": "France",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "RMSFREUR": {
   "id": "rmsfreur",
@@ -4509,7 +4509,7 @@
   "cat": "Stocks",
   "sub": "France",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "RNOFREUR": {
   "id": "rnofreur",
@@ -4517,7 +4517,7 @@
   "cat": "Stocks",
   "sub": "France",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "SAFFREUR": {
   "id": "saffreur",
@@ -4525,7 +4525,7 @@
   "cat": "Stocks",
   "sub": "France",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "SANFREUR": {
   "id": "sanfreur",
@@ -4533,7 +4533,7 @@
   "cat": "Stocks",
   "sub": "France",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "SGOFREUR": {
   "id": "sgofreur",
@@ -4541,7 +4541,7 @@
   "cat": "Stocks",
   "sub": "France",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "SUFREUR": {
   "id": "sufreur",
@@ -4549,7 +4549,7 @@
   "cat": "Stocks",
   "sub": "France",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "SWFREUR": {
   "id": "swfreur",
@@ -4557,7 +4557,7 @@
   "cat": "Stocks",
   "sub": "France",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "VIEFREUR": {
   "id": "viefreur",
@@ -4565,7 +4565,7 @@
   "cat": "Stocks",
   "sub": "France",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "VIVFREUR": {
   "id": "vivfreur",
@@ -4573,7 +4573,7 @@
   "cat": "Stocks",
   "sub": "France",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "VKFREUR": {
   "id": "vkfreur",
@@ -4581,7 +4581,7 @@
   "cat": "Stocks",
   "sub": "France",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ADSDEEUR": {
   "id": "adsdeeur",
@@ -4589,7 +4589,7 @@
   "cat": "Stocks",
   "sub": "Germany",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "ALVDEEUR": {
   "id": "alvdeeur",
@@ -4597,7 +4597,7 @@
   "cat": "Stocks",
   "sub": "Germany",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "BASDEEUR": {
   "id": "basdeeur",
@@ -4605,7 +4605,7 @@
   "cat": "Stocks",
   "sub": "Germany",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "BAYNDEEUR": {
   "id": "bayndeeur",
@@ -4613,7 +4613,7 @@
   "cat": "Stocks",
   "sub": "Germany",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "BEIDEEUR": {
   "id": "beideeur",
@@ -4621,7 +4621,7 @@
   "cat": "Stocks",
   "sub": "Germany",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "BMWDEEUR": {
   "id": "bmwdeeur",
@@ -4629,7 +4629,7 @@
   "cat": "Stocks",
   "sub": "Germany",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "BNRDEEUR": {
   "id": "bnrdeeur",
@@ -4637,7 +4637,7 @@
   "cat": "Stocks",
   "sub": "Germany",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BOSSDEEUR": {
   "id": "bossdeeur",
@@ -4645,7 +4645,7 @@
   "cat": "Stocks",
   "sub": "Germany",
   "start": 2012,
-  "on": false
+  "on": true
  },
  "CBKDEEUR": {
   "id": "cbkdeeur",
@@ -4653,7 +4653,7 @@
   "cat": "Stocks",
   "sub": "Germany",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "CONDEEUR": {
   "id": "condeeur",
@@ -4661,7 +4661,7 @@
   "cat": "Stocks",
   "sub": "Germany",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "COVDEEUR": {
   "id": "covdeeur",
@@ -4669,7 +4669,7 @@
   "cat": "Stocks",
   "sub": "Germany",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "DAIDEEUR": {
   "id": "daideeur",
@@ -4677,7 +4677,7 @@
   "cat": "Stocks",
   "sub": "Germany",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "DB1DEEUR": {
   "id": "db1deeur",
@@ -4685,7 +4685,7 @@
   "cat": "Stocks",
   "sub": "Germany",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "DBKDEEUR": {
   "id": "dbkdeeur",
@@ -4693,7 +4693,7 @@
   "cat": "Stocks",
   "sub": "Germany",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "DHRDEEUR": {
   "id": "dhrdeeur",
@@ -4701,7 +4701,7 @@
   "cat": "Stocks",
   "sub": "Germany",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "DPWDEEUR": {
   "id": "dpwdeeur",
@@ -4709,7 +4709,7 @@
   "cat": "Stocks",
   "sub": "Germany",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "DTEDEEUR": {
   "id": "dtedeeur",
@@ -4717,7 +4717,7 @@
   "cat": "Stocks",
   "sub": "Germany",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "EOANDEEUR": {
   "id": "eoandeeur",
@@ -4725,7 +4725,7 @@
   "cat": "Stocks",
   "sub": "Germany",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "FMEDEEUR": {
   "id": "fmedeeur",
@@ -4733,7 +4733,7 @@
   "cat": "Stocks",
   "sub": "Germany",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "FREDEEUR": {
   "id": "fredeeur",
@@ -4741,7 +4741,7 @@
   "cat": "Stocks",
   "sub": "Germany",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "HEIDEEUR": {
   "id": "heideeur",
@@ -4749,7 +4749,7 @@
   "cat": "Stocks",
   "sub": "Germany",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "HEN3DEEUR": {
   "id": "hen3deeur",
@@ -4757,7 +4757,7 @@
   "cat": "Stocks",
   "sub": "Germany",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "HFGDEEUR": {
   "id": "hfgdeeur",
@@ -4765,7 +4765,7 @@
   "cat": "Stocks",
   "sub": "Germany",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "HNRDEEUR": {
   "id": "hnrdeeur",
@@ -4773,7 +4773,7 @@
   "cat": "Stocks",
   "sub": "Germany",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "IFXDEEUR": {
   "id": "ifxdeeur",
@@ -4781,7 +4781,7 @@
   "cat": "Stocks",
   "sub": "Germany",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "LHADEEUR": {
   "id": "lhadeeur",
@@ -4789,7 +4789,7 @@
   "cat": "Stocks",
   "sub": "Germany",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "LXSDEEUR": {
   "id": "lxsdeeur",
@@ -4797,7 +4797,7 @@
   "cat": "Stocks",
   "sub": "Germany",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "MRKDEEUR": {
   "id": "mrkdeeur",
@@ -4805,7 +4805,7 @@
   "cat": "Stocks",
   "sub": "Germany",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "MTXDEEUR": {
   "id": "mtxdeeur",
@@ -4813,7 +4813,7 @@
   "cat": "Stocks",
   "sub": "Germany",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MUV2DEEUR": {
   "id": "muv2deeur",
@@ -4821,7 +4821,7 @@
   "cat": "Stocks",
   "sub": "Germany",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "PAH3DEEUR": {
   "id": "pah3deeur",
@@ -4829,7 +4829,7 @@
   "cat": "Stocks",
   "sub": "Germany",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "PSMDEEUR": {
   "id": "psmdeeur",
@@ -4837,7 +4837,7 @@
   "cat": "Stocks",
   "sub": "Germany",
   "start": 2013,
-  "on": false
+  "on": true
  },
  "PUMDEEUR": {
   "id": "pumdeeur",
@@ -4845,7 +4845,7 @@
   "cat": "Stocks",
   "sub": "Germany",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "RWEDEEUR": {
   "id": "rwedeeur",
@@ -4853,7 +4853,7 @@
   "cat": "Stocks",
   "sub": "Germany",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "SAPDEEUR": {
   "id": "sapdeeur",
@@ -4861,7 +4861,7 @@
   "cat": "Stocks",
   "sub": "Germany",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "SDFDEEUR": {
   "id": "sdfdeeur",
@@ -4869,7 +4869,7 @@
   "cat": "Stocks",
   "sub": "Germany",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "SIEDEEUR": {
   "id": "siedeeur",
@@ -4877,7 +4877,7 @@
   "cat": "Stocks",
   "sub": "Germany",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "SRTDEEUR": {
   "id": "srtdeeur",
@@ -4885,7 +4885,7 @@
   "cat": "Stocks",
   "sub": "Germany",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SY1DEEUR": {
   "id": "sy1deeur",
@@ -4893,7 +4893,7 @@
   "cat": "Stocks",
   "sub": "Germany",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TKADEEUR": {
   "id": "tkadeeur",
@@ -4901,7 +4901,7 @@
   "cat": "Stocks",
   "sub": "Germany",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "TUI1DEEUR": {
   "id": "tui1deeur",
@@ -4909,7 +4909,7 @@
   "cat": "Stocks",
   "sub": "Germany",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "VNADEEUR": {
   "id": "vnadeeur",
@@ -4917,7 +4917,7 @@
   "cat": "Stocks",
   "sub": "Germany",
   "start": 2015,
-  "on": false
+  "on": true
  },
  "VOW3DEEUR": {
   "id": "vow3deeur",
@@ -4925,7 +4925,7 @@
   "cat": "Stocks",
   "sub": "Germany",
   "start": 2011,
-  "on": false
+  "on": true
  },
  "0005HKHKD": {
   "id": "0005hkhkd",
@@ -4933,7 +4933,7 @@
   "cat": "Stocks",
   "sub": "Hong Kong",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "0027HKHKD": {
   "id": "0027hkhkd",
@@ -4941,7 +4941,7 @@
   "cat": "Stocks",
   "sub": "Hong Kong",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "0175HKHKD": {
   "id": "0175hkhkd",
@@ -4949,7 +4949,7 @@
   "cat": "Stocks",
   "sub": "Hong Kong",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "0291HKHKD": {
   "id": "0291hkhkd",
@@ -4957,7 +4957,7 @@
   "cat": "Stocks",
   "sub": "Hong Kong",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "0386HKHKD": {
   "id": "0386hkhkd",
@@ -4965,7 +4965,7 @@
   "cat": "Stocks",
   "sub": "Hong Kong",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "0388HKHKD": {
   "id": "0388hkhkd",
@@ -4973,7 +4973,7 @@
   "cat": "Stocks",
   "sub": "Hong Kong",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "0700HKHKD": {
   "id": "0700hkhkd",
@@ -4981,7 +4981,7 @@
   "cat": "Stocks",
   "sub": "Hong Kong",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "0857HKHKD": {
   "id": "0857hkhkd",
@@ -4989,7 +4989,7 @@
   "cat": "Stocks",
   "sub": "Hong Kong",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "0883HKHKD": {
   "id": "0883hkhkd",
@@ -4997,7 +4997,7 @@
   "cat": "Stocks",
   "sub": "Hong Kong",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "0939HKHKD": {
   "id": "0939hkhkd",
@@ -5005,7 +5005,7 @@
   "cat": "Stocks",
   "sub": "Hong Kong",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "0941HKHKD": {
   "id": "0941hkhkd",
@@ -5013,7 +5013,7 @@
   "cat": "Stocks",
   "sub": "Hong Kong",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "0998HKHKD": {
   "id": "0998hkhkd",
@@ -5021,7 +5021,7 @@
   "cat": "Stocks",
   "sub": "Hong Kong",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "1093HKHKD": {
   "id": "1093hkhkd",
@@ -5029,7 +5029,7 @@
   "cat": "Stocks",
   "sub": "Hong Kong",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "1177HKHKD": {
   "id": "1177hkhkd",
@@ -5037,7 +5037,7 @@
   "cat": "Stocks",
   "sub": "Hong Kong",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "1288HKHKD": {
   "id": "1288hkhkd",
@@ -5045,7 +5045,7 @@
   "cat": "Stocks",
   "sub": "Hong Kong",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "1299HKHKD": {
   "id": "1299hkhkd",
@@ -5053,7 +5053,7 @@
   "cat": "Stocks",
   "sub": "Hong Kong",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "1398HKHKD": {
   "id": "1398hkhkd",
@@ -5061,7 +5061,7 @@
   "cat": "Stocks",
   "sub": "Hong Kong",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "1810HKHKD": {
   "id": "1810hkhkd",
@@ -5069,7 +5069,7 @@
   "cat": "Stocks",
   "sub": "Hong Kong",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "1918HKHKD": {
   "id": "1918hkhkd",
@@ -5077,7 +5077,7 @@
   "cat": "Stocks",
   "sub": "Hong Kong",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "2007HKHKD": {
   "id": "2007hkhkd",
@@ -5085,7 +5085,7 @@
   "cat": "Stocks",
   "sub": "Hong Kong",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "2018HKHKD": {
   "id": "2018hkhkd",
@@ -5093,7 +5093,7 @@
   "cat": "Stocks",
   "sub": "Hong Kong",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "2318HKHKD": {
   "id": "2318hkhkd",
@@ -5101,7 +5101,7 @@
   "cat": "Stocks",
   "sub": "Hong Kong",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "2388HKHKD": {
   "id": "2388hkhkd",
@@ -5109,7 +5109,7 @@
   "cat": "Stocks",
   "sub": "Hong Kong",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "2628HKHKD": {
   "id": "2628hkhkd",
@@ -5117,7 +5117,7 @@
   "cat": "Stocks",
   "sub": "Hong Kong",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "3968HKHKD": {
   "id": "3968hkhkd",
@@ -5125,7 +5125,7 @@
   "cat": "Stocks",
   "sub": "Hong Kong",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "3988HKHKD": {
   "id": "3988hkhkd",
@@ -5133,7 +5133,7 @@
   "cat": "Stocks",
   "sub": "Hong Kong",
   "start": 2019,
-  "on": false
+  "on": true
  },
  "BIRGIEEUR": {
   "id": "birgieeur",
@@ -5141,7 +5141,7 @@
   "cat": "Stocks",
   "sub": "Ireland",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "KRXIEEUR": {
   "id": "krxieeur",
@@ -5149,7 +5149,7 @@
   "cat": "Stocks",
   "sub": "Ireland",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "KRZIEEUR": {
   "id": "krzieeur",
@@ -5157,7 +5157,7 @@
   "cat": "Stocks",
   "sub": "Ireland",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "RY4CIEEUR": {
   "id": "ry4cieeur",
@@ -5165,7 +5165,7 @@
   "cat": "Stocks",
   "sub": "Ireland",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "A2AITEUR": {
   "id": "a2aiteur",
@@ -5173,7 +5173,7 @@
   "cat": "Stocks",
   "sub": "Italy",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AMPITEUR": {
   "id": "ampiteur",
@@ -5181,7 +5181,7 @@
   "cat": "Stocks",
   "sub": "Italy",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AZMITEUR": {
   "id": "azmiteur",
@@ -5189,7 +5189,7 @@
   "cat": "Stocks",
   "sub": "Italy",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BAMIITEUR": {
   "id": "bamiiteur",
@@ -5197,7 +5197,7 @@
   "cat": "Stocks",
   "sub": "Italy",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BCITEUR": {
   "id": "bciteur",
@@ -5205,7 +5205,7 @@
   "cat": "Stocks",
   "sub": "Italy",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BPEITEUR": {
   "id": "bpeiteur",
@@ -5213,7 +5213,7 @@
   "cat": "Stocks",
   "sub": "Italy",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BREITEUR": {
   "id": "breiteur",
@@ -5221,7 +5221,7 @@
   "cat": "Stocks",
   "sub": "Italy",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BZUITEUR": {
   "id": "bzuiteur",
@@ -5229,7 +5229,7 @@
   "cat": "Stocks",
   "sub": "Italy",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CPRITEUR": {
   "id": "cpriteur",
@@ -5237,7 +5237,7 @@
   "cat": "Stocks",
   "sub": "Italy",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "DANITEUR": {
   "id": "daniteur",
@@ -5245,7 +5245,7 @@
   "cat": "Stocks",
   "sub": "Italy",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "DIAITEUR": {
   "id": "diaiteur",
@@ -5253,7 +5253,7 @@
   "cat": "Stocks",
   "sub": "Italy",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ENELITEUR": {
   "id": "eneliteur",
@@ -5261,7 +5261,7 @@
   "cat": "Stocks",
   "sub": "Italy",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ENIITEUR": {
   "id": "eniiteur",
@@ -5269,7 +5269,7 @@
   "cat": "Stocks",
   "sub": "Italy",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ERGITEUR": {
   "id": "ergiteur",
@@ -5277,7 +5277,7 @@
   "cat": "Stocks",
   "sub": "Italy",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "FBKITEUR": {
   "id": "fbkiteur",
@@ -5285,7 +5285,7 @@
   "cat": "Stocks",
   "sub": "Italy",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "FCAITEUR": {
   "id": "fcaiteur",
@@ -5293,7 +5293,7 @@
   "cat": "Stocks",
   "sub": "Italy",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "GITEUR": {
   "id": "giteur",
@@ -5301,7 +5301,7 @@
   "cat": "Stocks",
   "sub": "Italy",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "IGITEUR": {
   "id": "igiteur",
@@ -5309,7 +5309,7 @@
   "cat": "Stocks",
   "sub": "Italy",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "INWITEUR": {
   "id": "inwiteur",
@@ -5317,7 +5317,7 @@
   "cat": "Stocks",
   "sub": "Italy",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ISPITEUR": {
   "id": "ispiteur",
@@ -5325,7 +5325,7 @@
   "cat": "Stocks",
   "sub": "Italy",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "JUVEITEUR": {
   "id": "juveiteur",
@@ -5333,7 +5333,7 @@
   "cat": "Stocks",
   "sub": "Italy",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "LDOITEUR": {
   "id": "ldoiteur",
@@ -5341,7 +5341,7 @@
   "cat": "Stocks",
   "sub": "Italy",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MBITEUR": {
   "id": "mbiteur",
@@ -5349,7 +5349,7 @@
   "cat": "Stocks",
   "sub": "Italy",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MONCITEUR": {
   "id": "monciteur",
@@ -5357,7 +5357,7 @@
   "cat": "Stocks",
   "sub": "Italy",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MSITEUR": {
   "id": "msiteur",
@@ -5365,7 +5365,7 @@
   "cat": "Stocks",
   "sub": "Italy",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "PIAITEUR": {
   "id": "piaiteur",
@@ -5373,7 +5373,7 @@
   "cat": "Stocks",
   "sub": "Italy",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "PRYITEUR": {
   "id": "pryiteur",
@@ -5381,7 +5381,7 @@
   "cat": "Stocks",
   "sub": "Italy",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "RACEITEUR": {
   "id": "raceiteur",
@@ -5389,7 +5389,7 @@
   "cat": "Stocks",
   "sub": "Italy",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "RECITEUR": {
   "id": "reciteur",
@@ -5397,7 +5397,7 @@
   "cat": "Stocks",
   "sub": "Italy",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SFERITEUR": {
   "id": "sferiteur",
@@ -5405,7 +5405,7 @@
   "cat": "Stocks",
   "sub": "Italy",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SPMITEUR": {
   "id": "spmiteur",
@@ -5413,7 +5413,7 @@
   "cat": "Stocks",
   "sub": "Italy",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SRGITEUR": {
   "id": "srgiteur",
@@ -5421,7 +5421,7 @@
   "cat": "Stocks",
   "sub": "Italy",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "STMITEUR": {
   "id": "stmiteur",
@@ -5429,7 +5429,7 @@
   "cat": "Stocks",
   "sub": "Italy",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TENITEUR": {
   "id": "teniteur",
@@ -5437,7 +5437,7 @@
   "cat": "Stocks",
   "sub": "Italy",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TITITEUR": {
   "id": "tititeur",
@@ -5445,7 +5445,7 @@
   "cat": "Stocks",
   "sub": "Italy",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TRNITEUR": {
   "id": "trniteur",
@@ -5453,7 +5453,7 @@
   "cat": "Stocks",
   "sub": "Italy",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "UCGITEUR": {
   "id": "ucgiteur",
@@ -5461,7 +5461,7 @@
   "cat": "Stocks",
   "sub": "Italy",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "WBDITEUR": {
   "id": "wbditeur",
@@ -5469,7 +5469,7 @@
   "cat": "Stocks",
   "sub": "Italy",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "2502JPJPY": {
   "id": "2502jpjpy",
@@ -5477,7 +5477,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "2503JPJPY": {
   "id": "2503jpjpy",
@@ -5485,7 +5485,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "2914JPJPY": {
   "id": "2914jpjpy",
@@ -5493,7 +5493,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "3382JPJPY": {
   "id": "3382jpjpy",
@@ -5501,7 +5501,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "3436JPJPY": {
   "id": "3436jpjpy",
@@ -5509,7 +5509,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "4004JPJPY": {
   "id": "4004jpjpy",
@@ -5517,7 +5517,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "4005JPJPY": {
   "id": "4005jpjpy",
@@ -5525,7 +5525,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "4063JPJPY": {
   "id": "4063jpjpy",
@@ -5533,7 +5533,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "4452JPJPY": {
   "id": "4452jpjpy",
@@ -5541,7 +5541,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "4502JPJPY": {
   "id": "4502jpjpy",
@@ -5549,7 +5549,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "4503JPJPY": {
   "id": "4503jpjpy",
@@ -5557,7 +5557,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "4507JPJPY": {
   "id": "4507jpjpy",
@@ -5565,7 +5565,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "4523JPJPY": {
   "id": "4523jpjpy",
@@ -5573,7 +5573,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "4543JPJPY": {
   "id": "4543jpjpy",
@@ -5581,7 +5581,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "4689JPJPY": {
   "id": "4689jpjpy",
@@ -5589,7 +5589,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "4911JPJPY": {
   "id": "4911jpjpy",
@@ -5597,7 +5597,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "5108JPJPY": {
   "id": "5108jpjpy",
@@ -5605,7 +5605,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "5301JPJPY": {
   "id": "5301jpjpy",
@@ -5613,7 +5613,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "5401JPJPY": {
   "id": "5401jpjpy",
@@ -5621,7 +5621,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "6098JPJPY": {
   "id": "6098jpjpy",
@@ -5629,7 +5629,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "6301JPJPY": {
   "id": "6301jpjpy",
@@ -5637,7 +5637,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "6367JPJPY": {
   "id": "6367jpjpy",
@@ -5645,7 +5645,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "6503JPJPY": {
   "id": "6503jpjpy",
@@ -5653,7 +5653,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "6506JPJPY": {
   "id": "6506jpjpy",
@@ -5661,7 +5661,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "6702JPJPY": {
   "id": "6702jpjpy",
@@ -5669,7 +5669,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "6752JPJPY": {
   "id": "6752jpjpy",
@@ -5677,7 +5677,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "6758JPJPY": {
   "id": "6758jpjpy",
@@ -5685,7 +5685,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "6762JPJPY": {
   "id": "6762jpjpy",
@@ -5693,7 +5693,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "6902JPJPY": {
   "id": "6902jpjpy",
@@ -5701,7 +5701,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "6954JPJPY": {
   "id": "6954jpjpy",
@@ -5709,7 +5709,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "6971JPJPY": {
   "id": "6971jpjpy",
@@ -5717,7 +5717,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "7201JPJPY": {
   "id": "7201jpjpy",
@@ -5725,7 +5725,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "7203JPJPY": {
   "id": "7203jpjpy",
@@ -5733,7 +5733,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "7261JPJPY": {
   "id": "7261jpjpy",
@@ -5741,7 +5741,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "7267JPJPY": {
   "id": "7267jpjpy",
@@ -5749,7 +5749,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "7269JPJPY": {
   "id": "7269jpjpy",
@@ -5757,7 +5757,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "7270JPJPY": {
   "id": "7270jpjpy",
@@ -5765,7 +5765,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "7751JPJPY": {
   "id": "7751jpjpy",
@@ -5773,7 +5773,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "7974JPJPY": {
   "id": "7974jpjpy",
@@ -5781,7 +5781,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "8031JPJPY": {
   "id": "8031jpjpy",
@@ -5789,7 +5789,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "8035JPJPY": {
   "id": "8035jpjpy",
@@ -5797,7 +5797,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "8306JPJPY": {
   "id": "8306jpjpy",
@@ -5805,7 +5805,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "8316JPJPY": {
   "id": "8316jpjpy",
@@ -5813,7 +5813,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "8411JPJPY": {
   "id": "8411jpjpy",
@@ -5821,7 +5821,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "8766JPJPY": {
   "id": "8766jpjpy",
@@ -5829,7 +5829,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "8801JPJPY": {
   "id": "8801jpjpy",
@@ -5837,7 +5837,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "8802JPJPY": {
   "id": "8802jpjpy",
@@ -5845,7 +5845,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "9020JPJPY": {
   "id": "9020jpjpy",
@@ -5853,7 +5853,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "9432JPJPY": {
   "id": "9432jpjpy",
@@ -5861,7 +5861,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "9433JPJPY": {
   "id": "9433jpjpy",
@@ -5869,7 +5869,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "9501JPJPY": {
   "id": "9501jpjpy",
@@ -5877,7 +5877,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "9983JPJPY": {
   "id": "9983jpjpy",
@@ -5885,7 +5885,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "9984JPJPY": {
   "id": "9984jpjpy",
@@ -5893,7 +5893,7 @@
   "cat": "Stocks",
   "sub": "Japan",
   "start": 2018,
-  "on": false
+  "on": true
  },
  "ALFAAMXMXN": {
   "id": "alfaamxmxn",
@@ -5901,7 +5901,7 @@
   "cat": "Stocks",
   "sub": "Mexico",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ALSEAMXMXN": {
   "id": "alseamxmxn",
@@ -5909,7 +5909,7 @@
   "cat": "Stocks",
   "sub": "Mexico",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AMXLMXMXN": {
   "id": "amxlmxmxn",
@@ -5917,7 +5917,7 @@
   "cat": "Stocks",
   "sub": "Mexico",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ARCAMXMXN": {
   "id": "arcamxmxn",
@@ -5925,7 +5925,7 @@
   "cat": "Stocks",
   "sub": "Mexico",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ASURBMXMXN": {
   "id": "asurbmxmxn",
@@ -5933,7 +5933,7 @@
   "cat": "Stocks",
   "sub": "Mexico",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BBAJIOOMXMXN": {
   "id": "bbajioomxmxn",
@@ -5941,7 +5941,7 @@
   "cat": "Stocks",
   "sub": "Mexico",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BOLSAAMXMXN": {
   "id": "bolsaamxmxn",
@@ -5949,7 +5949,7 @@
   "cat": "Stocks",
   "sub": "Mexico",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CEMEXCPOMXMXN": {
   "id": "cemexcpomxmxn",
@@ -5957,7 +5957,7 @@
   "cat": "Stocks",
   "sub": "Mexico",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "FEMSAUBDMXMXN": {
   "id": "femsaubdmxmxn",
@@ -5965,7 +5965,7 @@
   "cat": "Stocks",
   "sub": "Mexico",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "GAPBMXMXN": {
   "id": "gapbmxmxn",
@@ -5973,7 +5973,7 @@
   "cat": "Stocks",
   "sub": "Mexico",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "GCARSOA1MXMXN": {
   "id": "gcarsoa1mxmxn",
@@ -5981,7 +5981,7 @@
   "cat": "Stocks",
   "sub": "Mexico",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "GCCMXMXN": {
   "id": "gccmxmxn",
@@ -5989,7 +5989,7 @@
   "cat": "Stocks",
   "sub": "Mexico",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "GFNORTEOMXMXN": {
   "id": "gfnorteomxmxn",
@@ -5997,7 +5997,7 @@
   "cat": "Stocks",
   "sub": "Mexico",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "GMEXICOBMXMXN": {
   "id": "gmexicobmxmxn",
@@ -6005,7 +6005,7 @@
   "cat": "Stocks",
   "sub": "Mexico",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "GRUMABMXMXN": {
   "id": "grumabmxmxn",
@@ -6013,7 +6013,7 @@
   "cat": "Stocks",
   "sub": "Mexico",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "KIMBERAMXMXN": {
   "id": "kimberamxmxn",
@@ -6021,7 +6021,7 @@
   "cat": "Stocks",
   "sub": "Mexico",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "KOFUBLMXMXN": {
   "id": "kofublmxmxn",
@@ -6029,7 +6029,7 @@
   "cat": "Stocks",
   "sub": "Mexico",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "LABBMXMXN": {
   "id": "labbmxmxn",
@@ -6037,7 +6037,7 @@
   "cat": "Stocks",
   "sub": "Mexico",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "LIVEPOLC1MXMXN": {
   "id": "livepolc1mxmxn",
@@ -6045,7 +6045,7 @@
   "cat": "Stocks",
   "sub": "Mexico",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MEGACPOMXMXN": {
   "id": "megacpomxmxn",
@@ -6053,7 +6053,7 @@
   "cat": "Stocks",
   "sub": "Mexico",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "OMABMXMXN": {
   "id": "omabmxmxn",
@@ -6061,7 +6061,7 @@
   "cat": "Stocks",
   "sub": "Mexico",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ORBIAMXMXN": {
   "id": "orbiamxmxn",
@@ -6069,7 +6069,7 @@
   "cat": "Stocks",
   "sub": "Mexico",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "PEOLESMXMXN": {
   "id": "peolesmxmxn",
@@ -6077,7 +6077,7 @@
   "cat": "Stocks",
   "sub": "Mexico",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "PINFRAMXMXN": {
   "id": "pinframxmxn",
@@ -6085,7 +6085,7 @@
   "cat": "Stocks",
   "sub": "Mexico",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "QMXMXN": {
   "id": "qmxmxn",
@@ -6093,7 +6093,7 @@
   "cat": "Stocks",
   "sub": "Mexico",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "RAMXMXN": {
   "id": "ramxmxn",
@@ -6101,7 +6101,7 @@
   "cat": "Stocks",
   "sub": "Mexico",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "VOLARAMXMXN": {
   "id": "volaramxmxn",
@@ -6109,7 +6109,7 @@
   "cat": "Stocks",
   "sub": "Mexico",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "WALMEXMXMXN": {
   "id": "walmexmxmxn",
@@ -6117,7 +6117,7 @@
   "cat": "Stocks",
   "sub": "Mexico",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AGNNLEUR": {
   "id": "agnnleur",
@@ -6125,7 +6125,7 @@
   "cat": "Stocks",
   "sub": "Netherlands",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AHNLEUR": {
   "id": "ahnleur",
@@ -6133,7 +6133,7 @@
   "cat": "Stocks",
   "sub": "Netherlands",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AKZANLEUR": {
   "id": "akzanleur",
@@ -6141,7 +6141,7 @@
   "cat": "Stocks",
   "sub": "Netherlands",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ASMLNLEUR": {
   "id": "asmlnleur",
@@ -6149,7 +6149,7 @@
   "cat": "Stocks",
   "sub": "Netherlands",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "DSMNLEUR": {
   "id": "dsmnleur",
@@ -6157,7 +6157,7 @@
   "cat": "Stocks",
   "sub": "Netherlands",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "HEIANLEUR": {
   "id": "heianleur",
@@ -6165,7 +6165,7 @@
   "cat": "Stocks",
   "sub": "Netherlands",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "INGANLEUR": {
   "id": "inganleur",
@@ -6173,7 +6173,7 @@
   "cat": "Stocks",
   "sub": "Netherlands",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "KPNNLEUR": {
   "id": "kpnnleur",
@@ -6181,7 +6181,7 @@
   "cat": "Stocks",
   "sub": "Netherlands",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MTNLEUR": {
   "id": "mtnleur",
@@ -6189,7 +6189,7 @@
   "cat": "Stocks",
   "sub": "Netherlands",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "PHIANLEUR": {
   "id": "phianleur",
@@ -6197,7 +6197,7 @@
   "cat": "Stocks",
   "sub": "Netherlands",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "QIANLEUR": {
   "id": "qianleur",
@@ -6205,7 +6205,7 @@
   "cat": "Stocks",
   "sub": "Netherlands",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "RANDNLEUR": {
   "id": "randnleur",
@@ -6213,7 +6213,7 @@
   "cat": "Stocks",
   "sub": "Netherlands",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "RDSANLEUR": {
   "id": "rdsanleur",
@@ -6221,7 +6221,7 @@
   "cat": "Stocks",
   "sub": "Netherlands",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "VPKNLEUR": {
   "id": "vpknleur",
@@ -6229,7 +6229,7 @@
   "cat": "Stocks",
   "sub": "Netherlands",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "WKLNLEUR": {
   "id": "wklnleur",
@@ -6237,7 +6237,7 @@
   "cat": "Stocks",
   "sub": "Netherlands",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MHGNONOK": {
   "id": "mhgnonok",
@@ -6245,7 +6245,7 @@
   "cat": "Stocks",
   "sub": "Norway",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "NHYNONOK": {
   "id": "nhynonok",
@@ -6253,7 +6253,7 @@
   "cat": "Stocks",
   "sub": "Norway",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ORKNONOK": {
   "id": "orknonok",
@@ -6261,7 +6261,7 @@
   "cat": "Stocks",
   "sub": "Norway",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "STLNONOK": {
   "id": "stlnonok",
@@ -6269,7 +6269,7 @@
   "cat": "Stocks",
   "sub": "Norway",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TELNONOK": {
   "id": "telnonok",
@@ -6277,7 +6277,7 @@
   "cat": "Stocks",
   "sub": "Norway",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "EDPPTEUR": {
   "id": "edppteur",
@@ -6285,7 +6285,7 @@
   "cat": "Stocks",
   "sub": "Portugal",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "GALPPTEUR": {
   "id": "galppteur",
@@ -6293,7 +6293,7 @@
   "cat": "Stocks",
   "sub": "Portugal",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ACSESEUR": {
   "id": "acseseur",
@@ -6301,7 +6301,7 @@
   "cat": "Stocks",
   "sub": "Spain",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ACXESEUR": {
   "id": "acxeseur",
@@ -6309,7 +6309,7 @@
   "cat": "Stocks",
   "sub": "Spain",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AENAESEUR": {
   "id": "aenaeseur",
@@ -6317,7 +6317,7 @@
   "cat": "Stocks",
   "sub": "Spain",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AMSESEUR": {
   "id": "amseseur",
@@ -6325,7 +6325,7 @@
   "cat": "Stocks",
   "sub": "Spain",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BBVAESEUR": {
   "id": "bbvaeseur",
@@ -6333,7 +6333,7 @@
   "cat": "Stocks",
   "sub": "Spain",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CABKESEUR": {
   "id": "cabkeseur",
@@ -6341,7 +6341,7 @@
   "cat": "Stocks",
   "sub": "Spain",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "EBRESEUR": {
   "id": "ebreseur",
@@ -6349,7 +6349,7 @@
   "cat": "Stocks",
   "sub": "Spain",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ELEESEUR": {
   "id": "eleeseur",
@@ -6357,7 +6357,7 @@
   "cat": "Stocks",
   "sub": "Spain",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ENGESEUR": {
   "id": "engeseur",
@@ -6365,7 +6365,7 @@
   "cat": "Stocks",
   "sub": "Spain",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "FERESEUR": {
   "id": "fereseur",
@@ -6373,7 +6373,7 @@
   "cat": "Stocks",
   "sub": "Spain",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "GASESEUR": {
   "id": "gaseseur",
@@ -6381,7 +6381,7 @@
   "cat": "Stocks",
   "sub": "Spain",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "GRFESEUR": {
   "id": "grfeseur",
@@ -6389,7 +6389,7 @@
   "cat": "Stocks",
   "sub": "Spain",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "IBEESEUR": {
   "id": "ibeeseur",
@@ -6397,7 +6397,7 @@
   "cat": "Stocks",
   "sub": "Spain",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ITXESEUR": {
   "id": "itxeseur",
@@ -6405,7 +6405,7 @@
   "cat": "Stocks",
   "sub": "Spain",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MAPESEUR": {
   "id": "mapeseur",
@@ -6413,7 +6413,7 @@
   "cat": "Stocks",
   "sub": "Spain",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "REPESEUR": {
   "id": "repeseur",
@@ -6421,7 +6421,7 @@
   "cat": "Stocks",
   "sub": "Spain",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SANESEUR": {
   "id": "saneseur",
@@ -6429,7 +6429,7 @@
   "cat": "Stocks",
   "sub": "Spain",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TEFESEUR": {
   "id": "tefeseur",
@@ -6437,7 +6437,7 @@
   "cat": "Stocks",
   "sub": "Spain",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "VISESEUR": {
   "id": "viseseur",
@@ -6445,7 +6445,7 @@
   "cat": "Stocks",
   "sub": "Spain",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ALFASESEK": {
   "id": "alfasesek",
@@ -6453,7 +6453,7 @@
   "cat": "Stocks",
   "sub": "Sweden",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ATCOASESEK": {
   "id": "atcoasesek",
@@ -6461,7 +6461,7 @@
   "cat": "Stocks",
   "sub": "Sweden",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ELUXBSESEK": {
   "id": "eluxbsesek",
@@ -6469,7 +6469,7 @@
   "cat": "Stocks",
   "sub": "Sweden",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ERICBSESEK": {
   "id": "ericbsesek",
@@ -6477,7 +6477,7 @@
   "cat": "Stocks",
   "sub": "Sweden",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "GETIBSESEK": {
   "id": "getibsesek",
@@ -6485,7 +6485,7 @@
   "cat": "Stocks",
   "sub": "Sweden",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "HMBSESEK": {
   "id": "hmbsesek",
@@ -6493,7 +6493,7 @@
   "cat": "Stocks",
   "sub": "Sweden",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "INVEBSESEK": {
   "id": "invebsesek",
@@ -6501,7 +6501,7 @@
   "cat": "Stocks",
   "sub": "Sweden",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "NDASESEK": {
   "id": "ndasesek",
@@ -6509,7 +6509,7 @@
   "cat": "Stocks",
   "sub": "Sweden",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SANDSESEK": {
   "id": "sandsesek",
@@ -6517,7 +6517,7 @@
   "cat": "Stocks",
   "sub": "Sweden",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SCABSESEK": {
   "id": "scabsesek",
@@ -6525,7 +6525,7 @@
   "cat": "Stocks",
   "sub": "Sweden",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SEBASESEK": {
   "id": "sebasesek",
@@ -6533,7 +6533,7 @@
   "cat": "Stocks",
   "sub": "Sweden",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SECUBSESEK": {
   "id": "secubsesek",
@@ -6541,7 +6541,7 @@
   "cat": "Stocks",
   "sub": "Sweden",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SKABSESEK": {
   "id": "skabsesek",
@@ -6549,7 +6549,7 @@
   "cat": "Stocks",
   "sub": "Sweden",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SKFBSESEK": {
   "id": "skfbsesek",
@@ -6557,7 +6557,7 @@
   "cat": "Stocks",
   "sub": "Sweden",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SWEDASESEK": {
   "id": "swedasesek",
@@ -6565,7 +6565,7 @@
   "cat": "Stocks",
   "sub": "Sweden",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TEL2BSESEK": {
   "id": "tel2bsesek",
@@ -6573,7 +6573,7 @@
   "cat": "Stocks",
   "sub": "Sweden",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TLSNSESEK": {
   "id": "tlsnsesek",
@@ -6581,7 +6581,7 @@
   "cat": "Stocks",
   "sub": "Sweden",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "VOLVBSESEK": {
   "id": "volvbsesek",
@@ -6589,7 +6589,7 @@
   "cat": "Stocks",
   "sub": "Sweden",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ABBNCHCHF": {
   "id": "abbnchchf",
@@ -6597,7 +6597,7 @@
   "cat": "Stocks",
   "sub": "Switzerland",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ADENCHCHF": {
   "id": "adenchchf",
@@ -6605,7 +6605,7 @@
   "cat": "Stocks",
   "sub": "Switzerland",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BAERCHCHF": {
   "id": "baerchchf",
@@ -6613,7 +6613,7 @@
   "cat": "Stocks",
   "sub": "Switzerland",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CFRCHCHF": {
   "id": "cfrchchf",
@@ -6621,7 +6621,7 @@
   "cat": "Stocks",
   "sub": "Switzerland",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CLNCHCHF": {
   "id": "clnchchf",
@@ -6629,7 +6629,7 @@
   "cat": "Stocks",
   "sub": "Switzerland",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "GIVNCHCHF": {
   "id": "givnchchf",
@@ -6637,7 +6637,7 @@
   "cat": "Stocks",
   "sub": "Switzerland",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "KNINCHCHF": {
   "id": "kninchchf",
@@ -6645,7 +6645,7 @@
   "cat": "Stocks",
   "sub": "Switzerland",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "LHNCHCHF": {
   "id": "lhnchchf",
@@ -6653,7 +6653,7 @@
   "cat": "Stocks",
   "sub": "Switzerland",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "LISPCHCHF": {
   "id": "lispchchf",
@@ -6661,7 +6661,7 @@
   "cat": "Stocks",
   "sub": "Switzerland",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "LOGNCHCHF": {
   "id": "lognchchf",
@@ -6669,7 +6669,7 @@
   "cat": "Stocks",
   "sub": "Switzerland",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "LONNCHCHF": {
   "id": "lonnchchf",
@@ -6677,7 +6677,7 @@
   "cat": "Stocks",
   "sub": "Switzerland",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "NESNCHCHF": {
   "id": "nesnchchf",
@@ -6685,7 +6685,7 @@
   "cat": "Stocks",
   "sub": "Switzerland",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "NOVNCHCHF": {
   "id": "novnchchf",
@@ -6693,7 +6693,7 @@
   "cat": "Stocks",
   "sub": "Switzerland",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "OERLCHCHF": {
   "id": "oerlchchf",
@@ -6701,7 +6701,7 @@
   "cat": "Stocks",
   "sub": "Switzerland",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ROGCHCHF": {
   "id": "rogchchf",
@@ -6709,7 +6709,7 @@
   "cat": "Stocks",
   "sub": "Switzerland",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SCMNCHCHF": {
   "id": "scmnchchf",
@@ -6717,7 +6717,7 @@
   "cat": "Stocks",
   "sub": "Switzerland",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SGSNCHCHF": {
   "id": "sgsnchchf",
@@ -6725,7 +6725,7 @@
   "cat": "Stocks",
   "sub": "Switzerland",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SLHNCHCHF": {
   "id": "slhnchchf",
@@ -6733,7 +6733,7 @@
   "cat": "Stocks",
   "sub": "Switzerland",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SOONCHCHF": {
   "id": "soonchchf",
@@ -6741,7 +6741,7 @@
   "cat": "Stocks",
   "sub": "Switzerland",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SRENCHCHF": {
   "id": "srenchchf",
@@ -6749,7 +6749,7 @@
   "cat": "Stocks",
   "sub": "Switzerland",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TEMNCHCHF": {
   "id": "temnchchf",
@@ -6757,7 +6757,7 @@
   "cat": "Stocks",
   "sub": "Switzerland",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "UBSGCHCHF": {
   "id": "ubsgchchf",
@@ -6765,7 +6765,7 @@
   "cat": "Stocks",
   "sub": "Switzerland",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "UHRCHCHF": {
   "id": "uhrchchf",
@@ -6773,7 +6773,7 @@
   "cat": "Stocks",
   "sub": "Switzerland",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "UHRNCHCHF": {
   "id": "uhrnchchf",
@@ -6781,7 +6781,7 @@
   "cat": "Stocks",
   "sub": "Switzerland",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ZURNCHCHF": {
   "id": "zurnchchf",
@@ -6789,7 +6789,7 @@
   "cat": "Stocks",
   "sub": "Switzerland",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AALGBGBX": {
   "id": "aalgbgbx",
@@ -6797,7 +6797,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ABFGBGBX": {
   "id": "abfgbgbx",
@@ -6805,7 +6805,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ADMGBGBX": {
   "id": "admgbgbx",
@@ -6813,7 +6813,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AGESGBGBX": {
   "id": "agesgbgbx",
@@ -6821,7 +6821,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2025,
-  "on": false
+  "on": true
  },
  "AHTGBGBX": {
   "id": "ahtgbgbx",
@@ -6829,7 +6829,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AIAIGBUSD": {
   "id": "aiaigbusd",
@@ -6837,7 +6837,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2025,
-  "on": false
+  "on": true
  },
  "ANTOGBGBX": {
   "id": "antogbgbx",
@@ -6845,7 +6845,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AVGBGBX": {
   "id": "avgbgbx",
@@ -6853,7 +6853,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AZNGBGBX": {
   "id": "azngbgbx",
@@ -6861,7 +6861,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BABGBGBX": {
   "id": "babgbgbx",
@@ -6869,7 +6869,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BAGBGBX": {
   "id": "bagbgbx",
@@ -6877,7 +6877,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BARCGBGBX": {
   "id": "barcgbgbx",
@@ -6885,7 +6885,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BATSGBGBX": {
   "id": "batsgbgbx",
@@ -6893,7 +6893,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BDEVGBGBX": {
   "id": "bdevgbgbx",
@@ -6901,7 +6901,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BLNDGBGBX": {
   "id": "blndgbgbx",
@@ -6909,7 +6909,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BLTGBGBX": {
   "id": "bltgbgbx",
@@ -6917,7 +6917,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BNZLGBGBX": {
   "id": "bnzlgbgbx",
@@ -6925,7 +6925,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BRBYGBGBX": {
   "id": "brbygbgbx",
@@ -6933,7 +6933,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BTGBGBX": {
   "id": "btgbgbx",
@@ -6941,7 +6941,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CCLGBGBX": {
   "id": "cclgbgbx",
@@ -6949,7 +6949,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CNAGBGBX": {
   "id": "cnagbgbx",
@@ -6957,7 +6957,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CPGGBGBX": {
   "id": "cpggbgbx",
@@ -6965,7 +6965,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CPIGBGBX": {
   "id": "cpigbgbx",
@@ -6973,7 +6973,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CRDAGBGBX": {
   "id": "crdagbgbx",
@@ -6981,7 +6981,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CRHGBGBX": {
   "id": "crhgbgbx",
@@ -6989,7 +6989,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "DCCGBGBX": {
   "id": "dccgbgbx",
@@ -6997,7 +6997,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "DFNGGBGBP": {
   "id": "dfnggbgbp",
@@ -7005,7 +7005,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2025,
-  "on": false
+  "on": true
  },
  "DGEGBGBX": {
   "id": "dgegbgbx",
@@ -7013,7 +7013,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ECARGBUSD": {
   "id": "ecargbusd",
@@ -7021,7 +7021,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2025,
-  "on": false
+  "on": true
  },
  "ECMGBGBX": {
   "id": "ecmgbgbx",
@@ -7029,7 +7029,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "EXPNGBGBX": {
   "id": "expngbgbx",
@@ -7037,7 +7037,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "EZJGBGBX": {
   "id": "ezjgbgbx",
@@ -7045,7 +7045,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "FRESGBGBX": {
   "id": "fresgbgbx",
@@ -7053,7 +7053,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "GLENGBGBX": {
   "id": "glengbgbx",
@@ -7061,7 +7061,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "GLGGGBGBX": {
   "id": "glgggbgbx",
@@ -7069,7 +7069,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2025,
-  "on": false
+  "on": true
  },
  "GSKGBGBX": {
   "id": "gskgbgbx",
@@ -7077,7 +7077,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "HIKGBGBX": {
   "id": "hikgbgbx",
@@ -7085,7 +7085,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "HLMAGBGBX": {
   "id": "hlmagbgbx",
@@ -7093,7 +7093,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "HMSOGBGBX": {
   "id": "hmsogbgbx",
@@ -7101,7 +7101,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "HSBAGBGBX": {
   "id": "hsbagbgbx",
@@ -7109,7 +7109,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "IAGGBGBX": {
   "id": "iaggbgbx",
@@ -7117,7 +7117,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ICPGBGBX": {
   "id": "icpgbgbx",
@@ -7125,7 +7125,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "IHGGBGBX": {
   "id": "ihggbgbx",
@@ -7133,7 +7133,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "IIIGBGBX": {
   "id": "iiigbgbx",
@@ -7141,7 +7141,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "IMTGBGBX": {
   "id": "imtgbgbx",
@@ -7149,7 +7149,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "INTLGBGBX": {
   "id": "intlgbgbx",
@@ -7157,7 +7157,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2025,
-  "on": false
+  "on": true
  },
  "ITRKGBGBX": {
   "id": "itrkgbgbx",
@@ -7165,7 +7165,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ITVGBGBX": {
   "id": "itvgbgbx",
@@ -7173,7 +7173,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "KGFGBGBX": {
   "id": "kgfgbgbx",
@@ -7181,7 +7181,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "LANDGBGBX": {
   "id": "landgbgbx",
@@ -7189,7 +7189,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "LGENGBGBX": {
   "id": "lgengbgbx",
@@ -7197,7 +7197,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "LLOYGBGBX": {
   "id": "lloygbgbx",
@@ -7205,7 +7205,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "LSEGBGBX": {
   "id": "lsegbgbx",
@@ -7213,7 +7213,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MKSGBGBX": {
   "id": "mksgbgbx",
@@ -7221,7 +7221,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MNDIGBGBX": {
   "id": "mndigbgbx",
@@ -7229,7 +7229,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MNGGBGBX": {
   "id": "mnggbgbx",
@@ -7237,7 +7237,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "NGGBGBX": {
   "id": "nggbgbx",
@@ -7245,7 +7245,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "NXTGBGBX": {
   "id": "nxtgbgbx",
@@ -7253,7 +7253,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "OCDOGBGBX": {
   "id": "ocdogbgbx",
@@ -7261,7 +7261,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "PHNXGBGBX": {
   "id": "phnxgbgbx",
@@ -7269,7 +7269,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "PRUGBGBX": {
   "id": "prugbgbx",
@@ -7277,7 +7277,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "PSNGBGBX": {
   "id": "psngbgbx",
@@ -7285,7 +7285,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "PSONGBGBX": {
   "id": "psongbgbx",
@@ -7293,7 +7293,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "RBGBGBX": {
   "id": "rbgbgbx",
@@ -7301,7 +7301,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "RBSGBGBX": {
   "id": "rbsgbgbx",
@@ -7309,7 +7309,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "RDSBGBGBX": {
   "id": "rdsbgbgbx",
@@ -7317,7 +7317,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "RELGBGBX": {
   "id": "relgbgbx",
@@ -7325,7 +7325,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "RIOGBGBX": {
   "id": "riogbgbx",
@@ -7333,7 +7333,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "RMVGBGBX": {
   "id": "rmvgbgbx",
@@ -7341,7 +7341,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "RRGBGBX": {
   "id": "rrgbgbx",
@@ -7349,7 +7349,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "RTOGBGBX": {
   "id": "rtogbgbx",
@@ -7357,7 +7357,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SBRYGBGBX": {
   "id": "sbrygbgbx",
@@ -7365,7 +7365,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SDRGBGBX": {
   "id": "sdrgbgbx",
@@ -7373,7 +7373,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SGEGBGBX": {
   "id": "sgegbgbx",
@@ -7381,7 +7381,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SGROGBGBX": {
   "id": "sgrogbgbx",
@@ -7389,7 +7389,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SLAGBGBX": {
   "id": "slagbgbx",
@@ -7397,7 +7397,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SMINGBGBX": {
   "id": "smingbgbx",
@@ -7405,7 +7405,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SMTGBGBX": {
   "id": "smtgbgbx",
@@ -7413,7 +7413,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SNGBGBX": {
   "id": "sngbgbx",
@@ -7421,7 +7421,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SPXGBGBX": {
   "id": "spxgbgbx",
@@ -7429,7 +7429,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SSEGBGBX": {
   "id": "ssegbgbx",
@@ -7437,7 +7437,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "STANGBGBX": {
   "id": "stangbgbx",
@@ -7445,7 +7445,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "STJGBGBX": {
   "id": "stjgbgbx",
@@ -7453,7 +7453,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SUASGBUSD": {
   "id": "suasgbusd",
@@ -7461,7 +7461,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2025,
-  "on": false
+  "on": true
  },
  "SUSMGBUSD": {
   "id": "susmgbusd",
@@ -7469,7 +7469,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2025,
-  "on": false
+  "on": true
  },
  "SUUSGBGBX": {
   "id": "suusgbgbx",
@@ -7477,7 +7477,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2025,
-  "on": false
+  "on": true
  },
  "SVTGBGBX": {
   "id": "svtgbgbx",
@@ -7485,7 +7485,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TATEGBGBX": {
   "id": "tategbgbx",
@@ -7493,7 +7493,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TLWGBGBX": {
   "id": "tlwgbgbx",
@@ -7501,7 +7501,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TPKGBGBX": {
   "id": "tpkgbgbx",
@@ -7509,7 +7509,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TSCOGBGBX": {
   "id": "tscogbgbx",
@@ -7517,7 +7517,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TWGBGBX": {
   "id": "twgbgbx",
@@ -7525,7 +7525,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ULVRGBGBX": {
   "id": "ulvrgbgbx",
@@ -7533,7 +7533,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "UUGBGBX": {
   "id": "uugbgbx",
@@ -7541,7 +7541,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "VODGBGBX": {
   "id": "vodgbgbx",
@@ -7549,7 +7549,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "VUKGGBGBP": {
   "id": "vukggbgbp",
@@ -7557,7 +7557,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2025,
-  "on": false
+  "on": true
  },
  "VWRPGBGBP": {
   "id": "vwrpgbgbp",
@@ -7565,7 +7565,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2025,
-  "on": false
+  "on": true
  },
  "WEIRGBGBX": {
   "id": "weirgbgbx",
@@ -7573,7 +7573,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "WOSGBGBX": {
   "id": "wosgbgbx",
@@ -7581,7 +7581,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "WPPGBGBX": {
   "id": "wppgbgbx",
@@ -7589,7 +7589,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "WSMLGBUSD": {
   "id": "wsmlgbusd",
@@ -7597,7 +7597,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2025,
-  "on": false
+  "on": true
  },
  "WTBGBGBX": {
   "id": "wtbgbgbx",
@@ -7605,7 +7605,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "XNAQGBGBP": {
   "id": "xnaqgbgbp",
@@ -7613,7 +7613,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2025,
-  "on": false
+  "on": true
  },
  "XS6RGBGBX": {
   "id": "xs6rgbgbx",
@@ -7621,7 +7621,7 @@
   "cat": "Stocks",
   "sub": "United Kingdom",
   "start": 2025,
-  "on": false
+  "on": true
  },
  "AABVUSUSD": {
   "id": "aabvususd",
@@ -7629,7 +7629,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AALUSUSD": {
   "id": "aalususd",
@@ -7637,7 +7637,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AAPLUSUSD": {
   "id": "aaplususd",
@@ -7645,7 +7645,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AAPUSUSD": {
   "id": "aapususd",
@@ -7653,7 +7653,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AAUSUSD": {
   "id": "aaususd",
@@ -7661,7 +7661,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ABEVUSUSD": {
   "id": "abevususd",
@@ -7669,7 +7669,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ABTUSUSD": {
   "id": "abtususd",
@@ -7677,7 +7677,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ACGLUSUSD": {
   "id": "acglususd",
@@ -7685,7 +7685,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ACMUSUSD": {
   "id": "acmususd",
@@ -7693,7 +7693,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ACNUSUSD": {
   "id": "acnususd",
@@ -7701,7 +7701,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ADBEUSUSD": {
   "id": "adbeususd",
@@ -7709,7 +7709,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ADIUSUSD": {
   "id": "adiususd",
@@ -7717,7 +7717,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ADSKUSUSD": {
   "id": "adskususd",
@@ -7725,7 +7725,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AEPUSUSD": {
   "id": "aepususd",
@@ -7733,7 +7733,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AFGUSUSD": {
   "id": "afgususd",
@@ -7741,7 +7741,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AGNCUSUSD": {
   "id": "agncususd",
@@ -7749,7 +7749,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AIGUSUSD": {
   "id": "aigususd",
@@ -7757,7 +7757,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AJGUSUSD": {
   "id": "ajgususd",
@@ -7765,7 +7765,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ALBUSUSD": {
   "id": "albususd",
@@ -7773,7 +7773,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ALGNUSUSD": {
   "id": "algnususd",
@@ -7781,7 +7781,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ALKSUSUSD": {
   "id": "alksususd",
@@ -7789,7 +7789,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ALKUSUSD": {
   "id": "alkususd",
@@ -7797,7 +7797,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ALLEUSUSD": {
   "id": "alleususd",
@@ -7805,7 +7805,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ALLUSUSD": {
   "id": "allususd",
@@ -7813,7 +7813,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ALLYUSUSD": {
   "id": "allyususd",
@@ -7821,7 +7821,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AMATUSUSD": {
   "id": "amatususd",
@@ -7829,7 +7829,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AMCRUSUSD": {
   "id": "amcrususd",
@@ -7837,7 +7837,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AMDUSUSD": {
   "id": "amdususd",
@@ -7845,7 +7845,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AMGNUSUSD": {
   "id": "amgnususd",
@@ -7853,7 +7853,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AMHUSUSD": {
   "id": "amhususd",
@@ -7861,7 +7861,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AMPUSUSD": {
   "id": "ampususd",
@@ -7869,7 +7869,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AMTUSUSD": {
   "id": "amtususd",
@@ -7877,7 +7877,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AMWLUSUSD": {
   "id": "amwlususd",
@@ -7885,7 +7885,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AMZNUSUSD": {
   "id": "amznususd",
@@ -7893,7 +7893,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AONUSUSD": {
   "id": "aonususd",
@@ -7901,7 +7901,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AOSUSUSD": {
   "id": "aosususd",
@@ -7909,7 +7909,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "APAUSUSD": {
   "id": "apaususd",
@@ -7917,7 +7917,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "APDUSUSD": {
   "id": "apdususd",
@@ -7925,7 +7925,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AREUSUSD": {
   "id": "areususd",
@@ -7933,7 +7933,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ARMKUSUSD": {
   "id": "armkususd",
@@ -7941,7 +7941,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ARUSUSD": {
   "id": "arususd",
@@ -7949,7 +7949,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ARWUSUSD": {
   "id": "arwususd",
@@ -7957,7 +7957,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ATOUSUSD": {
   "id": "atoususd",
@@ -7965,7 +7965,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AUSUSD": {
   "id": "aususd",
@@ -7973,7 +7973,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AVBUSUSD": {
   "id": "avbususd",
@@ -7981,7 +7981,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AVGOUSUSD": {
   "id": "avgoususd",
@@ -7989,7 +7989,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AVTRUSUSD": {
   "id": "avtrususd",
@@ -7997,7 +7997,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AWKUSUSD": {
   "id": "awkususd",
@@ -8005,7 +8005,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AXPUSUSD": {
   "id": "axpususd",
@@ -8013,7 +8013,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2015,
-  "on": false
+  "on": true
  },
  "AXTAUSUSD": {
   "id": "axtaususd",
@@ -8021,7 +8021,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "AZNUSUSD": {
   "id": "aznususd",
@@ -8029,7 +8029,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BABAUSUSD": {
   "id": "babaususd",
@@ -8037,7 +8037,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BACUSUSD": {
   "id": "bacususd",
@@ -8045,7 +8045,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BAHUSUSD": {
   "id": "bahususd",
@@ -8053,7 +8053,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BAUSUSD": {
   "id": "baususd",
@@ -8061,7 +8061,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2015,
-  "on": false
+  "on": true
  },
  "BBDUSUSD": {
   "id": "bbdususd",
@@ -8069,7 +8069,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BBWIUSUSD": {
   "id": "bbwiususd",
@@ -8077,7 +8077,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BBYUSUSD": {
   "id": "bbyususd",
@@ -8085,7 +8085,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BIDUUSUSD": {
   "id": "biduususd",
@@ -8093,7 +8093,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BIIBUSUSD": {
   "id": "biibususd",
@@ -8101,7 +8101,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BIOUSUSD": {
   "id": "bioususd",
@@ -8109,7 +8109,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BKRUSUSD": {
   "id": "bkrususd",
@@ -8117,7 +8117,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BKUSUSD": {
   "id": "bkususd",
@@ -8125,7 +8125,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BMRNUSUSD": {
   "id": "bmrnususd",
@@ -8133,7 +8133,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BMYUSUSD": {
   "id": "bmyususd",
@@ -8141,7 +8141,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BPOPUSUSD": {
   "id": "bpopususd",
@@ -8149,7 +8149,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BPUSUSD": {
   "id": "bpususd",
@@ -8157,7 +8157,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BRKBUSUSD": {
   "id": "brkbususd",
@@ -8165,7 +8165,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BRKRUSUSD": {
   "id": "brkrususd",
@@ -8173,7 +8173,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BROUSUSD": {
   "id": "broususd",
@@ -8181,7 +8181,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BRUSUSD": {
   "id": "brususd",
@@ -8189,7 +8189,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BRXUSUSD": {
   "id": "brxususd",
@@ -8197,7 +8197,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BSXUSUSD": {
   "id": "bsxususd",
@@ -8205,7 +8205,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BURLUSUSD": {
   "id": "burlususd",
@@ -8213,7 +8213,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BWAUSUSD": {
   "id": "bwaususd",
@@ -8221,7 +8221,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "BYNDUSUSD": {
   "id": "byndususd",
@@ -8229,7 +8229,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CACCUSUSD": {
   "id": "caccususd",
@@ -8237,7 +8237,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CACIUSUSD": {
   "id": "caciususd",
@@ -8245,7 +8245,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CAGUSUSD": {
   "id": "cagususd",
@@ -8253,7 +8253,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CAHUSUSD": {
   "id": "cahususd",
@@ -8261,7 +8261,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CARRUSUSD": {
   "id": "carrususd",
@@ -8269,7 +8269,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CASYUSUSD": {
   "id": "casyususd",
@@ -8277,7 +8277,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CATUSUSD": {
   "id": "catususd",
@@ -8285,7 +8285,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2015,
-  "on": false
+  "on": true
  },
  "CBOEUSUSD": {
   "id": "cboeususd",
@@ -8293,7 +8293,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CBUSUSD": {
   "id": "cbususd",
@@ -8301,7 +8301,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CCIUSUSD": {
   "id": "cciususd",
@@ -8309,7 +8309,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CCKUSUSD": {
   "id": "cckususd",
@@ -8317,7 +8317,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CCLUSUSD": {
   "id": "cclususd",
@@ -8325,7 +8325,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CDAYUSUSD": {
   "id": "cdayususd",
@@ -8333,7 +8333,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CDEVUSUSD": {
   "id": "cdevususd",
@@ -8341,7 +8341,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CDNSUSUSD": {
   "id": "cdnsususd",
@@ -8349,7 +8349,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CDWUSUSD": {
   "id": "cdwususd",
@@ -8357,7 +8357,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CEUSUSD": {
   "id": "ceususd",
@@ -8365,7 +8365,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CFGUSUSD": {
   "id": "cfgususd",
@@ -8373,7 +8373,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CFRUSUSD": {
   "id": "cfrususd",
@@ -8381,7 +8381,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CFUSUSD": {
   "id": "cfususd",
@@ -8389,7 +8389,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CGNXUSUSD": {
   "id": "cgnxususd",
@@ -8397,7 +8397,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CHDUSUSD": {
   "id": "chdususd",
@@ -8405,7 +8405,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CIUSUSD": {
   "id": "ciususd",
@@ -8413,7 +8413,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CLUSUSD": {
   "id": "clususd",
@@ -8421,7 +8421,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CMCSAUSUSD": {
   "id": "cmcsaususd",
@@ -8429,7 +8429,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CMEUSUSD": {
   "id": "cmeususd",
@@ -8437,7 +8437,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CMGUSUSD": {
   "id": "cmgususd",
@@ -8445,7 +8445,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CNCUSUSD": {
   "id": "cncususd",
@@ -8453,7 +8453,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "COLDUSUSD": {
   "id": "coldususd",
@@ -8461,7 +8461,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "COOUSUSD": {
   "id": "cooususd",
@@ -8469,7 +8469,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "COPUSUSD": {
   "id": "copususd",
@@ -8477,7 +8477,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "COSTUSUSD": {
   "id": "costususd",
@@ -8485,7 +8485,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CPRIUSUSD": {
   "id": "cpriususd",
@@ -8493,7 +8493,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CPRTUSUSD": {
   "id": "cprtususd",
@@ -8501,7 +8501,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CPTUSUSD": {
   "id": "cptususd",
@@ -8509,7 +8509,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CRLUSUSD": {
   "id": "crlususd",
@@ -8517,7 +8517,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CRMUSUSD": {
   "id": "crmususd",
@@ -8525,7 +8525,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CSCOUSUSD": {
   "id": "cscoususd",
@@ -8533,7 +8533,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2015,
-  "on": false
+  "on": true
  },
  "CSGPUSUSD": {
   "id": "csgpususd",
@@ -8541,7 +8541,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CSLUSUSD": {
   "id": "cslususd",
@@ -8549,7 +8549,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CSXUSUSD": {
   "id": "csxususd",
@@ -8557,7 +8557,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CTLUSUSD": {
   "id": "ctlususd",
@@ -8565,7 +8565,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CTSHUSUSD": {
   "id": "ctshususd",
@@ -8573,7 +8573,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CTVAUSUSD": {
   "id": "ctvaususd",
@@ -8581,7 +8581,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CUBEUSUSD": {
   "id": "cubeususd",
@@ -8589,7 +8589,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CUSUSD": {
   "id": "cususd",
@@ -8597,7 +8597,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CVNAUSUSD": {
   "id": "cvnaususd",
@@ -8605,7 +8605,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CVSUSUSD": {
   "id": "cvsususd",
@@ -8613,7 +8613,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "CVXUSUSD": {
   "id": "cvxususd",
@@ -8621,7 +8621,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2015,
-  "on": false
+  "on": true
  },
  "CZRUSUSD": {
   "id": "czrususd",
@@ -8629,7 +8629,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "DALUSUSD": {
   "id": "dalususd",
@@ -8637,7 +8637,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "DBXUSUSD": {
   "id": "dbxususd",
@@ -8645,7 +8645,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "DELLUSUSD": {
   "id": "dellususd",
@@ -8653,7 +8653,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "DEUSUSD": {
   "id": "deususd",
@@ -8661,7 +8661,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "DGUSUSD": {
   "id": "dgususd",
@@ -8669,7 +8669,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "DHIUSUSD": {
   "id": "dhiususd",
@@ -8677,7 +8677,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "DHRUSUSD": {
   "id": "dhrususd",
@@ -8685,7 +8685,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "DISUSUSD": {
   "id": "disususd",
@@ -8693,7 +8693,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2015,
-  "on": false
+  "on": true
  },
  "DKSUSUSD": {
   "id": "dksususd",
@@ -8701,7 +8701,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "DLRUSUSD": {
   "id": "dlrususd",
@@ -8709,7 +8709,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "DLTRUSUSD": {
   "id": "dltrususd",
@@ -8717,7 +8717,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "DOCUUSUSD": {
   "id": "docuususd",
@@ -8725,7 +8725,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "DOXUSUSD": {
   "id": "doxususd",
@@ -8733,7 +8733,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "DPZUSUSD": {
   "id": "dpzususd",
@@ -8741,7 +8741,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "DTUSUSD": {
   "id": "dtususd",
@@ -8749,7 +8749,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "DUKUSUSD": {
   "id": "dukususd",
@@ -8757,7 +8757,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "DUSUSD": {
   "id": "dususd",
@@ -8765,7 +8765,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "DVAUSUSD": {
   "id": "dvaususd",
@@ -8773,7 +8773,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "DVNUSUSD": {
   "id": "dvnususd",
@@ -8781,7 +8781,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "DXCMUSUSD": {
   "id": "dxcmususd",
@@ -8789,7 +8789,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "DXCUSUSD": {
   "id": "dxcususd",
@@ -8797,7 +8797,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "EAUSUSD": {
   "id": "eaususd",
@@ -8805,7 +8805,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "EBAYUSUSD": {
   "id": "ebayususd",
@@ -8813,7 +8813,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "EEFTUSUSD": {
   "id": "eeftususd",
@@ -8821,7 +8821,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "EFXUSUSD": {
   "id": "efxususd",
@@ -8829,7 +8829,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "EHCUSUSD": {
   "id": "ehcususd",
@@ -8837,7 +8837,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "EIXUSUSD": {
   "id": "eixususd",
@@ -8845,7 +8845,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ELANUSUSD": {
   "id": "elanususd",
@@ -8853,7 +8853,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ELSUSUSD": {
   "id": "elsususd",
@@ -8861,7 +8861,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ELUSUSD": {
   "id": "elususd",
@@ -8869,7 +8869,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "EMRUSUSD": {
   "id": "emrususd",
@@ -8877,7 +8877,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ENPHUSUSD": {
   "id": "enphususd",
@@ -8885,7 +8885,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ENTGUSUSD": {
   "id": "entgususd",
@@ -8893,7 +8893,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "EOGUSUSD": {
   "id": "eogususd",
@@ -8901,7 +8901,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "EPAMUSUSD": {
   "id": "epamususd",
@@ -8909,7 +8909,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "EQHUSUSD": {
   "id": "eqhususd",
@@ -8917,7 +8917,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "EQTUSUSD": {
   "id": "eqtususd",
@@ -8925,7 +8925,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ESSUSUSD": {
   "id": "essususd",
@@ -8933,7 +8933,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ESTCUSUSD": {
   "id": "estcususd",
@@ -8941,7 +8941,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ESUSUSD": {
   "id": "esususd",
@@ -8949,7 +8949,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ETNUSUSD": {
   "id": "etnususd",
@@ -8957,7 +8957,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ETSYUSUSD": {
   "id": "etsyususd",
@@ -8965,7 +8965,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "EVRGUSUSD": {
   "id": "evrgususd",
@@ -8973,7 +8973,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "EWBCUSUSD": {
   "id": "ewbcususd",
@@ -8981,7 +8981,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "EWUSUSD": {
   "id": "ewususd",
@@ -8989,7 +8989,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "EXCUSUSD": {
   "id": "excususd",
@@ -8997,7 +8997,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "EXELUSUSD": {
   "id": "exelususd",
@@ -9005,7 +9005,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "EXPEUSUSD": {
   "id": "expeususd",
@@ -9013,7 +9013,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "EXRUSUSD": {
   "id": "exrususd",
@@ -9021,7 +9021,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "FANGUSUSD": {
   "id": "fangususd",
@@ -9029,7 +9029,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "FBUSUSD": {
   "id": "fbususd",
@@ -9037,7 +9037,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "FCNCAUSUSD": {
   "id": "fcncaususd",
@@ -9045,7 +9045,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "FCXUSUSD": {
   "id": "fcxususd",
@@ -9053,7 +9053,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "FDSUSUSD": {
   "id": "fdsususd",
@@ -9061,7 +9061,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "FDXUSUSD": {
   "id": "fdxususd",
@@ -9069,7 +9069,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "FEUSUSD": {
   "id": "feususd",
@@ -9077,7 +9077,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "FICOUSUSD": {
   "id": "ficoususd",
@@ -9085,7 +9085,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "FITBUSUSD": {
   "id": "fitbususd",
@@ -9093,7 +9093,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "FIVEUSUSD": {
   "id": "fiveususd",
@@ -9101,7 +9101,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "FLTUSUSD": {
   "id": "fltususd",
@@ -9109,7 +9109,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "FNDUSUSD": {
   "id": "fndususd",
@@ -9117,7 +9117,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "FNFUSUSD": {
   "id": "fnfususd",
@@ -9125,7 +9125,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "FOXAUSUSD": {
   "id": "foxaususd",
@@ -9133,7 +9133,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "FTIUSUSD": {
   "id": "ftiususd",
@@ -9141,7 +9141,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "FTNTUSUSD": {
   "id": "ftntususd",
@@ -9149,7 +9149,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "FTVUSUSD": {
   "id": "ftvususd",
@@ -9157,7 +9157,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "FUSUSD": {
   "id": "fususd",
@@ -9165,7 +9165,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "GDDYUSUSD": {
   "id": "gddyususd",
@@ -9173,7 +9173,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "GDUSUSD": {
   "id": "gdususd",
@@ -9181,7 +9181,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "GEUSUSD": {
   "id": "geususd",
@@ -9189,7 +9189,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2015,
-  "on": false
+  "on": true
  },
  "GGGUSUSD": {
   "id": "gggususd",
@@ -9197,7 +9197,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "GHUSUSD": {
   "id": "ghususd",
@@ -9205,7 +9205,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "GILDUSUSD": {
   "id": "gildususd",
@@ -9213,7 +9213,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "GISUSUSD": {
   "id": "gisususd",
@@ -9221,7 +9221,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "GLPIUSUSD": {
   "id": "glpiususd",
@@ -9229,7 +9229,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "GLUSUSD": {
   "id": "glususd",
@@ -9237,7 +9237,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "GLWUSUSD": {
   "id": "glwususd",
@@ -9245,7 +9245,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "GMUSUSD": {
   "id": "gmususd",
@@ -9253,7 +9253,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "GNRCUSUSD": {
   "id": "gnrcususd",
@@ -9261,7 +9261,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "GOOGLUSUSD": {
   "id": "googlususd",
@@ -9269,7 +9269,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "GOOGUSUSD": {
   "id": "googususd",
@@ -9277,7 +9277,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "GPNUSUSD": {
   "id": "gpnususd",
@@ -9285,7 +9285,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "GPSUSUSD": {
   "id": "gpsususd",
@@ -9293,7 +9293,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "GSUSUSD": {
   "id": "gsususd",
@@ -9301,7 +9301,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2015,
-  "on": false
+  "on": true
  },
  "GUSUSD": {
   "id": "gususd",
@@ -9309,7 +9309,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "HALUSUSD": {
   "id": "halususd",
@@ -9317,7 +9317,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "HBIUSUSD": {
   "id": "hbiususd",
@@ -9325,7 +9325,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "HCAUSUSD": {
   "id": "hcaususd",
@@ -9333,7 +9333,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "HCNUSUSD": {
   "id": "hcnususd",
@@ -9341,7 +9341,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "HDUSUSD": {
   "id": "hdususd",
@@ -9349,7 +9349,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2015,
-  "on": false
+  "on": true
  },
  "HEIUSUSD": {
   "id": "heiususd",
@@ -9357,7 +9357,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "HIIUSUSD": {
   "id": "hiiususd",
@@ -9365,7 +9365,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "HLTUSUSD": {
   "id": "hltususd",
@@ -9373,7 +9373,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "HOGUSUSD": {
   "id": "hogususd",
@@ -9381,7 +9381,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "HONUSUSD": {
   "id": "honususd",
@@ -9389,7 +9389,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "HPEUSUSD": {
   "id": "hpeususd",
@@ -9397,7 +9397,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "HPQUSUSD": {
   "id": "hpqususd",
@@ -9405,7 +9405,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "HTAUSUSD": {
   "id": "htaususd",
@@ -9413,7 +9413,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "HUBBUSUSD": {
   "id": "hubbususd",
@@ -9421,7 +9421,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "HUBSUSUSD": {
   "id": "hubsususd",
@@ -9429,7 +9429,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "HUMUSUSD": {
   "id": "humususd",
@@ -9437,7 +9437,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "HUSUSD": {
   "id": "hususd",
@@ -9445,7 +9445,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "HWMUSUSD": {
   "id": "hwmususd",
@@ -9453,7 +9453,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "IBKRUSUSD": {
   "id": "ibkrususd",
@@ -9461,7 +9461,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "IBMUSUSD": {
   "id": "ibmususd",
@@ -9469,7 +9469,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2015,
-  "on": false
+  "on": true
  },
  "ICEUSUSD": {
   "id": "iceususd",
@@ -9477,7 +9477,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "IDXXUSUSD": {
   "id": "idxxususd",
@@ -9485,7 +9485,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "IEXUSUSD": {
   "id": "iexususd",
@@ -9493,7 +9493,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ILMNUSUSD": {
   "id": "ilmnususd",
@@ -9501,7 +9501,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "INCYUSUSD": {
   "id": "incyususd",
@@ -9509,7 +9509,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "INTCUSUSD": {
   "id": "intcususd",
@@ -9517,7 +9517,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2015,
-  "on": false
+  "on": true
  },
  "INTUUSUSD": {
   "id": "intuususd",
@@ -9525,7 +9525,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "INVHUSUSD": {
   "id": "invhususd",
@@ -9533,7 +9533,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "IONSUSUSD": {
   "id": "ionsususd",
@@ -9541,7 +9541,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "IPGPUSUSD": {
   "id": "ipgpususd",
@@ -9549,7 +9549,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "IPGUSUSD": {
   "id": "ipgususd",
@@ -9557,7 +9557,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "IQVUSUSD": {
   "id": "iqvususd",
@@ -9565,7 +9565,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "IRUSUSD": {
   "id": "irususd",
@@ -9573,7 +9573,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ISRGUSUSD": {
   "id": "isrgususd",
@@ -9581,7 +9581,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ITUBUSUSD": {
   "id": "itubususd",
@@ -9589,7 +9589,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ITUSUSD": {
   "id": "itususd",
@@ -9597,7 +9597,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ITWUSUSD": {
   "id": "itwususd",
@@ -9605,7 +9605,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "IVZUSUSD": {
   "id": "ivzususd",
@@ -9613,7 +9613,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "JAZZUSUSD": {
   "id": "jazzususd",
@@ -9621,7 +9621,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "JBLUUSUSD": {
   "id": "jbluususd",
@@ -9629,7 +9629,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "JCIUSUSD": {
   "id": "jciususd",
@@ -9637,7 +9637,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "JEFUSUSD": {
   "id": "jefususd",
@@ -9645,7 +9645,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "JKHYUSUSD": {
   "id": "jkhyususd",
@@ -9653,7 +9653,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "JLLUSUSD": {
   "id": "jllususd",
@@ -9661,7 +9661,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "JNJUSUSD": {
   "id": "jnjususd",
@@ -9669,7 +9669,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2015,
-  "on": false
+  "on": true
  },
  "JPMUSUSD": {
   "id": "jpmususd",
@@ -9677,7 +9677,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2015,
-  "on": false
+  "on": true
  },
  "KEYSUSUSD": {
   "id": "keysususd",
@@ -9685,7 +9685,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "KEYUSUSD": {
   "id": "keyususd",
@@ -9693,7 +9693,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "KHCUSUSD": {
   "id": "khcususd",
@@ -9701,7 +9701,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "KMBUSUSD": {
   "id": "kmbususd",
@@ -9709,7 +9709,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "KMIUSUSD": {
   "id": "kmiususd",
@@ -9717,7 +9717,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "KMXUSUSD": {
   "id": "kmxususd",
@@ -9725,7 +9725,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "KNXUSUSD": {
   "id": "knxususd",
@@ -9733,7 +9733,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "KOUSUSD": {
   "id": "koususd",
@@ -9741,7 +9741,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2015,
-  "on": false
+  "on": true
  },
  "KRCUSUSD": {
   "id": "krcususd",
@@ -9749,7 +9749,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "KRUSUSD": {
   "id": "krususd",
@@ -9757,7 +9757,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "KSSUSUSD": {
   "id": "kssususd",
@@ -9765,7 +9765,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "KUSUSD": {
   "id": "kususd",
@@ -9773,7 +9773,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "LAMRUSUSD": {
   "id": "lamrususd",
@@ -9781,7 +9781,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "LDOSUSUSD": {
   "id": "ldosususd",
@@ -9789,7 +9789,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "LEAUSUSD": {
   "id": "leaususd",
@@ -9797,7 +9797,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "LENUSUSD": {
   "id": "lenususd",
@@ -9805,7 +9805,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "LHXUSUSD": {
   "id": "lhxususd",
@@ -9813,7 +9813,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "LKQUSUSD": {
   "id": "lkqususd",
@@ -9821,7 +9821,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "LLYUSUSD": {
   "id": "llyususd",
@@ -9829,7 +9829,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "LMTUSUSD": {
   "id": "lmtususd",
@@ -9837,7 +9837,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "LNCUSUSD": {
   "id": "lncususd",
@@ -9845,7 +9845,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "LNGUSUSD": {
   "id": "lngususd",
@@ -9853,7 +9853,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "LNTUSUSD": {
   "id": "lntususd",
@@ -9861,7 +9861,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "LOWUSUSD": {
   "id": "lowususd",
@@ -9869,7 +9869,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "LPLAUSUSD": {
   "id": "lplaususd",
@@ -9877,7 +9877,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "LRCXUSUSD": {
   "id": "lrcxususd",
@@ -9885,7 +9885,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "LSTRUSUSD": {
   "id": "lstrususd",
@@ -9893,7 +9893,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "LULUUSUSD": {
   "id": "luluususd",
@@ -9901,7 +9901,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "LUSUSD": {
   "id": "lususd",
@@ -9909,7 +9909,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "LUVUSUSD": {
   "id": "luvususd",
@@ -9917,7 +9917,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "LVSUSUSD": {
   "id": "lvsususd",
@@ -9925,7 +9925,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "LWUSUSD": {
   "id": "lwususd",
@@ -9933,7 +9933,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "LYBUSUSD": {
   "id": "lybususd",
@@ -9941,7 +9941,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "LYFTUSUSD": {
   "id": "lyftususd",
@@ -9949,7 +9949,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "LYVUSUSD": {
   "id": "lyvususd",
@@ -9957,7 +9957,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MAAUSUSD": {
   "id": "maaususd",
@@ -9965,7 +9965,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MANHUSUSD": {
   "id": "manhususd",
@@ -9973,7 +9973,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MARUSUSD": {
   "id": "marususd",
@@ -9981,7 +9981,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MASIUSUSD": {
   "id": "masiususd",
@@ -9989,7 +9989,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MATUSUSD": {
   "id": "matususd",
@@ -9997,7 +9997,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MAUSUSD": {
   "id": "maususd",
@@ -10005,7 +10005,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MCDUSUSD": {
   "id": "mcdususd",
@@ -10013,7 +10013,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2015,
-  "on": false
+  "on": true
  },
  "MCHPUSUSD": {
   "id": "mchpususd",
@@ -10021,7 +10021,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MCKUSUSD": {
   "id": "mckususd",
@@ -10029,7 +10029,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MDBUSUSD": {
   "id": "mdbususd",
@@ -10037,7 +10037,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MDLZUSUSD": {
   "id": "mdlzususd",
@@ -10045,7 +10045,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MDTUSUSD": {
   "id": "mdtususd",
@@ -10053,7 +10053,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "METUSUSD": {
   "id": "metususd",
@@ -10061,7 +10061,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MGMUSUSD": {
   "id": "mgmususd",
@@ -10069,7 +10069,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MHKUSUSD": {
   "id": "mhkususd",
@@ -10077,7 +10077,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MIDDUSUSD": {
   "id": "middususd",
@@ -10085,7 +10085,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MKLUSUSD": {
   "id": "mklususd",
@@ -10093,7 +10093,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MKSIUSUSD": {
   "id": "mksiususd",
@@ -10101,7 +10101,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MKTXUSUSD": {
   "id": "mktxususd",
@@ -10109,7 +10109,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MLMUSUSD": {
   "id": "mlmususd",
@@ -10117,7 +10117,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MMMUSUSD": {
   "id": "mmmususd",
@@ -10125,7 +10125,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2015,
-  "on": false
+  "on": true
  },
  "MOHUSUSD": {
   "id": "mohususd",
@@ -10133,7 +10133,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MOUSUSD": {
   "id": "moususd",
@@ -10141,7 +10141,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MPCUSUSD": {
   "id": "mpcususd",
@@ -10149,7 +10149,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MPWRUSUSD": {
   "id": "mpwrususd",
@@ -10157,7 +10157,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MPWUSUSD": {
   "id": "mpwususd",
@@ -10165,7 +10165,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MRKUSUSD": {
   "id": "mrkususd",
@@ -10173,7 +10173,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2015,
-  "on": false
+  "on": true
  },
  "MRNAUSUSD": {
   "id": "mrnaususd",
@@ -10181,7 +10181,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MRVLUSUSD": {
   "id": "mrvlususd",
@@ -10189,7 +10189,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MSCIUSUSD": {
   "id": "msciususd",
@@ -10197,7 +10197,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MSFTUSUSD": {
   "id": "msftususd",
@@ -10205,7 +10205,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2015,
-  "on": false
+  "on": true
  },
  "MSUSUSD": {
   "id": "msususd",
@@ -10213,7 +10213,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MTCHUSUSD": {
   "id": "mtchususd",
@@ -10221,7 +10221,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MTDUSUSD": {
   "id": "mtdususd",
@@ -10229,7 +10229,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MTNUSUSD": {
   "id": "mtnususd",
@@ -10237,7 +10237,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MUSUSD": {
   "id": "mususd",
@@ -10245,7 +10245,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "MUUSUSD": {
   "id": "muususd",
@@ -10253,7 +10253,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "NBIXUSUSD": {
   "id": "nbixususd",
@@ -10261,7 +10261,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "NCLHUSUSD": {
   "id": "nclhususd",
@@ -10269,7 +10269,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "NDSNUSUSD": {
   "id": "ndsnususd",
@@ -10277,7 +10277,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "NEEUSUSD": {
   "id": "neeususd",
@@ -10285,7 +10285,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "NEMUSUSD": {
   "id": "nemususd",
@@ -10293,7 +10293,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "NFLXUSUSD": {
   "id": "nflxususd",
@@ -10301,7 +10301,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "NIOUSUSD": {
   "id": "nioususd",
@@ -10309,7 +10309,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "NKEUSUSD": {
   "id": "nkeususd",
@@ -10317,7 +10317,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2015,
-  "on": false
+  "on": true
  },
  "NLOKUSUSD": {
   "id": "nlokususd",
@@ -10325,7 +10325,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "NLYUSUSD": {
   "id": "nlyususd",
@@ -10333,7 +10333,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "NOCUSUSD": {
   "id": "nocususd",
@@ -10341,7 +10341,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "NOWUSUSD": {
   "id": "nowususd",
@@ -10349,7 +10349,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "NRGUSUSD": {
   "id": "nrgususd",
@@ -10357,7 +10357,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "NSCUSUSD": {
   "id": "nscususd",
@@ -10365,7 +10365,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "NTNXUSUSD": {
   "id": "ntnxususd",
@@ -10373,7 +10373,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "NVDAUSUSD": {
   "id": "nvdaususd",
@@ -10381,7 +10381,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "NWLUSUSD": {
   "id": "nwlususd",
@@ -10389,7 +10389,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "NWSUSUSD": {
   "id": "nwsususd",
@@ -10397,7 +10397,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "NXSTUSUSD": {
   "id": "nxstususd",
@@ -10405,7 +10405,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "NYTUSUSD": {
   "id": "nytususd",
@@ -10413,7 +10413,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "OCUSUSD": {
   "id": "ocususd",
@@ -10421,7 +10421,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ODFLUSUSD": {
   "id": "odflususd",
@@ -10429,7 +10429,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "OGEUSUSD": {
   "id": "ogeususd",
@@ -10437,7 +10437,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "OGNUSUSD": {
   "id": "ognususd",
@@ -10445,7 +10445,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "OHIUSUSD": {
   "id": "ohiususd",
@@ -10453,7 +10453,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "OKEUSUSD": {
   "id": "okeususd",
@@ -10461,7 +10461,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "OKTAUSUSD": {
   "id": "oktaususd",
@@ -10469,7 +10469,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "OLEDUSUSD": {
   "id": "oledususd",
@@ -10477,7 +10477,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "OLLIUSUSD": {
   "id": "olliususd",
@@ -10485,7 +10485,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "OLNUSUSD": {
   "id": "olnususd",
@@ -10493,7 +10493,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "OMCUSUSD": {
   "id": "omcususd",
@@ -10501,7 +10501,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "OMFUSUSD": {
   "id": "omfususd",
@@ -10509,7 +10509,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ONUSUSD": {
   "id": "onususd",
@@ -10517,7 +10517,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ORCLUSUSD": {
   "id": "orclususd",
@@ -10525,7 +10525,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ORLYUSUSD": {
   "id": "orlyususd",
@@ -10533,7 +10533,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "OTISUSUSD": {
   "id": "otisususd",
@@ -10541,7 +10541,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "OUSUSD": {
   "id": "oususd",
@@ -10549,7 +10549,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "OXYUSUSD": {
   "id": "oxyususd",
@@ -10557,7 +10557,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "PANWUSUSD": {
   "id": "panwususd",
@@ -10565,7 +10565,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "PAYCUSUSD": {
   "id": "paycususd",
@@ -10573,7 +10573,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "PAYXUSUSD": {
   "id": "payxususd",
@@ -10581,7 +10581,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "PBFUSUSD": {
   "id": "pbfususd",
@@ -10589,7 +10589,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "PBRUSUSD": {
   "id": "pbrususd",
@@ -10597,7 +10597,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "PCARUSUSD": {
   "id": "pcarususd",
@@ -10605,7 +10605,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "PCGUSUSD": {
   "id": "pcgususd",
@@ -10613,7 +10613,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "PCLNUSUSD": {
   "id": "pclnususd",
@@ -10621,7 +10621,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "PCTYUSUSD": {
   "id": "pctyususd",
@@ -10629,7 +10629,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "PEAKUSUSD": {
   "id": "peakususd",
@@ -10637,7 +10637,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "PENNUSUSD": {
   "id": "pennususd",
@@ -10645,7 +10645,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "PEPUSUSD": {
   "id": "pepususd",
@@ -10653,7 +10653,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "PFEUSUSD": {
   "id": "pfeususd",
@@ -10661,7 +10661,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2015,
-  "on": false
+  "on": true
  },
  "PGRUSUSD": {
   "id": "pgrususd",
@@ -10669,7 +10669,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "PGUSUSD": {
   "id": "pgususd",
@@ -10677,7 +10677,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2015,
-  "on": false
+  "on": true
  },
  "PHUSUSD": {
   "id": "phususd",
@@ -10685,7 +10685,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "PIIUSUSD": {
   "id": "piiususd",
@@ -10693,7 +10693,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "PKGUSUSD": {
   "id": "pkgususd",
@@ -10701,7 +10701,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "PLNTUSUSD": {
   "id": "plntususd",
@@ -10709,7 +10709,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "PLTRUSUSD": {
   "id": "pltrususd",
@@ -10717,7 +10717,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "PLUGUSUSD": {
   "id": "plugususd",
@@ -10725,7 +10725,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "PMUSUSD": {
   "id": "pmususd",
@@ -10733,7 +10733,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "PNCUSUSD": {
   "id": "pncususd",
@@ -10741,7 +10741,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "PNRUSUSD": {
   "id": "pnrususd",
@@ -10749,7 +10749,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "PODDUSUSD": {
   "id": "poddususd",
@@ -10757,7 +10757,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "POOLUSUSD": {
   "id": "poolususd",
@@ -10765,7 +10765,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "PRGOUSUSD": {
   "id": "prgoususd",
@@ -10773,7 +10773,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "PRUUSUSD": {
   "id": "pruususd",
@@ -10781,7 +10781,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "PSAUSUSD": {
   "id": "psaususd",
@@ -10789,7 +10789,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "PSTGUSUSD": {
   "id": "pstgususd",
@@ -10797,7 +10797,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "PTCUSUSD": {
   "id": "ptcususd",
@@ -10805,7 +10805,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "PTENUSUSD": {
   "id": "ptenususd",
@@ -10813,7 +10813,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "PTONUSUSD": {
   "id": "ptonususd",
@@ -10821,7 +10821,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "PVHUSUSD": {
   "id": "pvhususd",
@@ -10829,7 +10829,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "PYPLUSUSD": {
   "id": "pyplususd",
@@ -10837,7 +10837,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "QCOMUSUSD": {
   "id": "qcomususd",
@@ -10845,7 +10845,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "QRVOUSUSD": {
   "id": "qrvoususd",
@@ -10853,7 +10853,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "RCLUSUSD": {
   "id": "rclususd",
@@ -10861,7 +10861,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "REGNUSUSD": {
   "id": "regnususd",
@@ -10869,7 +10869,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "REGUSUSD": {
   "id": "regususd",
@@ -10877,7 +10877,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "REUSUSD": {
   "id": "reususd",
@@ -10885,7 +10885,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "RFUSUSD": {
   "id": "rfususd",
@@ -10893,7 +10893,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "RGAUSUSD": {
   "id": "rgaususd",
@@ -10901,7 +10901,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "RGLDUSUSD": {
   "id": "rgldususd",
@@ -10909,7 +10909,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "RJFUSUSD": {
   "id": "rjfususd",
@@ -10917,7 +10917,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "RMDUSUSD": {
   "id": "rmdususd",
@@ -10925,7 +10925,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "RNGUSUSD": {
   "id": "rngususd",
@@ -10933,7 +10933,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "RNRUSUSD": {
   "id": "rnrususd",
@@ -10941,7 +10941,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ROKUUSUSD": {
   "id": "rokuususd",
@@ -10949,7 +10949,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ROLUSUSD": {
   "id": "rolususd",
@@ -10957,7 +10957,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ROSTUSUSD": {
   "id": "rostususd",
@@ -10965,7 +10965,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "RPMUSUSD": {
   "id": "rpmususd",
@@ -10973,7 +10973,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "RRCUSUSD": {
   "id": "rrcususd",
@@ -10981,7 +10981,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "RRXUSUSD": {
   "id": "rrxususd",
@@ -10989,7 +10989,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "RSUSUSD": {
   "id": "rsususd",
@@ -10997,7 +10997,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "RTXUSUSD": {
   "id": "rtxususd",
@@ -11005,7 +11005,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SABRUSUSD": {
   "id": "sabrususd",
@@ -11013,7 +11013,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SBUXUSUSD": {
   "id": "sbuxususd",
@@ -11021,7 +11021,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SCCOUSUSD": {
   "id": "sccoususd",
@@ -11029,7 +11029,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SCHWUSUSD": {
   "id": "schwususd",
@@ -11037,7 +11037,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SCIUSUSD": {
   "id": "sciususd",
@@ -11045,7 +11045,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SEDGUSUSD": {
   "id": "sedgususd",
@@ -11053,7 +11053,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SEICUSUSD": {
   "id": "seicususd",
@@ -11061,7 +11061,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SFMUSUSD": {
   "id": "sfmususd",
@@ -11069,7 +11069,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SHWUSUSD": {
   "id": "shwususd",
@@ -11077,7 +11077,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SJMUSUSD": {
   "id": "sjmususd",
@@ -11085,7 +11085,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SLBUSUSD": {
   "id": "slbususd",
@@ -11093,7 +11093,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SLMUSUSD": {
   "id": "slmususd",
@@ -11101,7 +11101,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SNAPUSUSD": {
   "id": "snapususd",
@@ -11109,7 +11109,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SNOWUSUSD": {
   "id": "snowususd",
@@ -11117,7 +11117,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SNPSUSUSD": {
   "id": "snpsususd",
@@ -11125,7 +11125,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SOUSUSD": {
   "id": "soususd",
@@ -11133,7 +11133,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SPGIUSUSD": {
   "id": "spgiususd",
@@ -11141,7 +11141,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SPGUSUSD": {
   "id": "spgususd",
@@ -11149,7 +11149,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SPOTUSUSD": {
   "id": "spotususd",
@@ -11157,7 +11157,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SPRUSUSD": {
   "id": "sprususd",
@@ -11165,7 +11165,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SQUSUSD": {
   "id": "sqususd",
@@ -11173,7 +11173,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SRPTUSUSD": {
   "id": "srptususd",
@@ -11181,7 +11181,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SSNCUSUSD": {
   "id": "ssncususd",
@@ -11189,7 +11189,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "STEUSUSD": {
   "id": "steususd",
@@ -11197,7 +11197,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "STTUSUSD": {
   "id": "sttususd",
@@ -11205,7 +11205,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "STZUSUSD": {
   "id": "stzususd",
@@ -11213,7 +11213,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SUIUSUSD": {
   "id": "suiususd",
@@ -11221,7 +11221,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SWKSUSUSD": {
   "id": "swksususd",
@@ -11229,7 +11229,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SWKUSUSD": {
   "id": "swkususd",
@@ -11237,7 +11237,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SYFUSUSD": {
   "id": "syfususd",
@@ -11245,7 +11245,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SYKUSUSD": {
   "id": "sykususd",
@@ -11253,7 +11253,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "SYYUSUSD": {
   "id": "syyususd",
@@ -11261,7 +11261,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TAPUSUSD": {
   "id": "tapususd",
@@ -11269,7 +11269,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TDGUSUSD": {
   "id": "tdgususd",
@@ -11277,7 +11277,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TDYUSUSD": {
   "id": "tdyususd",
@@ -11285,7 +11285,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TEAMUSUSD": {
   "id": "teamususd",
@@ -11293,7 +11293,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TECHUSUSD": {
   "id": "techususd",
@@ -11301,7 +11301,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TELUSUSD": {
   "id": "telususd",
@@ -11309,7 +11309,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TEVAUSUSD": {
   "id": "tevaususd",
@@ -11317,7 +11317,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TFCUSUSD": {
   "id": "tfcususd",
@@ -11325,7 +11325,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TFXUSUSD": {
   "id": "tfxususd",
@@ -11333,7 +11333,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TGTUSUSD": {
   "id": "tgtususd",
@@ -11341,7 +11341,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TJXUSUSD": {
   "id": "tjxususd",
@@ -11349,7 +11349,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TMOUSUSD": {
   "id": "tmoususd",
@@ -11357,7 +11357,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TMUSUSUSD": {
   "id": "tmusususd",
@@ -11365,7 +11365,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TOLUSUSD": {
   "id": "tolususd",
@@ -11373,7 +11373,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TPRUSUSD": {
   "id": "tprususd",
@@ -11381,7 +11381,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TPXUSUSD": {
   "id": "tpxususd",
@@ -11389,7 +11389,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TRGPUSUSD": {
   "id": "trgpususd",
@@ -11397,7 +11397,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TRMBUSUSD": {
   "id": "trmbususd",
@@ -11405,7 +11405,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TROWUSUSD": {
   "id": "trowususd",
@@ -11413,7 +11413,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TRUUSUSD": {
   "id": "truususd",
@@ -11421,7 +11421,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TRVUSUSD": {
   "id": "trvususd",
@@ -11429,7 +11429,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2015,
-  "on": false
+  "on": true
  },
  "TSLAUSUSD": {
   "id": "tslaususd",
@@ -11437,7 +11437,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TSMUSUSD": {
   "id": "tsmususd",
@@ -11445,7 +11445,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TSNUSUSD": {
   "id": "tsnususd",
@@ -11453,7 +11453,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TTDUSUSD": {
   "id": "ttdususd",
@@ -11461,7 +11461,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TTUSUSD": {
   "id": "ttususd",
@@ -11469,7 +11469,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TTWOUSUSD": {
   "id": "ttwoususd",
@@ -11477,7 +11477,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TUSUSD": {
   "id": "tususd",
@@ -11485,7 +11485,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2015,
-  "on": false
+  "on": true
  },
  "TWLOUSUSD": {
   "id": "twloususd",
@@ -11493,7 +11493,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TXNUSUSD": {
   "id": "txnususd",
@@ -11501,7 +11501,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "TYLUSUSD": {
   "id": "tylususd",
@@ -11509,7 +11509,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "UAAUSUSD": {
   "id": "uaaususd",
@@ -11517,7 +11517,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "UALUSUSD": {
   "id": "ualususd",
@@ -11525,7 +11525,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "UAUSUSD": {
   "id": "uaususd",
@@ -11533,7 +11533,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "UBERUSUSD": {
   "id": "uberususd",
@@ -11541,7 +11541,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "UDRUSUSD": {
   "id": "udrususd",
@@ -11549,7 +11549,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "UGIUSUSD": {
   "id": "ugiususd",
@@ -11557,7 +11557,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "UHSUSUSD": {
   "id": "uhsususd",
@@ -11565,7 +11565,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ULTAUSUSD": {
   "id": "ultaususd",
@@ -11573,7 +11573,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "UNHUSUSD": {
   "id": "unhususd",
@@ -11581,7 +11581,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2015,
-  "on": false
+  "on": true
  },
  "UNPUSUSD": {
   "id": "unpususd",
@@ -11589,7 +11589,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "UPSUSUSD": {
   "id": "upsususd",
@@ -11597,7 +11597,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "URIUSUSD": {
   "id": "uriususd",
@@ -11605,7 +11605,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "USBUSUSD": {
   "id": "usbususd",
@@ -11613,7 +11613,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "USFDUSUSD": {
   "id": "usfdususd",
@@ -11621,7 +11621,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "UTHRUSUSD": {
   "id": "uthrususd",
@@ -11629,7 +11629,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "VALEUSUSD": {
   "id": "valeususd",
@@ -11637,7 +11637,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "VEEVUSUSD": {
   "id": "veevususd",
@@ -11645,7 +11645,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "VFCUSUSD": {
   "id": "vfcususd",
@@ -11653,7 +11653,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "VICIUSUSD": {
   "id": "viciususd",
@@ -11661,7 +11661,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "VIRTUSUSD": {
   "id": "virtususd",
@@ -11669,7 +11669,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "VLOUSUSD": {
   "id": "vloususd",
@@ -11677,7 +11677,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "VRTXUSUSD": {
   "id": "vrtxususd",
@@ -11685,7 +11685,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "VSTUSUSD": {
   "id": "vstususd",
@@ -11693,7 +11693,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "VTRSUSUSD": {
   "id": "vtrsususd",
@@ -11701,7 +11701,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "VUSUSD": {
   "id": "vususd",
@@ -11709,7 +11709,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2015,
-  "on": false
+  "on": true
  },
  "VZUSUSD": {
   "id": "vzususd",
@@ -11717,7 +11717,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2015,
-  "on": false
+  "on": true
  },
  "WABUSUSD": {
   "id": "wabususd",
@@ -11725,7 +11725,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "WALUSUSD": {
   "id": "walususd",
@@ -11733,7 +11733,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "WBSUSUSD": {
   "id": "wbsususd",
@@ -11741,7 +11741,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "WDAYUSUSD": {
   "id": "wdayususd",
@@ -11749,7 +11749,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "WDCUSUSD": {
   "id": "wdcususd",
@@ -11757,7 +11757,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "WENUSUSD": {
   "id": "wenususd",
@@ -11765,7 +11765,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "WEXUSUSD": {
   "id": "wexususd",
@@ -11773,7 +11773,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "WFCUSUSD": {
   "id": "wfcususd",
@@ -11781,7 +11781,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "WHRUSUSD": {
   "id": "whrususd",
@@ -11789,7 +11789,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "WHUSUSD": {
   "id": "whususd",
@@ -11797,7 +11797,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "WLKUSUSD": {
   "id": "wlkususd",
@@ -11805,7 +11805,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "WMTUSUSD": {
   "id": "wmtususd",
@@ -11813,7 +11813,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2015,
-  "on": false
+  "on": true
  },
  "WPCUSUSD": {
   "id": "wpcususd",
@@ -11821,7 +11821,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "WRBUSUSD": {
   "id": "wrbususd",
@@ -11829,7 +11829,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "WSMUSUSD": {
   "id": "wsmususd",
@@ -11837,7 +11837,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "WSOUSUSD": {
   "id": "wsoususd",
@@ -11845,7 +11845,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "WSTUSUSD": {
   "id": "wstususd",
@@ -11853,7 +11853,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "WTRGUSUSD": {
   "id": "wtrgususd",
@@ -11861,7 +11861,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "WTWUSUSD": {
   "id": "wtwususd",
@@ -11869,7 +11869,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "WUSUSD": {
   "id": "wususd",
@@ -11877,7 +11877,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "WWDUSUSD": {
   "id": "wwdususd",
@@ -11885,7 +11885,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "WYNNUSUSD": {
   "id": "wynnususd",
@@ -11893,7 +11893,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "XOMUSUSD": {
   "id": "xomususd",
@@ -11901,7 +11901,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2015,
-  "on": false
+  "on": true
  },
  "XPEVUSUSD": {
   "id": "xpevususd",
@@ -11909,7 +11909,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "XPOUSUSD": {
   "id": "xpoususd",
@@ -11917,7 +11917,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "XYLUSUSD": {
   "id": "xylususd",
@@ -11925,7 +11925,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "YUMCUSUSD": {
   "id": "yumcususd",
@@ -11933,7 +11933,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "YUMUSUSD": {
   "id": "yumususd",
@@ -11941,7 +11941,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ZBHUSUSD": {
   "id": "zbhususd",
@@ -11949,7 +11949,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ZBRAUSUSD": {
   "id": "zbraususd",
@@ -11957,7 +11957,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ZMUSUSD": {
   "id": "zmususd",
@@ -11965,7 +11965,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ZSUSUSD": {
   "id": "zsususd",
@@ -11973,7 +11973,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ZTSUSUSD": {
   "id": "ztsususd",
@@ -11981,7 +11981,7 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  },
  "ZUSUSD": {
   "id": "zususd",
@@ -11989,6 +11989,6 @@
   "cat": "Stocks",
   "sub": "United States",
   "start": 2003,
-  "on": false
+  "on": true
  }
 }
