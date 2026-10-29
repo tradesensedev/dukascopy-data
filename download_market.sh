@@ -9,6 +9,7 @@ END_YEAR=$(date -u +%Y)
 TOMORROW=$(date -u -d tomorrow +%Y-%m-%d)
 if [ "$(date -u +%m)" = "01" ]; then REFRESH_FROM=$((END_YEAR-1)); else REFRESH_FROM=$END_YEAR; fi
 mkdir -p out prev stage
+FRESH_AFTER=$(date -u -d '6 days ago' +%Y-%m-%d)
 
 LEVELS=("40 250" "20 500" "10 1000" "5 2000")
 LEVEL=${START_LEVEL:-2}; FASTEST=${FASTEST:-$LEVEL}; OKSTREAK=0; streak=0; STAGED=0
@@ -122,20 +123,25 @@ process_market() {
   local start; start=$(jq -r --arg m "$market" '.[$m].start // 2003' markets.json)
   TAG="m1-$market"; REL_OK=0
   isdone=0; is_done "$market" && isdone=1
-  if [ $isdone -eq 1 ] && [ "$DO_TAIL" != "true" ]; then return 0; fi
+  tail_this=$DO_TAIL
+  if [ "$DO_TAIL" = "true" ]; then
+    curu=$(jq -r --arg m "$market" --argjson y "$END_YEAR" '(.m[$m] // empty) | . as $d | ($d.y | index($y)) as $i | if $i == null then "" else $d.u[$i] end' index.json)
+    if [ -n "$curu" ] && [[ "$curu" > "$FRESH_AFTER" ]]; then tail_this=false; fi
+  fi
+  if [ $isdone -eq 1 ] && [ "$tail_this" != "true" ]; then return 0; fi
   load_existing
   [ -n "$existing" ] && REL_OK=1
   local lowest=$start
   if [ $isdone -eq 1 ] && [ "$REFRESH_FROM" -gt "$start" ]; then lowest=$REFRESH_FROM; fi
   echo "=== $market ($id) from $lowest | L$LEVEL ==="
 
-  local seen=0 empties=0 new=0 mfails=0 year side name has rc to T0
+  local seen=0 empties=0 new=0 mfails=0 failed=0 year side name has rc to T0
   for year in $(seq "$END_YEAR" -1 "$lowest"); do
     for side in bid ask; do
       if [ "$SECONDS" -gt "$BUDGET" ]; then echo "Time budget reached."; return 9; fi
       name="${market}_${year}_${side}"
       has=0; if echo "$existing" | grep -qx "$name.csv.gz"; then has=1; seen=1; fi
-      if [ $has -eq 1 ] && { [ "$year" -lt "$REFRESH_FROM" ] || [ "$DO_TAIL" != "true" ]; }; then continue; fi
+      if [ $has -eq 1 ] && { [ "$year" -lt "$REFRESH_FROM" ] || [ "$tail_this" != "true" ]; }; then continue; fi
 
       if [ $has -eq 1 ]; then
         update_tail "$name" "$side"; rc=$?
@@ -151,17 +157,17 @@ process_market() {
       case $rc in
         0) publish "$name"; echo "DONE: $name ($((SECONDS-T0))s, L$LEVEL)"; new=$((new+1)); seen=1; streak=0; sleep 1 ;;
         2) echo "NO DATA: $name"; tail -n 3 log.txt
-           if [ $seen -eq 1 ] && [ "$year" -lt "$END_YEAR" ]; then echo "Reached start of history."; mark_done; return 0; fi
+           if [ $seen -eq 1 ] && [ "$year" -lt "$END_YEAR" ]; then echo "Reached start of history."; [ $failed -eq 0 ] && mark_done; return 0; fi
            empties=$((empties+1))
-           if [ $empties -ge 8 ]; then echo "No data found, skipping market."; mark_done; return 0; fi ;;
+           if [ $empties -ge 8 ]; then echo "No data found, skipping market."; [ $failed -eq 0 ] && mark_done; return 0; fi ;;
         4) echo "INVALID instrument id: $id"; mark_done; return 0 ;;
-        *) echo "FAILED: $name"; mfails=$((mfails+1)); streak=$((streak+1))
+        *) echo "FAILED: $name"; failed=1; mfails=$((mfails+1)); streak=$((streak+1))
            [ $streak -ge 4 ] && { echo "Repeated failures (block?). Stopping job."; return 9; }
            [ $mfails -ge 2 ] && return 0 ;;
       esac
     done
   done
-  mark_done
+  [ $failed -eq 0 ] && mark_done
   return 0
 }
 

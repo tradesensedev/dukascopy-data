@@ -56,7 +56,7 @@ jobs:
           n=${I_SHARDS:-6}; [ "$n" -lt 1 ] && n=1; [ "$n" -gt 20 ] && n=20
           case "$I_TAIL" in
             true|false) tl=$I_TAIL ;;
-            *) if [ "$(date -u +%u)" = 6 ]; then tl=true; else tl=false; fi ;;
+            *) tl=true ;;
           esac
           prev=${I_PREV:-0}
           if [ "$prev" = 0 ]; then
